@@ -1,0 +1,25 @@
+<div class="col-md-8">
+	<table class="table table-striped">
+    	<thead>
+      		<tr>
+        		<th>Task Name</th>
+        		<th>Number of Questions</th>
+        		<th> Created on </th>
+        		<th>Action</th>
+      		</tr>
+    	</thead>
+    	<tbody>
+    		<% @tasks.each do |task| %>
+    			<%= "<tr> 
+    				<td><a href='tasks/#{task['namespace']}'>#{task['name']}</a></td>
+    				<td>#{task['number_of_questions']}</td>
+    				<td>#{task['creation_time'].in_time_zone}</td>
+    				<td><a href='#'>delete</a></td>
+    			</tr>".html_safe %>
+    		<% end %>
+    	</tbody>
+  	</table>
+</div>
+<div class="col-md-4">
+<%= render 'form' %>
+</div>

@@ -1,0 +1,6 @@
+<%= bootstrap_form_tag url: 'tasks/create.json' do |f| %>
+	<%= f.text_field :task_name %>
+	<%= f.number_field :number_of_questions %>
+	<%= f.file_field :question_file %>
+	<%= f.submit :create %>
+<% end %>

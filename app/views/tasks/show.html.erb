@@ -1,0 +1,69 @@
+
+
+
+        <div class="row">
+
+            <!-- Show Document here -->
+            <div class="col-md-8">
+                <div class="affix" style="width:60%">
+                    <embed type="application/pdf" src="http://localhost:3005/naya-20160520101611/naya-20160520101611.pdf" width="100%" height="490" />
+                </div>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <%= bootstrap_form_tag url: 'tasks/code.json' do |f| %>
+                <!-- Comments Well -->
+                <div class="well">
+                    <h4>Comments</h4>
+                    <div class="input-group">
+                        <%= f.text_field :top_comments %>
+                        <%= f.text_field :middle_comments %>
+                        <%= f.text_field :bottom_comments %>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Variables Well -->
+                <div class="well">
+                    <h4>Variables</h4>
+                    <div class="input-group">
+                        <%= f.text_field :input_variables %>
+                        <%= f.text_field :output_variables %>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Input/Output Well -->
+                <div class="well">
+                    <h4>Sample Inputs and outputs</h4>
+                    <div class="input-group">
+                        <%= f.text_field :input_set_1 %>
+                        <%= f.text_field :output_set_1 %>
+                    </div>
+                    <hr>
+                    <div class="input-group">
+                        <%= f.text_field :input_set_2 %>
+                        <%= f.text_field :output_set_2 %>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+                <!-- Languages Well -->
+                <div class="well">
+                    <h4>Sample Inputs and outputs</h4>
+                    <div class="input-group">
+                        <%= f.check_box :c, inline: true %>
+                        <%= f.check_box :c_plus_plus, label: 'C++', inline: true %>
+                        <%= f.check_box :c_sharp, label: 'C#', inline: true %>
+                        <%= f.check_box :javascript, inline: true %>
+                        <%= f.check_box :python, inline: true %>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <% end %>
+            </div>
+
+        </div>
+        <!-- /.row -->
