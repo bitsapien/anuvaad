@@ -13,14 +13,28 @@
 
             <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
-                <%= bootstrap_form_tag url: 'tasks/code.json' do |f| %>
+                <%= bootstrap_form_tag url: 'generate_code' do |form| %>
+                <!-- Name Well -->
+                <div class="well">
+                    <div class="input-group">
+                        <%= form.hidden_field :namespace, value: @namespace %>   
+                        <%= form.text_field :name %>   
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+
                 <!-- Comments Well -->
                 <div class="well">
                     <h4>Comments</h4>
                     <div class="input-group">
-                        <%= f.text_field :top_comments %>
-                        <%= f.text_field :middle_comments %>
-                        <%= f.text_field :bottom_comments %>
+                        <%= fields_for :comments do |f| %>
+                            <div class="form-group">
+                            <%= f.text_area :top, class: 'form-control' %>
+                            <%= f.text_area :middle, class: 'form-control' %>
+                            <%= f.text_area :bottom, class: 'form-control' %>
+                        </div>
+                        <% end %>
                     </div>
                     <!-- /.input-group -->
                 </div>
@@ -29,20 +43,36 @@
                 <div class="well">
                     <h4>Variables</h4>
                     <div class="input-group">
-                        <%= f.text_field :input_variables %>
-                        <%= f.text_field :output_variables %>
+                        <%= fields_for :variables do |f| %>
+                            <div class="form-group">
+                            <%= f.text_area :input, class: 'form-control' %>
+                            <%= f.text_area :extra, class: 'form-control' %>
+                            <%= f.text_area :output, class: 'form-control' %>
+                        </div>
+                        <% end %>
                     </div>
                     <!-- /.input-group -->
                 </div>
                 <!-- Languages Well -->
                 <div class="well">
-                    <h4>Sample Inputs and outputs</h4>
+                    <h4>Languages</h4>
                     <div class="input-group">
-                        <%= f.check_box :c, inline: true %>
-                        <%= f.check_box :c_plus_plus, label: 'C++', inline: true %>
-                        <%= f.check_box :c_sharp, label: 'C#', inline: true %>
-                        <%= f.check_box :javascript, inline: true %>
-                        <%= f.check_box :python, inline: true %>
+                        <%= fields_for :languages do |f| %>
+                            <%= f.check_box :c, inline: true, checked: true %> C
+                            <%= f.check_box :c_plus_plus, label: 'C++', inline: true, checked: true %> C++
+                            <%= f.check_box :c_sharp, label: 'C#', inline: true, checked: true %> C#
+                            <%= f.check_box :javascript, inline: true, checked: true %> Javascript
+                            <%= f.check_box :python, inline: true, checked: true %> Python
+                            <%= f.check_box :java, inline: true, checked: true %> Java
+                        <% end %>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Generate Well -->
+                <div class="well">
+                    <div class="input-group">
+                        <%= form.submit :generate %>
                     </div>
                     <!-- /.input-group -->
                 </div>
