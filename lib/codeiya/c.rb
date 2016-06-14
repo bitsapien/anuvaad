@@ -54,10 +54,11 @@ module Codeiya
 					var_list.each do |var|
 						if var['size1'].blank? & var['size2'].blank?
 						elsif var['size2'].blank?
-							extra.push '<integer>index'
+							extra.push '<int>index'
 						else
-							extra.push '<integer>idx'
-							extra.push '<integer>jdx'
+							extra.push '<int>idx'
+							extra.push '<int>jdx'
+							extra.push "<char>tmp[#{var['size2'].to_s}]"
 						end
 					end
 					tmp_extra = @variables['extra'].split(' ')
@@ -80,6 +81,7 @@ module Codeiya
 					data_type = {
 						'int' => 'int',
 						'string' => 'char',
+						'char' => 'char',
 						'float' => 'float',
 						'double' => 'double'
 					}
@@ -133,12 +135,18 @@ module Codeiya
 						if one['size1'].blank? && one['size2'].blank?
 							access_specifier_string.push access_specifier_mappings[one['type']]
 							input_variables_string.push "&#{one['name']}"
+							input_code << "\tscanf(\"#{access_specifier_string.join(' ')}\", #{input_variables_string.join(', ')});\n"
 						elsif one['size2'].blank?
 
 						else
-							
+							input_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {"
+							input_code << "\t\tscanf(\"%s\", &tmp[0]);"
+							input_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {"
+							input_code << "\t\t\t#{one['name']}[idx][jdx] = tmp[jdx];"
+							input_code << "\t\t}"
+							input_code << "\t}"
 						end
-						input_code << "\tscanf(\"#{access_specifier_string.join(' ')}\", #{input_variables_string.join(', ')});\n"
+						
 					end
 					input_code
 				end

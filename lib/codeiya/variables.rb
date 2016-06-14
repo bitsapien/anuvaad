@@ -4,9 +4,12 @@ module Codeiya
 			list = []
 			x = 0
 			y = 0
-			variables.split("\n").each do |variable_string|
+			# <int>n[400m][300d](4000)
+			variables.split(",").each do |variable_string|
 				variable_string.split(' ').each do |var|
 					variable = /<(\w+)>(\w+)\[?(\d*)(\w*)\]?\[?(\d*)(\w*)\]?\(?(\w*)\)?/.match(var)
+					puts '#'*90
+					puts variable.inspect
 					type = variable[1]
 					name = variable[2]
 					size_1 = variable[3]
