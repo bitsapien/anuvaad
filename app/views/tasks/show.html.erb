@@ -25,9 +25,10 @@
 
 
                 <!-- Comments Well -->
-                <div class="well">
+                <a href="#" onclick="toggler('comments');">show/hide comments</a>
+                <div class="well hidden" id="comments">
                     <h4>Comments</h4>
-                    <div class="input-group">
+                    <div class="input-group ">
                         <%= fields_for :comments do |f| %>
                             <div class="form-group">
                             <%= f.text_area :top, class: 'form-control' %>
@@ -82,3 +83,8 @@
 
         </div>
         <!-- /.row -->
+<script type="text/javascript">
+function toggler(divId) {
+    $("#" + divId).toggle();
+}
+</script>

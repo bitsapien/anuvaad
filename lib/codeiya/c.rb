@@ -16,10 +16,17 @@ module Codeiya
 
 					var_extra = Codeiya::Variables.aggregate @variables["extra"]
 
+					var_input_comment = Codeiya::Variables.input_comments(var_input_list)
+					var_output_comment = Codeiya::Variables.output_comments(var_output_list)
 
 					code = "// Name : #{@name}\n"
 					code << "#include <stdio.h>\nint main() {\n"
 					code << "\t// input:\n"
+
+					var_input_comment.each do |comment|
+						code << "\t// #{comment}\n"
+					end
+
 					@comments['top'].split("\n").each do |comment|
 						code << "\t// #{comment}\n"
 					end
@@ -28,6 +35,8 @@ module Codeiya
 					code << "#{input_lines(var_input_list)}"
 
 					code << "\n\n\t// write your code here\n"
+
+					code << "\t// store your results in #{var_output_comment}\n"
 
 					@comments['middle'].split("\n").each do |comment|
 						code << "\t// #{comment}\n"
@@ -61,8 +70,8 @@ module Codeiya
 							extra.push "<char>tmp[#{var['size2'].to_s}]"
 						end
 					end
-					tmp_extra = @variables['extra'].split(' ')
-					@variables['extra'] = (extra+tmp_extra).join(' ')
+					tmp_extra = @variables['extra'].split('|')
+					@variables['extra'] = (extra+tmp_extra).join('|')
 
 				end
 
@@ -111,12 +120,16 @@ module Codeiya
 				def input_lines input_list
 					# detect positions
 					input_code = ''
+										puts '#'*90
+					puts input_list.inspect
 					x = input_list.map do |ex| ex['x'] end
+						puts x.inspect
 					number_of_lines = x.max + 1
 					number_of_lines.times do |idx|
 						index = idx - 1
 						one_line = (input_list.map do |n| n if n['x']==idx end).compact
 						input_code << input_interpreter(one_line)
+						puts index
 					end
 					input_code
 				end
@@ -135,16 +148,20 @@ module Codeiya
 						if one['size1'].blank? && one['size2'].blank?
 							access_specifier_string.push access_specifier_mappings[one['type']]
 							input_variables_string.push "&#{one['name']}"
-							input_code << "\tscanf(\"#{access_specifier_string.join(' ')}\", #{input_variables_string.join(', ')});\n"
+							input_code = "\tscanf(\"#{access_specifier_string.join(' ')}\", #{input_variables_string.join(', ')});\n"
 						elsif one['size2'].blank?
-
+							input_code = ''
+							input_code << "\tfor(index = 0; index< #{one['size1_name']}; index++) {\n"
+							input_code << "\t\tscanf(\"#{access_specifier_mappings[one['type']]}\", &#{one['name']}[index]);\n"
+							input_code << "\t}\n"
 						else
-							input_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {"
-							input_code << "\t\tscanf(\"%s\", &tmp[0]);"
-							input_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {"
-							input_code << "\t\t\t#{one['name']}[idx][jdx] = tmp[jdx];"
-							input_code << "\t\t}"
-							input_code << "\t}"
+							input_code = ''
+							input_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {\n"
+							input_code << "\t\tscanf(\"%s\", &tmp[0]);\n"
+							input_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {\n"
+							input_code << "\t\t\t#{one['name']}[idx][jdx] = tmp[jdx];\n"
+							input_code << "\t\t}\n"
+							input_code << "\t}\n"
 						end
 						
 					end
@@ -173,17 +190,25 @@ module Codeiya
 					}
 					access_specifier_string = []
 					output_variables_string = []
+					output_code = ''
 					sublist.each do |one|
 						if one['size1'].blank? && one['size2'].blank?
 							access_specifier_string.push access_specifier_mappings[one['type']]
 							output_variables_string.push "#{one['name']}"
+							output_code = "\tprintf(\"#{access_specifier_string.join(' ')}\", #{output_variables_string.join(', ')});\n"
 						elsif one['size2'].blank?
 
 						else
-
+							output_code = ''
+							output_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {\n"
+							output_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {\n"
+							output_code << "\t\t\tprintf(\"%d \",result[idx][jdx]);\n"
+							output_code << "\t\t}\n"
+							output_code << "\t\tprintf(\"\\n\");\n"
+							output_code << "\t}\n"							
 						end
 					end
-					"\tprintf(\"#{access_specifier_string.join(' ')}\", #{output_variables_string.join(', ')});\n"
+					output_code
 				end
 
 			end

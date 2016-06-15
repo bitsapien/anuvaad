@@ -11,6 +11,6 @@ int main() {
 	// store result in `resized_a` and `resized_b`
 
 	// output
-	printf("%d %d", &resized_a, &resized_b);
+	printf("%d %d", resized_a, resized_b);
 	return 0;
 }
