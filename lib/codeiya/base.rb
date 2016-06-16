@@ -23,9 +23,12 @@ module Codeiya
 			case lang
 			when 'c'
 				Codeiya::Writer::C.write @packed_data
+			when 'java'
+				#Codeiya::Writer::Java.write @packed_data
 			when 'c_plus_plus'
 			when 'c_sharp'
 			when 'javascript'
+				Codeiya::Writer::Javascript.write @packed_data
 			when 'python'
 			end
 		end

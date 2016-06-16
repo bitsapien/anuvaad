@@ -12,9 +12,10 @@ module Codeiya
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
 
-					create_extra_variables_if_needed(var_input_list+var_output_list)
 
-					var_extra = Codeiya::Variables.aggregate @variables["extra"]
+					var_extra_raw = create_extra_variables_if_needed(var_input_list+var_output_list)
+
+					var_extra = Codeiya::Variables.aggregate var_extra_raw
 
 					var_input_comment = Codeiya::Variables.input_comments(var_input_list)
 					var_output_comment = Codeiya::Variables.output_comments(var_output_list)
@@ -71,7 +72,7 @@ module Codeiya
 						end
 					end
 					tmp_extra = @variables['extra'].split('|')
-					@variables['extra'] = (extra+tmp_extra).join('|')
+					(extra+tmp_extra).join('|')
 
 				end
 
@@ -120,16 +121,12 @@ module Codeiya
 				def input_lines input_list
 					# detect positions
 					input_code = ''
-										puts '#'*90
-					puts input_list.inspect
 					x = input_list.map do |ex| ex['x'] end
-						puts x.inspect
 					number_of_lines = x.max + 1
 					number_of_lines.times do |idx|
 						index = idx - 1
 						one_line = (input_list.map do |n| n if n['x']==idx end).compact
 						input_code << input_interpreter(one_line)
-						puts index
 					end
 					input_code
 				end
@@ -197,12 +194,16 @@ module Codeiya
 							output_variables_string.push "#{one['name']}"
 							output_code = "\tprintf(\"#{access_specifier_string.join(' ')}\", #{output_variables_string.join(', ')});\n"
 						elsif one['size2'].blank?
+							output_code = ''
+							output_code << "\tfor(index = 0; index< #{one['size1_name']}; index++) {\n"
+							output_code << "\t\tprintf(\"%d \",#{one['name']}[index]);\n"
+							output_code << "\t}\n"
 
 						else
 							output_code = ''
 							output_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {\n"
 							output_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {\n"
-							output_code << "\t\t\tprintf(\"%d \",result[idx][jdx]);\n"
+							output_code << "\t\t\tprintf(\"%d \",#{one['name']}[idx][jdx]);\n"
 							output_code << "\t\t}\n"
 							output_code << "\t\tprintf(\"\\n\");\n"
 							output_code << "\t}\n"							
