@@ -28,7 +28,7 @@ class TasksController < ApplicationController
 	end
 
 	def show
-		@link = "#{params['namespace']}/#{params['namespace']}.docx"
+		@link = "#{params['namespace']}/#{params['namespace']}.pdf"
 		@namespace = params['namespace']
 	end
 

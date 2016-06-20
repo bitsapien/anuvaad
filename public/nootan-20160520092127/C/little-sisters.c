@@ -2,21 +2,18 @@
 #include <stdio.h>
 int main() {
 	// input:
-	// n : number of sisters Hikki has
-	int n, solution[100][100], idx, jdx;
-	char tmp[100];
-	scanf("%d", &n);
+	// a : size
+	// b : size
+	// x : ratio
+	// y : ratio
+	int a, b, x, y, new_size_x, new_size_y;
+	scanf("%d %d %d %d", &a, &b, &x, &y);
 
 
 	// write your code here
-	// store your results in `solution`
+	// store your results in `new_size_x`,`new_size_y`
 
 	// output
-	for(idx = 0; idx< n; idx++) {
-		for(jdx = 0;jdx<n;jdx++) {
-			printf("%d ",solution[idx][jdx]);
-		}
-		printf("\n");
-	}
+	printf("%d %d", new_size_x, new_size_y);
 	return 0;
 }

@@ -1,6 +1,6 @@
 module Codeiya
 	module Writer
-		class Javascript
+		class Python
 			class << self
 				def write data
 					@name = data['name']
@@ -12,28 +12,24 @@ module Codeiya
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
 
-					puts '#'*90
-					puts @variables["extra"].inspect
 
-					puts '#'*90
-
-					var_extra_raw = create_extra_variables_if_needed(var_input_list+var_output_list)
-
-					var_extra = Codeiya::Variables.aggregate var_extra_raw
+					var_extra = Codeiya::Variables.aggregate @variables['extra']
 
 					var_input_comment = Codeiya::Variables.input_comments(var_input_list)
 					var_output_comment = Codeiya::Variables.output_comments(var_output_list)
 
-					code = "// Name : #{@name}\n"
+					code = "#!/usr/bin/python\n"
 
-					code << "// input:\n"
+					code << "# Name : #{@name}\n"
+
+					code << "# input:\n"
 
 					var_input_comment.each do |comment|
-						code << "// #{comment}\n"
+						code << "# #{comment}\n"
 					end
 
 					@comments['top'].split("\n").each do |comment|
-						code << "// #{comment}\n"
+						code << "# #{comment}\n"
 					end
 
 					# take inputs
@@ -42,18 +38,18 @@ module Codeiya
 
 					code << "#{input_lines(var_input_list)}"
 
-					code << "\n\n// write your code here\n"
+					code << "\n\n# write your code here\n"
 
-					code << "// store your results in #{var_output_comment}\n"
+					code << "# store your results in #{var_output_comment}\n"
 
 					@comments['middle'].split("\n").each do |comment|
-						code << "// #{comment}\n"
+						code << "# #{comment}\n"
 					end
 
-					code << "\n// output\n"
+					code << "\n# output\n"
 
 					@comments['bottom'].split("\n").each do |comment|
-						code << "// #{comment}\n"
+						code << "# #{comment}\n"
 					end
 
 					# print outputs
@@ -66,9 +62,8 @@ module Codeiya
 				end
 
 				def variables_define var_list
-					var_names = var_list.map do |v| v['name'] end
-					"var #{var_names.join(',')};\n" unless var_names.blank?
-
+					var_names = var_list.map do |v| "#{v['name']} = #{var['value']}" end
+					"#{var_names.join(',')}\n" unless var_names.blank?
 				end
 
 				def create_extra_variables_if_needed var_list 
@@ -88,11 +83,11 @@ module Codeiya
 				end
 
 				def create_files name, namespace
-					path = File.join('public', namespace, 'JAVASCRIPT')
+					path = File.join('public', namespace, 'PYTHON')
 					unless File.directory? path
 						Dir.mkdir(path)
 					end
-					filename = "#{name.parameterize}.js"	
+					filename = "#{name.parameterize}.py"	
 					File.join(path,filename)			
 				end
 
@@ -114,43 +109,35 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "var #{var['name']} = #{parser(var['type'],'readline()')};\n"
+							line = "#{var['name']} = #{parser(var['type'],'input()')}\n"
 						else
-							line = "var elements = readline().split(\" \");\n"
+							line = "elements = input().split(' ')\n"
 							var_list.each_with_index do |v,index|
-								line << "var #{v['name']} = #{parser(v['type'],"elements[#{index}]")};\n"
+								line << "#{v['name']} = #{parser(v['type'],"elements[#{index}]")};\n"
 							end
 						end
 					elsif var['size2'].empty?
 						tmp_var_name = "#{var['name']}_elements"
-						line = "var #{var['name']} = [];\n"
-						line << "var #{tmp_var_name} = readline().split(' ');\n"
-						line << "for(index=0;index<#{var['size1_name']};index++)\n"
-						line << "\t#{var['name']}.push(#{parser(var['type'], tmp_var_name+"[index]")});\n"	
+						line = "#{tmp_var_name} = input().split(' ')\n"
+						line << "#{var['name']} = (#{parser(var['type'],'e')} for e in #{tmp_var_name})\n"	
 					else
 						tmp_var_name = "#{var['name']}_elements"
-						line = "var #{var['name']} = new Array([]);\n"
-						line << "var #{tmp_var_name} = \"\";\n"
-						line << "for(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\t#{tmp_var_name} = readline().split(' ');\n"
-						line << "\t#{var['name']}[idx] = new Array([]);\n"
-						line << "\tfor(jdx=0;jdx<#{var['size2_name']};jdx++){\n"
-						line << "\t\t#{var['name']}[idx][jdx] = #{parser(var['type'], tmp_var_name+"[jdx]")};\n"
-						line << "\t}\n"
-						line << "}"
+						line = "for _ in xrange(#{var['size1_name']}):\n"
+						line << "\t#{tmp_var_name} = input().split(' ')\n"
+						line << "\t#{var['name']} = (#{parser(var['type'],'e')} for e in #{tmp_var_name})\n"	
 					end
 					line
 				end
 
 				def parser type, term
 					input_parser = {
-						'int' => 'parseInt',
+						'int' => 'int',
 						'string' => '',
 						'char' => '',
-						'float' => 'parseFloat',
-						'double' => 'parseDouble'
+						'float' => 'float',
+						'double' => 'float'
 					}
-					input_parser[type].blank? ? term : "#{input_parser[type]}(#{term}, 10)" 
+					input_parser[type].blank? ? term : "#{input_parser[type]}(#{term})" 
 				end
 
 				def output_lines output_list
@@ -170,17 +157,16 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "print(#{var['name']});\n"
+							line = "print(#{var['name']})\n"
 						else
-							variables = var_list.map do |k| k['name'] end
+							variables = var_list.map do |k| "str(#{k['name']})" end
 							line = "print(#{variables.join('+" "+')});\n"
 						end
 					elsif var['size2'].empty?
-						line = "print(#{var['name']}.join(\" \"))"
+						line = "print(\" \".join(str(e) for e in #{var['name']}))"
 					else
-						line = "for(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\tprint(#{var['name']}[idx].join(' '));\n"
-						line << "}"
+						line = "for idx in xrange(#{var['size1_name']}):\n"
+						line = "\tprint(\" \".join(str(e) for e in #{var['name']}[idx]))"
 					end
 					line
 				end

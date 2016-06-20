@@ -1,14 +1,18 @@
 // Name : Little Sisters
 // input:
-// n : number of sisters Hikki has
-var idx,jdx;
-var n = parseInt(readline(), 10);
+// a : size
+// b : size
+// x : ratio
+// y : ratio
+var elements = readline().split(" ");
+var a = parseInt(elements[0], 10);
+var b = parseInt(elements[1], 10);
+var x = parseInt(elements[2], 10);
+var y = parseInt(elements[3], 10);
 
 
 // write your code here
-// store your results in `solution`
+// store your results in `new_size_x`,`new_size_y`
 
 // output
-for(idx=0;idx<n;idx++){
-	print(solution[idx].join(' '));
-}
+print(new_size_x+" "+new_size_y);

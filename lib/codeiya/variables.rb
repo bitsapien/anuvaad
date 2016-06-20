@@ -9,8 +9,8 @@ module Codeiya
 			# ====
 			# <int>a,<int>b|<int>c,<int>d
 			#  <int>n[33{n}][33{m}](22)"jjfjf fjfj fjfj4 5j"
-			variables.split(",").each do |variable_string|
-				variable_string.split('|').each do |var|
+			variables.split("|").each do |variable_string|
+				variable_string.split(',').each do |var|
 					variable = /<(\w+)>(\w+)\[?(\d*)\{?(\w*)\}?\]?\[?(\d*)\{?(\w*)\}?\]?\(?(\w*)\)?\"?([a-zA-Z0-9_ ]*)\"?/.match(var)
 					type = variable[1]
 					name = variable[2]

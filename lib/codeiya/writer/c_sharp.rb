@@ -1,6 +1,6 @@
 module Codeiya
 	module Writer
-		class Java
+		class CSharp
 			class << self
 				def write data
 					@name = data['name']
@@ -12,9 +12,6 @@ module Codeiya
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
 
-					puts var_input_list.inspect
-					puts var_output_list.inspect
-
 					var_extra_raw = create_extra_variables_if_needed(var_input_list+var_output_list)
 
 					var_extra = Codeiya::Variables.aggregate var_extra_raw
@@ -24,47 +21,48 @@ module Codeiya
 
 					code = "// Name : #{@name}\n"
 
-					code << "import java.util.*;\n"
-					code << "import java.lang.*;\n"
-					code << "import java.io.*;\n"
-					code << "class Main {\n"
-					code << "\tpublic static void main (String[] args) throws java.lang.Exception {\n"
+					code << "using System;\n"
+					code << "namespace Application {\n"
+					code << "\tclass #{@name.gsub(' ','').underscore} {\n"
+					code << "\t\tpublic static void Main(string[] args) {\n"
 
-					code << "\t\t// input:\n"
+					code << "\t\t\t// input:\n"
 
 					var_input_comment.each do |comment|
-						code << "\t\t// #{comment}\n"
+						code << "\t\t\t// #{comment}\n"
 					end
 
 					@comments['top'].split("\n").each do |comment|
-						code << "\t\t// #{comment}\n"
+						code << "\t\t\t// #{comment}\n"
 					end
 
 					# take inputs
 
-					code << "\t\t#{variables_define(var_extra)}"
+					code << "\t\t\t#{variables_define(var_extra)}"
 
-					code << "\t\t#{input_lines(var_input_list)}"
+					code << "\t\t\t#{input_lines(var_input_list)}"
 
-					code << "\n\n\t\t// write your code here\n"
+					code << "\n\n\t\t\t// write your code here\n"
 
-					code << "\t\t// store your results in #{var_output_comment}\n"
+					code << "\t\t\t// store your results in #{var_output_comment}\n"
 
 					@comments['middle'].split("\n").each do |comment|
-						code << "\t\t// #{comment}\n"
+						code << "\t\t\t// #{comment}\n"
 					end
 
-					code << "\n\t\t// output\n"
+					code << "\n\t\t\t// output\n"
 
 					@comments['bottom'].split("\n").each do |comment|
-						code << "\t\t// #{comment}\n"
+						code << "\t\t\t// #{comment}\n"
 					end
 
 					# print outputs
 
-					code << "\t\t#{output_lines(var_output_list)}\n"
+					code << "\t\t\t#{output_lines(var_output_list)}\n"
 
-					code << "\t}\n"
+					code << "\t}\t\n"
+
+					code << "\t}"
 
 					code << "}"
 
@@ -76,7 +74,7 @@ module Codeiya
 				def variables_define variable_set
 					data_type = {
 						'int' => 'int',
-						'string' => 'String',
+						'string' => 'string',
 						'char' => 'char',
 						'float' => 'float',
 						'double' => 'double'
@@ -121,18 +119,18 @@ module Codeiya
 				end
 
 				def create_files name, namespace
-					path = File.join('public', namespace, 'JAVA')
+					path = File.join('public', namespace, 'C_SHARP')
 					unless File.directory? path
 						Dir.mkdir(path)
 					end
-					filename = "#{name.parameterize}.java"	
+					filename = "#{name.parameterize}.cs"	
 					File.join(path,filename)			
 				end
 
 
 				def input_lines input_list
 					# detect positions
-					input_code = "Scanner in = new Scanner(System.in);\n"
+					input_code = ""
 					x = input_list.map do |ex| ex['x'] end
 					number_of_lines = x.max + 1
 					number_of_lines.times do |idx|
@@ -147,9 +145,9 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "\t\t#{data_type_helper(var['type'])} #{var['name']} = #{parser(var['type'],'in.nextLine()')};\n"
+							line = "\t\t#{data_type_helper(var['type'])} #{var['name']} = #{parser(var['type'],'Console.ReadLine()')};\n"
 						else
-							line = "\t\tString[] elements = (in.nextLine()).split(\" \");\n"
+							line = "\t\tstring[] elements = (Console.ReadLine()).Split(\" \");\n"
 							var_list.each_with_index do |v,index|
 								line << "\t\t#{data_type_helper(v['type'])} #{v['name']} = #{parser(v['type'],"elements[#{index}]")};\n"
 							end
@@ -158,7 +156,7 @@ module Codeiya
 						tmp_var_name = "#{var['name']}_elements"
 						size_limit = var['size1_name'].blank? ? var['size1'] : var['size1_name']
 						line = "\t\t#{data_type_helper(var['type'])}[] #{var['name']} = new #{data_type_helper(var['type'])}[#{size_limit}];\n"
-						line << "\t\tString[] #{tmp_var_name} = (in.nextLine()).split(\" \");\n"
+						line << "\t\tstring[] #{tmp_var_name} = (Console.ReadLine()).Split(\" \");\n"
 						line << "\t\tfor(index=0;index<#{var['size1_name']};index++)\n"
 						line << "\t\t\t#{var['name']}[index] = #{parser(var['type'],tmp_var_name+'[index]')};\n"	
 					else
@@ -166,9 +164,9 @@ module Codeiya
 						size_limit1 = var['size1_name'].blank? ? var['size1'] : var['size1_name']
 						size_limit2 = var['size2_name'].blank? ? var['size2'] : var['size2_name']
 						line = "\t\t#{data_type_helper(var['type'])}[][] #{var['name']} = new #{data_type_helper(var['type'])}[#{size_limit}][#{}];\n"
-						line << "\t\tString #{tmp_var_name} = \"\";\n"
+						line << "\t\tstring #{tmp_var_name} = \"\";\n"
 						line << "\t\tfor(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\t\t\t#{tmp_var_name} = (in.nextLine()).split(\" \");\n"
+						line << "\t\t\t#{tmp_var_name} = (Console.ReadLine()).Split(\" \");\n"
 						line << "\t\t\tfor(jdx=0;jdx<#{var['size2_name']};jdx++){\n"
 						line << "\t\t\t\t#{var['name']}[idx][jdx] = #{parser(var['type'],tmp_var_name+'[jdx]')};\n"
 						line << "\t\t\t}\n"
@@ -180,7 +178,7 @@ module Codeiya
 				def data_type_helper type
 					types = {
 						'int' => 'int',
-						'string' => 'String',
+						'string' => 'string',
 						'char' => 'char',
 						'float' => 'float',
 						'double' => 'double'
@@ -190,7 +188,7 @@ module Codeiya
 
 				def parser type, term
 					input_parser = {
-						'int' => 'Integer.parseInt',
+						'int' => 'Convert.ToInt32',
 						'string' => '',
 						'char' => '',
 						'float' => 'Float.parseFloat',
@@ -216,16 +214,16 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "\t\tSystem.out.println(#{var['name']});\n"
+							line = "\t\tConsole.WriteLine(#{var['name']});\n"
 						else
 							variables = var_list.map do |k| k['name'] end
-							line = "\t\tSystem.out.println(#{variables.join('+" "+')});\n"
+							line = "\t\tConsole.WriteLine(#{variables.join('+" "+')});\n"
 						end
 					elsif var['size2'].empty?
-						line = "\t\tSystem.out.println(#{var['name']}.join(\" \"));]n"
+						line = "\t\tConsole.WriteLine(#{var['name']}.join(\" \"));]n"
 					else
 						line = "for(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\t\t\tSystem.out.println(#{var['name']}[idx].join(' '));\n"
+						line << "\t\t\tConsole.WriteLine(#{var['name']}[idx].join(' '));\n"
 						line << "\t\t}"
 					end
 					line

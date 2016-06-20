@@ -24,12 +24,14 @@ module Codeiya
 			when 'c'
 				Codeiya::Writer::C.write @packed_data
 			when 'java'
-				#Codeiya::Writer::Java.write @packed_data
+				Codeiya::Writer::Java.write @packed_data
 			when 'c_plus_plus'
 			when 'c_sharp'
+				Codeiya::Writer::CSharp.write @packed_data
 			when 'javascript'
 				Codeiya::Writer::Javascript.write @packed_data
 			when 'python'
+				Codeiya::Writer::Python.write @packed_data
 			end
 		end
 	end
