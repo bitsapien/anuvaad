@@ -26,43 +26,45 @@ module Codeiya
 					code << "\tclass #{@name.gsub(' ','').underscore} {\n"
 					code << "\t\tpublic static void Main(string[] args) {\n"
 
-					code << "\t\t\t// input:\n"
+					code << "\t\t// input:\n"
 
 					var_input_comment.each do |comment|
-						code << "\t\t\t// #{comment}\n"
+						code << "\t\t// #{comment}\n"
 					end
 
 					@comments['top'].split("\n").each do |comment|
-						code << "\t\t\t// #{comment}\n"
+						code << "\t\t// #{comment}\n"
 					end
 
 					# take inputs
 
-					code << "\t\t\t#{variables_define(var_extra)}"
+					code << "#{variables_define(var_extra)}"
 
-					code << "\t\t\t#{input_lines(var_input_list)}"
+					code << "#{input_lines(var_input_list)}"
 
-					code << "\n\n\t\t\t// write your code here\n"
+					code << "\n\n\t\t// write your code here\n"
 
-					code << "\t\t\t// store your results in #{var_output_comment}\n"
+					code << "\t\t// store your results in #{var_output_comment}\n"
 
 					@comments['middle'].split("\n").each do |comment|
-						code << "\t\t\t// #{comment}\n"
+						code << "\t\t// #{comment}\n"
 					end
 
-					code << "\n\t\t\t// output\n"
+					code << "\n\t\t// output\n"
 
 					@comments['bottom'].split("\n").each do |comment|
-						code << "\t\t\t// #{comment}\n"
+						code << "\t\t// #{comment}\n"
 					end
 
+					code << "\t\t// Dummy Data\n"
+					code << "#{variables_define(var_output_list)}\n"
 					# print outputs
 
-					code << "\t\t\t#{output_lines(var_output_list)}\n"
+					code << "#{output_lines(var_output_list)}\n"
 
-					code << "\t}\t\n"
+					code << "\t\t}\t\n"
 
-					code << "\t}"
+					code << "\t}\n"
 
 					code << "}"
 
@@ -82,24 +84,26 @@ module Codeiya
 					vd = ''
 					(variable_set.group_by {|d| d['type']}).each do |d_t,d|
 						definition = "#{data_type[d_t]} "
-						list = []
-						d.each do |vr|
-							if vr['size1'].empty? && vr['size2'].empty?
-								if vr['value'].blank?
-									list.push vr['name'].to_s
+						vr = d.first
+						if vr['size1'].empty? && vr['size2'].empty?
+							list = []
+							d.each do |v|
+								if v['value'].blank?
+									list.push v['name'].to_s
 								else
-									list.push "#{vr['name'].to_s}=#{vr['value']}" if vr['type'].in? ['int', 'float', 'double']
-									list.push "#{vr['name'].to_s}=\'#{vr['value']}\'" if vr['type'].in? ['char', 'string']
+									list.push "#{v['name'].to_s}=#{v['value']}"
 								end
-							elsif vr['size2'].empty?
-								# list.push "#{vr['name'].to_s}[#{vr['size1']}]"
-							else
-								# list.push "#{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]"
 							end
+							vd << "#{definition}#{list.join(', ')};\n"
+						elsif vr['size2'].empty?
+							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}]" : " = new #{definition}[#{vr['size1_name']}] #{vr['value'].gsub('[','{').gsub(']','}')}"
+							vd = "#{definition}[] #{vr['name'].to_s}[#{vr['size1']}]#{assign};\n"
+						else
+							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}]" : "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}] #{vr['value'].gsub('[','{').gsub(']','}')}"
+							vd = "#{definition}[][] #{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]#{assign};\n"
 						end
-						vd << "#{definition}#{list.join(', ')};\n"
 					end
-					vd
+					"\t\t#{vd}"
 				end
 
 				def create_extra_variables_if_needed var_list 
@@ -147,7 +151,7 @@ module Codeiya
 						if var_list.size.eql? 1
 							line = "\t\t#{data_type_helper(var['type'])} #{var['name']} = #{parser(var['type'],'Console.ReadLine()')};\n"
 						else
-							line = "\t\tstring[] elements = (Console.ReadLine()).Split(\" \");\n"
+							line = "\t\tstring[] elements = (Console.ReadLine()).Split(\' \');\n"
 							var_list.each_with_index do |v,index|
 								line << "\t\t#{data_type_helper(v['type'])} #{v['name']} = #{parser(v['type'],"elements[#{index}]")};\n"
 							end
@@ -156,7 +160,7 @@ module Codeiya
 						tmp_var_name = "#{var['name']}_elements"
 						size_limit = var['size1_name'].blank? ? var['size1'] : var['size1_name']
 						line = "\t\t#{data_type_helper(var['type'])}[] #{var['name']} = new #{data_type_helper(var['type'])}[#{size_limit}];\n"
-						line << "\t\tstring[] #{tmp_var_name} = (Console.ReadLine()).Split(\" \");\n"
+						line << "\t\tstring[] #{tmp_var_name} = (Console.ReadLine()).Split(\' \');\n"
 						line << "\t\tfor(index=0;index<#{var['size1_name']};index++)\n"
 						line << "\t\t\t#{var['name']}[index] = #{parser(var['type'],tmp_var_name+'[index]')};\n"	
 					else
@@ -166,7 +170,7 @@ module Codeiya
 						line = "\t\t#{data_type_helper(var['type'])}[][] #{var['name']} = new #{data_type_helper(var['type'])}[#{size_limit}][#{}];\n"
 						line << "\t\tstring #{tmp_var_name} = \"\";\n"
 						line << "\t\tfor(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\t\t\t#{tmp_var_name} = (Console.ReadLine()).Split(\" \");\n"
+						line << "\t\t\t#{tmp_var_name} = (Console.ReadLine()).Split(\' \');\n"
 						line << "\t\t\tfor(jdx=0;jdx<#{var['size2_name']};jdx++){\n"
 						line << "\t\t\t\t#{var['name']}[idx][jdx] = #{parser(var['type'],tmp_var_name+'[jdx]')};\n"
 						line << "\t\t\t}\n"

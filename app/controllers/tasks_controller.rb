@@ -34,6 +34,7 @@ class TasksController < ApplicationController
 
 	def generate_code
 		codeiya = Codeiya::Base.new params['name'], params['comments'], params['variables'], params['languages'], params['namespace']
+		redirect_to :back
 	end
 
 	private 

@@ -2,20 +2,20 @@
 #include <stdio.h>
 int main() {
 	// input:
-	// n : number of devices that will fit into steve
-	// m : number of smartphones available for sale
-	// price_of_smartphones : list of price of n smartphones
-	int n, m, price_of_smartphones[100], result, index;
-	scanf("%d %d", &n, &m);
-	for(index = 0; index< n; index++) {
-		scanf("%d", &price_of_smartphones[index]);
+	// m : number of devices
+	// n : number of phones
+	// phones : smart phones
+	int m, n, phones[100], max=8, index;
+	scanf("%d %d", &m, &n);
+	for(index = 0; index< m; index++) {
+		scanf("%d", &phones[index]);
 	}
 
 
 	// write your code here
-	// store your results in `result`
+	// store your results in `max`
 
 	// output
-	printf("%d", result);
+	printf("%d", max);
 	return 0;
 }

@@ -3,25 +3,29 @@ using System;
 namespace Application {
 	class greedy_man {
 		public static void Main(string[] args) {
-			// input:
-			// n : number of devices that will fit into steve
-			// m : number of smartphones available for sale
-			// price_of_smartphones : list of price of n smartphones
-			int index;
-					string[] elements = (Console.ReadLine()).Split(" ");
-		int n = Convert.ToInt32(elements[0]);
-		int m = Convert.ToInt32(elements[1]);
-		int[] price_of_smartphones = new int[n];
-		string[] price_of_smartphones_elements = (Console.ReadLine()).Split(" ");
-		for(index=0;index<n;index++)
-			price_of_smartphones[index] = Convert.ToInt32(price_of_smartphones_elements[index]);
+		// input:
+		// m : number of devices
+		// n : number of phones
+		// phones : smart phones
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int m = Convert.ToInt32(elements[0]);
+		int n = Convert.ToInt32(elements[1]);
+		int[] phones = new int[m];
+		string[] phones_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<m;index++)
+			phones[index] = Convert.ToInt32(phones_elements[index]);
 
 
-			// write your code here
-			// store your results in `result`
+		// write your code here
+		// store your results in `max`
 
-			// output
-					Console.WriteLine(result);
+		// output
+		// Dummy Data
+		int max=8;
 
-	}	
-	}}
+		Console.WriteLine(max);
+
+		}	
+	}
+}

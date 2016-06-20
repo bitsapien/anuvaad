@@ -48,6 +48,11 @@ module Codeiya
 
 					code << "\n# output\n"
 
+
+					code << "\n# Dummy Data\n"
+
+					code << "#{create_data_assignments(var_output_list)}\n"
+
 					@comments['bottom'].split("\n").each do |comment|
 						code << "# #{comment}\n"
 					end
@@ -82,6 +87,24 @@ module Codeiya
 
 				end
 
+				def create_data_assignments list 
+					out = ""
+					list.each do |v|
+						out << "#{v['name']} = #{v['value']}\n"
+						# value = eval(v['value'])
+						# case value.class
+						# when Array
+						# 	out << "#{var['name']} = #{value}"
+						# when Float
+						# 	out << "#{var['name']} = #{value}"
+						# when Fixnum
+						# 	out << "#{var['name']} = #{value}"
+						# when String
+						# 	out << "#{var['name']} = #{value}"
+						# end
+					end
+					out
+				end
 				def create_files name, namespace
 					path = File.join('public', namespace, 'PYTHON')
 					unless File.directory? path
@@ -109,21 +132,21 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "#{var['name']} = #{parser(var['type'],'input()')}\n"
+							line = "#{var['name']} = #{parser(var['type'],'raw_input().strip()')}\n"
 						else
-							line = "elements = input().split(' ')\n"
+							line = "elements = raw_input().strip().split(' ')\n"
 							var_list.each_with_index do |v,index|
-								line << "#{v['name']} = #{parser(v['type'],"elements[#{index}]")};\n"
+								line << "#{v['name']} = #{parser(v['type'],"elements[#{index}]")}\n"
 							end
 						end
 					elsif var['size2'].empty?
 						tmp_var_name = "#{var['name']}_elements"
-						line = "#{tmp_var_name} = input().split(' ')\n"
+						line = "#{tmp_var_name} = raw_input().strip().split(' ')\n"
 						line << "#{var['name']} = (#{parser(var['type'],'e')} for e in #{tmp_var_name})\n"	
 					else
 						tmp_var_name = "#{var['name']}_elements"
 						line = "for _ in xrange(#{var['size1_name']}):\n"
-						line << "\t#{tmp_var_name} = input().split(' ')\n"
+						line << "\t#{tmp_var_name} = raw_input().strip().split(' ')\n"
 						line << "\t#{var['name']} = (#{parser(var['type'],'e')} for e in #{tmp_var_name})\n"	
 					end
 					line
@@ -160,7 +183,7 @@ module Codeiya
 							line = "print(#{var['name']})\n"
 						else
 							variables = var_list.map do |k| "str(#{k['name']})" end
-							line = "print(#{variables.join('+" "+')});\n"
+							line = "print(#{variables.join('+" "+')})\n"
 						end
 					elsif var['size2'].empty?
 						line = "print(\" \".join(str(e) for e in #{var['name']}))"

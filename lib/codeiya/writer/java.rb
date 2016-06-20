@@ -56,6 +56,10 @@ module Codeiya
 
 					code << "\n\t\t// output\n"
 
+					code << "\t\t// Dummy Data\n"
+
+					code << "\t\t#{variables_define(var_output_list)}\n"
+
 					@comments['bottom'].split("\n").each do |comment|
 						code << "\t\t// #{comment}\n"
 					end
@@ -84,22 +88,24 @@ module Codeiya
 					vd = ''
 					(variable_set.group_by {|d| d['type']}).each do |d_t,d|
 						definition = "#{data_type[d_t]} "
-						list = []
-						d.each do |vr|
-							if vr['size1'].empty? && vr['size2'].empty?
-								if vr['value'].blank?
-									list.push vr['name'].to_s
+						vr = d.first
+						if vr['size1'].empty? && vr['size2'].empty?
+							list = []
+							d.each do |v|
+								if v['value'].blank?
+									list.push v['name'].to_s
 								else
-									list.push "#{vr['name'].to_s}=#{vr['value']}" if vr['type'].in? ['int', 'float', 'double']
-									list.push "#{vr['name'].to_s}=\'#{vr['value']}\'" if vr['type'].in? ['char', 'string']
+									list.push "#{v['name'].to_s}=#{v['value']}"
 								end
-							elsif vr['size2'].empty?
-								# list.push "#{vr['name'].to_s}[#{vr['size1']}]"
-							else
-								# list.push "#{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]"
 							end
+							vd << "#{definition}#{list.join(', ')};\n"
+						elsif vr['size2'].empty?
+							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}]" : " = new #{definition}[] #{vr['value'].gsub('[','{').gsub(']','}')}"
+							vd = "#{vr['name'].to_s}[]#{assign};\n"
+						else
+							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}]" : "= new #{definition}[][] #{vr['value'].gsub('[','{').gsub(']','}')}"
+							vd = "#{definition}[][] #{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]#{assign};\n"
 						end
-						vd << "#{definition}#{list.join(', ')};\n"
 					end
 					vd
 				end

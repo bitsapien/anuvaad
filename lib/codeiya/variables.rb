@@ -8,18 +8,18 @@ module Codeiya
 			# c d
 			# ====
 			# <int>a,<int>b|<int>c,<int>d
-			#  <int>n[33{n}][33{m}](22)"jjfjf fjfj fjfj4 5j"
+			#  <int>n[33{n}][33{m}]"jjfjf fjfj fjfj4 5j"=[[1,2],[4,5]]
 			variables.split("|").each do |variable_string|
 				variable_string.split(',').each do |var|
-					variable = /<(\w+)>(\w+)\[?(\d*)\{?(\w*)\}?\]?\[?(\d*)\{?(\w*)\}?\]?\(?(\w*)\)?\"?([a-zA-Z0-9_ ]*)\"?/.match(var)
+					variable = /<(\w+)>(\w+)\[?(\d*)\{?(\w*)\}?\]?\[?(\d*)\{?(\w*)\}?\]?\"?([a-zA-Z0-9_ ]*)\"?\=?(.*)\)?/.match(var)
 					type = variable[1]
 					name = variable[2]
 					size_1 = variable[3]
 					size_1_name = variable[4]
 					size_2 = variable[5]
 					size_2_name = variable[6]
-					value = variable[7]
-					comment = variable[8]
+					comment = variable[7]
+					value = variable[8]
 					details = {}
 					details['name'] = name
 					details['type'] = type
@@ -29,9 +29,9 @@ module Codeiya
 					details['size2_name'] = size_2_name
 					details['x'] = x
 					details['y'] = y
-					details['value'] = value
+					details['value'] = value.to_s
 					details['comment'] = comment
-					details['set'] = 0
+					details['set'] = false
 	 				list.push details
 	 				y = y + 1
 				end

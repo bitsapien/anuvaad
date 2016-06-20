@@ -12,10 +12,7 @@ module Codeiya
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
 
-					puts '#'*90
-					puts @variables["extra"].inspect
 
-					puts '#'*90
 
 					var_extra_raw = create_extra_variables_if_needed(var_input_list+var_output_list)
 
@@ -38,13 +35,17 @@ module Codeiya
 
 					# take inputs
 
-					code << "#{variables_define(var_extra)}"
+					code << "#{variables_define(var_extra+var_output_list)}"
 
 					code << "#{input_lines(var_input_list)}"
 
 					code << "\n\n// write your code here\n"
 
 					code << "// store your results in #{var_output_comment}\n"
+
+					code << "\n// Dummy Data\n"
+
+					code << "#{create_data_assignments(var_output_list)}\n"
 
 					@comments['middle'].split("\n").each do |comment|
 						code << "// #{comment}\n"
@@ -69,6 +70,25 @@ module Codeiya
 					var_names = var_list.map do |v| v['name'] end
 					"var #{var_names.join(',')};\n" unless var_names.blank?
 
+				end
+
+				def create_data_assignments list 
+					out = ""
+					list.each do |v|
+						out << "#{v['name']} = #{v['value']};\n"
+						# value = eval(v['value'])
+						# case value.class
+						# when Array
+						# 	out << "#{var['name']} = #{value}"
+						# when Float
+						# 	out << "#{var['name']} = #{value}"
+						# when Fixnum
+						# 	out << "#{var['name']} = #{value}"
+						# when String
+						# 	out << "#{var['name']} = #{value}"
+						# end
+					end
+					out
 				end
 
 				def create_extra_variables_if_needed var_list 

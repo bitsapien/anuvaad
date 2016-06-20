@@ -100,17 +100,20 @@ module Codeiya
 						definition = "#{data_type[d_t]} "
 						list = []
 						d.each do |vr|
+							name =  (d_t.eql?('string') ? "#{vr['name']}[105]" : vr['name'])
 							if vr['size1'].empty? && vr['size2'].empty?
 								if vr['value'].blank?
-									list.push vr['name'].to_s
+									list.push name.to_s
 								else
-									list.push "#{vr['name'].to_s}=#{vr['value']}" if vr['type'].in? ['int', 'float', 'double']
-									list.push "#{vr['name'].to_s}=\'#{vr['value']}\'" if vr['type'].in? ['char', 'string']
+									list.push "#{name.to_s}=#{vr['value']}" if vr['type'].in? ['int', 'float', 'double']
+									list.push "#{name.to_s}=\'#{vr['value']}\'" if vr['type'].in? ['char', 'string']
 								end
 							elsif vr['size2'].empty?
-								list.push "#{vr['name'].to_s}[#{vr['size1']}]"
+								assign = vr['value'].blank? ? "" : "=#{vr['value'].gsub('[','{').gsub(']','}')}"
+								list.push "#{name.to_s}[#{vr['size1']}]#{assign}"
 							else
-								list.push "#{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]"
+								assign = vr['value'].blank? ? "" : "=#{vr['value'].gsub('[','{').gsub(']','}')}"
+								list.push "#{name.to_s}[#{vr['size1']}][#{vr['size2']}]#{assign}"
 							end
 						end
 						vd << "\t#{definition}#{list.join(', ')};\n"
