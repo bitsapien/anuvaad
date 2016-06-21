@@ -1,0 +1,127 @@
+// Name : A Bag
+using System;
+namespace Application {
+	class a_bag {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of toolkits
+		// volume : volume of each toolkit
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] volume = new int[n];
+		string[] volume_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			volume[index] = Convert.ToInt32(volume_elements[index]);
+
+
+		// write your code here
+		// store your results in `minimum_number_of_bags`
+
+		// output
+		// Dummy Data
+		int minimum_number_of_bags=4;
+
+		Console.WriteLine(minimum_number_of_bags);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Add and Remove
+using System;
+namespace Application {
+	class addand_remove {
+		public static void Main(string[] args) {
+		// input:
+		// n : the size of the array
+		// a : source of array
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=1;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Forty Seven
+using System;
+namespace Application {
+	class forty_seven {
+		public static void Main(string[] args) {
+		// input:
+		// a : string a
+		// b : string b
+				string a = Console.ReadLine();
+		string b = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=1;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Greedy Man
+using System;
+namespace Application {
+	class greedy_man {
+		public static void Main(string[] args) {
+		// input:
+		// m : number of devices
+		// n : number of phones
+		// phones : smart phones
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int m = Convert.ToInt32(elements[0]);
+		int n = Convert.ToInt32(elements[1]);
+		int[] phones = new int[m];
+		string[] phones_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<m;index++)
+			phones[index] = Convert.ToInt32(phones_elements[index]);
+
+
+		// write your code here
+		// store your results in `max`
+
+		// output
+		// Dummy Data
+		int max=8;
+
+		Console.WriteLine(max);
+
+		}	
+	}
+}
+
+
+
+

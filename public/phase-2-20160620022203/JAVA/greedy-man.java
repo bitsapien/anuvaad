@@ -5,28 +5,28 @@ import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// m : number of devices
-		// n : number of phones
-		// phones : smart phones
+		// n : the number of devices that will fit into
+		// m : e number of smartphones available for sale
+		// a : price of a smartphones
 		int index;
 		Scanner in = new Scanner(System.in);
 		String[] elements = (in.nextLine()).split(" ");
-		int m = Integer.parseInt(elements[0]);
-		int n = Integer.parseInt(elements[1]);
-		int[] phones = new int[m];
-		String[] phones_elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int[] a = new int[m];
+		String[] a_elements = (in.nextLine()).split(" ");
 		for(index=0;index<m;index++)
-			phones[index] = Integer.parseInt(phones_elements[index]);
+			a[index] = Integer.parseInt(a_elements[index]);
 
 
 		// write your code here
-		// store your results in `max`
+		// store your results in `maximum_sum_of_money`
 
 		// output
 		// Dummy Data
-		int max=8;
+		int maximum_sum_of_money=8;
 
-				System.out.println(max);
+				System.out.println(maximum_sum_of_money);
 
 	}
 }

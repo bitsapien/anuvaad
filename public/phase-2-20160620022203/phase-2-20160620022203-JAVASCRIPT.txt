@@ -1,0 +1,104 @@
+// Name : A Bag
+// input:
+// n : number of toolkits
+// volume : volume of each toolkit
+var index,minimum_number_of_bags;
+var n = parseInt(readline(), 10);
+var volume = [];
+var volume_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	volume.push(parseInt(volume_elements[index], 10));
+
+
+// write your code here
+// store your results in `minimum_number_of_bags`
+
+// Dummy Data
+minimum_number_of_bags = 4;
+
+
+// output
+print(minimum_number_of_bags);
+
+
+
+
+
+// Name : Add and Remove
+// input:
+// n : the size of the array
+// a : source of array
+var index,result;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 1;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Forty Seven
+// input:
+// a : string a
+// b : string b
+var result;
+var a = readline();
+var b = readline();
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 1;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Greedy Man
+// input:
+// m : number of devices
+// n : number of phones
+// phones : smart phones
+var index,max;
+var elements = readline().split(" ");
+var m = parseInt(elements[0], 10);
+var n = parseInt(elements[1], 10);
+var phones = [];
+var phones_elements = readline().split(' ');
+for(index=0;index<m;index++)
+	phones.push(parseInt(phones_elements[index], 10));
+
+
+// write your code here
+// store your results in `max`
+
+// Dummy Data
+max = 8;
+
+
+// output
+print(max);
+
+
+
+
+

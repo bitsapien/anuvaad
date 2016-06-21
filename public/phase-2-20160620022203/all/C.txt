@@ -1,0 +1,142 @@
+// Name : A Bag
+#include <stdio.h>
+int main() {
+	// input:
+	// n : number of toolkits
+	// volume : volume of each toolkit
+	int n, volume[10000], minimum_number_of_bags=4, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &volume[index]);
+	}
+
+
+	// write your code here
+	// store your results in `minimum_number_of_bags`
+
+	// output
+	printf("%d", minimum_number_of_bags);
+	return 0;
+}
+
+
+
+
+// Name : Add and Remove
+#include <stdio.h>
+int main() {
+	// input:
+	// n : the size of the array
+	// a : source of array
+	int n, a[10000], result=1, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &a[index]);
+	}
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Adventure Time
+#include <stdio.h>
+int main() {
+	// input:
+	// n : the distance to Jake's lake house
+	int n, minimum_number_of_hours=1;
+	scanf("%d", &n);
+
+
+	// write your code here
+	// store your results in `minimum_number_of_hours`
+
+	// output
+	printf("%d", minimum_number_of_hours);
+	return 0;
+}
+
+
+
+
+// Name : Alcohol Calculator
+#include <stdio.h>
+int main() {
+	// input:
+	// n1 :  alcohol percentage 1
+	// m1 : volume 1 in ml
+	// n2 :  alcohol percentage 2
+	// m2 : volume 2 in ml
+	int n1, n2;
+	float m1, m2;
+	char v[105]="30%";
+	scanf("%d %f", &n1, &m1);
+	scanf("%d %f", &n2, &m2);
+
+
+	// write your code here
+	// store your results in `v`
+
+	// output
+	printf("%s", v);
+	return 0;
+}
+
+
+
+
+// Name : Forty Seven
+#include <stdio.h>
+int main() {
+	// input:
+	// a : string a
+	// b : string b
+	char a[105], b[105];
+	int result=1;
+	scanf("%s", &a);
+	scanf("%s", &b);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Greedy Man
+#include <stdio.h>
+int main() {
+	// input:
+	// n : the number of devices that will fit into
+	// m : e number of smartphones available for sale
+	// a : price of a smartphones
+	int n, m, a[1000], maximum_sum_of_money=8, index;
+	scanf("%d %d", &n, &m);
+	for(index = 0; index< m; index++) {
+		scanf("%d", &a[index]);
+	}
+
+
+	// write your code here
+	// store your results in `maximum_sum_of_money`
+
+	// output
+	printf("%d", maximum_sum_of_money);
+	return 0;
+}
+
+
+
+

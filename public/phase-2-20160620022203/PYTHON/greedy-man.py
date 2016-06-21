@@ -1,22 +1,22 @@
 #!/usr/bin/python
 # Name : Greedy Man
 # input:
-# m : number of devices
-# n : number of phones
-# phones : smart phones
+# n : the number of devices that will fit into
+# m : e number of smartphones available for sale
+# a : price of a smartphones
 elements = raw_input().strip().split(' ')
-m = int(elements[0])
-n = int(elements[1])
-phones_elements = raw_input().strip().split(' ')
-phones = (int(e) for e in phones_elements)
+n = int(elements[0])
+m = int(elements[1])
+a_elements = raw_input().strip().split(' ')
+a = (int(e) for e in a_elements)
 
 
 # write your code here
-# store your results in `max`
+# store your results in `maximum_sum_of_money`
 
 # output
 
 # Dummy Data
-max = 8
+maximum_sum_of_money = 8
 
-print(max)
+print(maximum_sum_of_money)

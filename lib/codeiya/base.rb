@@ -26,6 +26,7 @@ module Codeiya
 			when 'java'
 				Codeiya::Writer::Java.write @packed_data
 			when 'c_plus_plus'
+				Codeiya::Writer::CPlusPlus.write @packed_data
 			when 'c_sharp'
 				Codeiya::Writer::CSharp.write @packed_data
 			when 'javascript'

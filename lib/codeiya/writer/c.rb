@@ -105,8 +105,7 @@ module Codeiya
 								if vr['value'].blank?
 									list.push name.to_s
 								else
-									list.push "#{name.to_s}=#{vr['value']}" if vr['type'].in? ['int', 'float', 'double']
-									list.push "#{name.to_s}=\'#{vr['value']}\'" if vr['type'].in? ['char', 'string']
+									list.push "#{name.to_s}=#{vr['value']}"
 								end
 							elsif vr['size2'].empty?
 								assign = vr['value'].blank? ? "" : "=#{vr['value'].gsub('[','{').gsub(']','}')}"

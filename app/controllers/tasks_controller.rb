@@ -1,7 +1,9 @@
 require 'yaml'
 require 'json'
 require 'fileutils'
+require 'zip'
 require 'codeiya/all'
+
 
 class TasksController < ApplicationController
 	def index
@@ -37,6 +39,12 @@ class TasksController < ApplicationController
 		redirect_to :back
 	end
 
+	def pack
+		namespace = params['namespace']
+		pack_files namespace
+		redirect_to :back
+	end
+
 	private 
 		def get_list_with_details
 			tasks = Dir.entries('public').select {|entry| File.directory? File.join('public',entry) and !(entry =='.' || entry == '..') }
@@ -51,6 +59,7 @@ class TasksController < ApplicationController
 			time = Time.now.utc
 			namespace = params["task_name"].downcase.parameterize+'-'+time.to_s.parameterize.gsub('-','').gsub('utc','')
 			Dir.mkdir(Rails.public_path.join(namespace))
+			Dir.mkdir(Rails.public_path.join(namespace,'all'))
 			[namespace, time]		
 		end
 
@@ -64,6 +73,33 @@ class TasksController < ApplicationController
 			File.open(Rails.public_path.join(namespace, 'tracker.yml'), 'wb') do |file|
 				file.write(tracker.to_yaml)
 			end	
+		end
+
+		def pack_files namespace
+			dirs = Dir["public/#{namespace}/*"].map do |e| e if File.directory?(e) end.compact
+			dirs.each do |d|
+				the_file = "public/#{namespace}/all/#{File.basename(d)}.txt"
+				file_contents = ""
+				Dir["#{d}/*"].each do |f|
+					file_contents << File.read(f)+"\n\n\n\n\n"
+				end
+				File.open(the_file, 'wb') { |file| file.write(file_contents) }
+			end
+			zip_them namespace
+		end
+
+		def zip_them namespace
+			input_filenames = Dir["public/#{namespace}/all/*.txt"]
+			zipfile_name = "public/#{namespace}/#{namespace}-all.zip"
+			Zip::File.open(zipfile_name, Zip::File::CREATE) do |zipfile|
+	  			input_filenames.each do |filename|
+	    			# Two arguments:
+	    			# - The name of the file as it will appear in the archive
+	    			# - The original file, including the path to find it
+	    			zipfile.add(filename, filename)
+	  			end
+	  			zipfile.get_output_stream("myFile") { |os| os.write "zipping done" }
+  			end
 		end
 
 

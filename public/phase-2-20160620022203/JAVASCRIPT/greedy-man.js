@@ -1,24 +1,24 @@
 // Name : Greedy Man
 // input:
-// m : number of devices
-// n : number of phones
-// phones : smart phones
-var index,max;
+// n : the number of devices that will fit into
+// m : e number of smartphones available for sale
+// a : price of a smartphones
+var index,maximum_sum_of_money;
 var elements = readline().split(" ");
-var m = parseInt(elements[0], 10);
-var n = parseInt(elements[1], 10);
-var phones = [];
-var phones_elements = readline().split(' ');
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
 for(index=0;index<m;index++)
-	phones.push(parseInt(phones_elements[index], 10));
+	a.push(parseInt(a_elements[index], 10));
 
 
 // write your code here
-// store your results in `max`
+// store your results in `maximum_sum_of_money`
 
 // Dummy Data
-max = 8;
+maximum_sum_of_money = 8;
 
 
 // output
-print(max);
+print(maximum_sum_of_money);

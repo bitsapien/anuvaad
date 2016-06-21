@@ -1,0 +1,154 @@
+// Name : A Bag
+// input:
+// n : number of toolkits
+// volume : volume of each toolkit
+var index,minimum_number_of_bags;
+var n = parseInt(readline(), 10);
+var volume = [];
+var volume_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	volume.push(parseInt(volume_elements[index], 10));
+
+
+// write your code here
+// store your results in `minimum_number_of_bags`
+
+// Dummy Data
+minimum_number_of_bags = 4;
+
+
+// output
+print(minimum_number_of_bags);
+
+
+
+
+
+// Name : Add and Remove
+// input:
+// n : the size of the array
+// a : source of array
+var index,result;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 1;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Adventure Time
+// input:
+// n : the distance to Jake's lake house
+var minimum_number_of_hours;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `minimum_number_of_hours`
+
+// Dummy Data
+minimum_number_of_hours = 1;
+
+
+// output
+print(minimum_number_of_hours);
+
+
+
+
+
+// Name : Alcohol Calculator
+// input:
+// n1 :  alcohol percentage 1
+// m1 : volume 1 in ml
+// n2 :  alcohol percentage 2
+// m2 : volume 2 in ml
+var v;
+var elements = readline().split(" ");
+var n1 = parseInt(elements[0], 10);
+var m1 = parseFloat(elements[1], 10);
+var elements = readline().split(" ");
+var n2 = parseInt(elements[0], 10);
+var m2 = parseFloat(elements[1], 10);
+
+
+// write your code here
+// store your results in `v`
+
+// Dummy Data
+v = "30%";
+
+
+// output
+print(v);
+
+
+
+
+
+// Name : Forty Seven
+// input:
+// a : string a
+// b : string b
+var result;
+var a = readline();
+var b = readline();
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 1;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Greedy Man
+// input:
+// n : the number of devices that will fit into
+// m : e number of smartphones available for sale
+// a : price of a smartphones
+var index,maximum_sum_of_money;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<m;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `maximum_sum_of_money`
+
+// Dummy Data
+maximum_sum_of_money = 8;
+
+
+// output
+print(maximum_sum_of_money);
+
+
+
+
+
