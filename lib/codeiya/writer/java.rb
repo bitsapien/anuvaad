@@ -13,8 +13,6 @@ module Codeiya
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
 
-					puts var_input_list.inspect
-					puts var_output_list.inspect
 
 					var_extra_raw = create_extra_variables_if_needed(var_input_list+var_output_list)
 
@@ -43,7 +41,7 @@ module Codeiya
 
 					# take inputs
 
-					code << "\t\t#{variables_define(var_extra)}"
+					code << "#{variables_define(var_extra)}"
 
 					code << "#{input_lines(var_input_list)}"
 
@@ -59,7 +57,7 @@ module Codeiya
 
 					code << "\t\t// Dummy Data\n"
 
-					code << "\t\t#{variables_define(var_output_list)}\n"
+					code << "#{variables_define(var_output_list)}\n"
 
 					@comments['bottom'].split("\n").each do |comment|
 						code << "\t\t// #{comment}\n"
@@ -97,25 +95,20 @@ module Codeiya
 						'double' => 'double'
 					}
 					vd = ''
-					(variable_set.group_by {|d| d['type']}).each do |d_t,d|
-						definition = "#{data_type[d_t]} "
-						vr = d.first
+					variable_set.each do |vr|
+						definition = "#{data_type[vr['type']]}"
 						if vr['size1'].empty? && vr['size2'].empty?
-							list = []
-							d.each do |v|
-								if v['value'].blank?
-									list.push v['name'].to_s
-								else
-									list.push "#{v['name'].to_s}=#{v['value']}"
-								end
+							if vr['value'].blank?
+								vd << "\t\t#{definition} #{vr['name'].to_s};\n"
+							else
+								vd << "\t\t#{definition} #{vr['name'].to_s}=#{vr['value']};\n"
 							end
-							vd << "#{definition}#{list.join(', ')};\n"
 						elsif vr['size2'].empty?
 							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}]" : " = new #{definition}[] #{vr['value'].gsub('[','{').gsub(']','}')}"
-							vd = "#{definition}#{vr['name'].to_s}[]#{assign};\n"
+							vd << "\t\t#{definition}#{vr['name'].to_s}[]#{assign};\n"
 						else
 							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}]" : "= new #{definition}[][] #{vr['value'].gsub('[','{').gsub(']','}')}"
-							vd = "#{definition}[][] #{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]#{assign};\n"
+							vd << "\t\t#{definition}[][] #{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]#{assign};\n"
 						end
 					end
 					vd

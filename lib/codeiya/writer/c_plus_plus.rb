@@ -12,15 +12,11 @@ module Codeiya
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
 
-					puts var_input_list.inspect
-					puts var_output_list.inspect
 
 					var_extra_raw = create_extra_variables_if_needed(var_input_list+var_output_list)
 
 					var_extra = Codeiya::Variables.aggregate var_extra_raw
 
-					puts '*'*90
-					puts var_extra.inspect
 
 					var_input_comment = Codeiya::Variables.input_comments(var_input_list)
 					var_output_comment = Codeiya::Variables.output_comments(var_output_list)
@@ -89,22 +85,24 @@ module Codeiya
 					vd = ''
 					(variable_set.group_by {|d| d['type']}).each do |d_t,d|
 						definition = "#{data_type[d_t]} "
-						vr = d.first
-						if vr['size1'].empty? && vr['size2'].empty?
-							list = []
-							d.each do |v|
-								if v['value'].blank?
-									list.push v['name'].to_s
+						list = []
+						d.each do |vr|
+							name =  vr['name']
+							if vr['size1'].empty? && vr['size2'].empty?
+								if vr['value'].blank?
+									list.push name.to_s
 								else
-									list.push "#{v['name'].to_s}=#{v['value']}"
+									list.push "#{name.to_s}=#{vr['value']}"
 								end
+							elsif vr['size2'].empty?
+								assign = vr['value'].blank? ? "" : "=#{vr['value'].gsub('[','{').gsub(']','}')}"
+								list.push "#{name.to_s}[#{vr['size1']}]#{assign}"
+							else
+								assign = vr['value'].blank? ? "" : "=#{vr['value'].gsub('[','{').gsub(']','}')}"
+								list.push "#{name.to_s}[#{vr['size1']}][#{vr['size2']}]#{assign}"
 							end
-							vd << "#{definition}#{list.join(', ')};\n"
-						elsif vr['size2'].empty?
-							vd = vr['value'].blank? ? "#{definition} #{vr['name']}[#{vr['size1_name']}];\n" : "#{definition} #{vr['name']}[] = #{vr['value'].gsub('[','{').gsub(']','}')};\n"
-						else
-							vd = vr['value'].blank? ? "#{definition} #{vr['name']}[#{vr['size1_name']}][#{vr['size2_name']}];\n" : "#{definition} #{vr['name']}[][] = #{vr['value'].gsub('[','{').gsub(']','}')};\n"
 						end
+						vd << "\t#{definition}#{list.join(', ')};\n"
 					end
 					vd
 				end
@@ -200,10 +198,10 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "cout << #{var['name']};\n"
+							line = "cout << #{var['name']} << endl;\n"
 						else
 							variables = var_list.map do |k| k['name'] end
-							line = "cout << #{variables.join(' << ')};\n"
+							line = "cout << #{variables.join(' << ')} << endl;\n"
 						end
 					elsif var['size2'].empty?
 						line = "for(index=0;index<#{var['size1_name']};index++)\n"

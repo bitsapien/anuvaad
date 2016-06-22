@@ -157,7 +157,7 @@ module Codeiya
 						line << "\tfor(jdx=0;jdx<#{var['size2_name']};jdx++){\n"
 						line << "\t\t#{var['name']}[idx][jdx] = #{parser(var['type'], tmp_var_name+"[jdx]")};\n"
 						line << "\t}\n"
-						line << "}"
+						line << "}\n"
 					end
 					line
 				end
@@ -196,11 +196,11 @@ module Codeiya
 							line = "print(#{variables.join('+" "+')});\n"
 						end
 					elsif var['size2'].empty?
-						line = "print(#{var['name']}.join(\" \"))"
+						line = "print(#{var['name']}.join(\" \"))\n"
 					else
 						line = "for(idx=0;idx<#{var['size1_name']};idx++){\n"
 						line << "\tprint(#{var['name']}[idx].join(' '));\n"
-						line << "}"
+						line << "}\n"
 					end
 					line
 				end

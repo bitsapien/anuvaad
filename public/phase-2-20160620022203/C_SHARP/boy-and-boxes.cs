@@ -22,7 +22,7 @@ namespace Application {
 
 		// output
 		// Dummy Data
-		int[] result = new int[n] {3,2,5,4};
+		int[] result = new int[] {3,2,5,4};
 
 		Console.WriteLine(string.Join(" ", result));
 		}	
