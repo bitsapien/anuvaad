@@ -2,20 +2,20 @@
 #include <stdio.h>
 int main() {
 	// input:
-	// n : the number of devices that will fit into
-	// m : e number of smartphones available for sale
-	// a : price of a smartphones
-	int n, m, a[1000], maximum_sum_of_money=8, index;
+	// n :  the number of devices that will fit into
+	// m :  the number of smartphones available for sale
+	// a : 
+	int n, m, a[1000], result=8, index;
 	scanf("%d %d", &n, &m);
-	for(index = 0; index< m; index++) {
+	for(index = 0; index< n; index++) {
 		scanf("%d", &a[index]);
 	}
 
 
 	// write your code here
-	// store your results in `maximum_sum_of_money`
+	// store your results in `result`
 
 	// output
-	printf("%d", maximum_sum_of_money);
+	printf("%d", result);
 	return 0;
 }

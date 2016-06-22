@@ -5,8 +5,8 @@ import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// n : the size of the array
-		// a : source of array
+		// n : size of array
+		// a : source array
 		int index;
 		Scanner in = new Scanner(System.in);
 		int n = Integer.parseInt(in.nextLine());
@@ -17,13 +17,13 @@ class Main {
 
 
 		// write your code here
-		// store your results in `result`
+		// store your results in `maximum_number_of_equal_elements`
 
 		// output
 		// Dummy Data
-		int result=1;
+		int maximum_number_of_equal_elements=1;
 
-				System.out.println(result);
+		System.out.println(maximum_number_of_equal_elements);
 
 	}
 }

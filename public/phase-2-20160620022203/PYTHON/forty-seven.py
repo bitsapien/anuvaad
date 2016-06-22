@@ -8,11 +8,11 @@ b = raw_input().strip()
 
 
 # write your code here
-# store your results in `result`
+# store your results in `minimum_number_of_operations`
 
 # output
 
 # Dummy Data
-result = 1
+minimum_number_of_operations = 1
 
-print(result)
+print(minimum_number_of_operations)

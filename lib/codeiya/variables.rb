@@ -10,8 +10,8 @@ module Codeiya
 			# <int>a,<int>b|<int>c,<int>d
 			#  <int>n[33{n}][33{m}]"jjfjf fjfj fjfj4 5j"=[[1,2],[4,5]]
 			variables.split("|").each do |variable_string|
-				variable_string.split(',').each do |var|
-					variable = /<(\w+)>(\w+)\[?(\d*)\{?(\w*)\}?\]?\[?(\d*)\{?(\w*)\}?\]?\"?([a-zA-Z0-9_' ]*)\"?\=?(.*)\)?/.match(var)
+				variable_string.split('^').each do |var|
+					variable = /<(\w+)>(\w+)\[?(\d*)\{?(\w*)\}?\]?\[?(\d*)\{?(\w*)\}?\]?\"?([a-zA-Z0-9_'’ ]*)\"?\=?(.*)\)?/.match(var)
 					type = variable[1]
 					name = variable[2]
 					size_1 = variable[3]
@@ -20,6 +20,8 @@ module Codeiya
 					size_2_name = variable[6]
 					comment = variable[7]
 					value = variable[8]
+					raise "Type cannot be blank" if type.blank?
+					raise "Name cannot be blank" if name.blank?
 					details = {}
 					details['name'] = name
 					details['type'] = type

@@ -76,6 +76,12 @@ class TasksController < ApplicationController
 		end
 
 		def pack_files namespace
+			# remove old
+			FileUtils.rm_rf("public/#{namespace}/#{namespace}-all")
+			FileUtils.rm_rf("public/#{namespace}/all")
+			FileUtils.rm_rf("public/#{namespace}/zip")
+			FileUtils.mkdir("public/#{namespace}/all")
+			FileUtils.mkdir("public/#{namespace}/zip")
 			dirs = Dir["public/#{namespace}/*"].map do |e| e if File.directory?(e) end.compact
 			dirs.each do |d|
 				the_file = "public/#{namespace}/all/#{File.basename(d)}.txt"
@@ -85,7 +91,7 @@ class TasksController < ApplicationController
 				end
 				File.open(the_file, 'wb') { |file| file.write(file_contents) }
 			end
-			zip_them namespace
+			# zip_them namespace
 		end
 
 		def zip_them namespace

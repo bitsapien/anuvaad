@@ -2,17 +2,17 @@
 // input:
 // a : string a
 // b : string b
-var result;
+var minimum_number_of_operations;
 var a = readline();
 var b = readline();
 
 
 // write your code here
-// store your results in `result`
+// store your results in `minimum_number_of_operations`
 
 // Dummy Data
-result = 1;
+minimum_number_of_operations = 1;
 
 
 // output
-print(result);
+print(minimum_number_of_operations);

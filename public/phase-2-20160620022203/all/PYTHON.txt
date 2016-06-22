@@ -1,11 +1,34 @@
 #!/usr/bin/python
+# Name : A and B
+# input:
+# n : length of the string
+# given_string : given string
+n = int(raw_input().strip())
+given_string = raw_input().strip()
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 0
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
 # Name : A Bag
 # input:
 # n : number of toolkits
-# volume : volume of each toolkit
+# volume_of_each_toolkit : volume of each toolkit
 n = int(raw_input().strip())
-volume_elements = raw_input().strip().split(' ')
-volume = (int(e) for e in volume_elements)
+volume_of_each_toolkit_elements = raw_input().strip().split(' ')
+volume_of_each_toolkit = (int(e) for e in volume_of_each_toolkit_elements)
 
 
 # write your code here
@@ -25,11 +48,37 @@ print(minimum_number_of_bags)
 #!/usr/bin/python
 # Name : Add and Remove
 # input:
-# n : the size of the array
-# a : source of array
+# n : size of array
+# a : source array
 n = int(raw_input().strip())
 a_elements = raw_input().strip().split(' ')
 a = (int(e) for e in a_elements)
+
+
+# write your code here
+# store your results in `maximum_number_of_equal_elements`
+
+# output
+
+# Dummy Data
+maximum_number_of_equal_elements = 1
+
+print(maximum_number_of_equal_elements)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Adventure Breakfast
+# input:
+# n : size of bread cm
+# m : size of bread cm
+# c : size of slice cxc cms
+elements = raw_input().strip().split(' ')
+n = int(elements[0])
+m = int(elements[1])
+c = int(elements[2])
 
 
 # write your code here
@@ -38,7 +87,7 @@ a = (int(e) for e in a_elements)
 # output
 
 # Dummy Data
-result = 1
+result = 4
 
 print(result)
 
@@ -70,10 +119,10 @@ print(minimum_number_of_hours)
 #!/usr/bin/python
 # Name : Alcohol Calculator
 # input:
-# n1 :  alcohol percentage 1
-# m1 : volume 1 in ml
-# n2 :  alcohol percentage 2
-# m2 : volume 2 in ml
+# n1 : alcohol percentage
+# m1 : volume in ml
+# n2 : alcohol percentage
+# m2 : volume in ml
 elements = raw_input().strip().split(' ')
 n1 = int(elements[0])
 m1 = float(elements[1])
@@ -97,6 +146,420 @@ print(v)
 
 
 #!/usr/bin/python
+# Name : All as One
+# input:
+# n : size of array
+# a : array of integers
+n = int(raw_input().strip())
+a_elements = raw_input().strip().split(' ')
+a = (int(e) for e in a_elements)
+
+
+# write your code here
+# store your results in `min_amt_of_changes`
+
+# output
+
+# Dummy Data
+min_amt_of_changes = 5
+
+print(min_amt_of_changes)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Anniversary
+# input:
+# k :  customer received a free bottle of milk
+# l :  a kilogram of bacon
+# m :  one 10 dollar coupon
+# n : 99 percent discount for everything they bought
+# d :  number of customers that day
+k = int(raw_input().strip())
+l = int(raw_input().strip())
+m = int(raw_input().strip())
+n = int(raw_input().strip())
+d = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 12
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Apples
+# input:
+# n :  the amount of apples
+# w :  the weight of each apple
+n = int(raw_input().strip())
+w_elements = raw_input().strip().split(' ')
+w = (int(e) for e in w_elements)
+
+
+# write your code here
+# store your results in `possibility`
+
+# output
+
+# Dummy Data
+possibility = "YES"
+
+print(possibility)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Arny’s Workout
+# input:
+# n :  the number of exercises
+# a :  the number of repeats for the exercises
+n = int(raw_input().strip())
+a_elements = raw_input().strip().split(' ')
+a = (int(e) for e in a_elements)
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = "chest"
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Artbook
+# input:
+# s : string of English characters
+s = raw_input().strip()
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 51
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Bacteria
+# input:
+# x : number of bacteria in the box
+x = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `answer`
+
+# output
+
+# Dummy Data
+answer = 2
+
+print(answer)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Bags with Apples
+# input:
+# y : second bag with y number of apples
+# k : divisible by k
+# n : no more than n
+elements = raw_input().strip().split(' ')
+y = int(elements[0])
+k = int(elements[1])
+n = int(elements[2])
+
+
+# write your code here
+# store your results in `x`
+
+# output
+
+# Dummy Data
+x = -1
+
+print(x)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Beautiful Photo
+# input:
+# photo : girls and boys
+photo = raw_input().strip()
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = "YES"
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Best Friends
+# input:
+# n : the number of Dima's friends
+# fingers :  the number of fingers Dima's friends will show during the counting game
+n = int(raw_input().strip())
+fingers_elements = raw_input().strip().split(' ')
+fingers = (int(e) for e in fingers_elements)
+
+
+# write your code here
+# store your results in `answer`
+
+# output
+
+# Dummy Data
+answer = 3
+
+print(answer)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Big Bang Pepsi
+# input:
+# n : nth Pepsi
+n = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `name`
+
+# output
+
+# Dummy Data
+name = "Sheldon"
+
+print(name)
+
+
+
+
+
+#!/usr/bin/python
+# Name : BinSequence
+# input:
+# n : length
+n = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `sequence`
+
+# output
+
+# Dummy Data
+sequence = [0,1]
+
+print(" ".join(str(e) for e in sequence))
+
+
+
+
+#!/usr/bin/python
+# Name : Bookshelf
+# input:
+# n : number of books
+# m : number of books remaining in the first shelf
+elements = raw_input().strip().split(' ')
+n = int(elements[0])
+m = int(elements[1])
+
+
+# write your code here
+# store your results in `number_of_methods`
+
+# output
+
+# Dummy Data
+number_of_methods = 4
+
+print(number_of_methods)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Box of Candies
+# input:
+# n :  the number of boxes with candies James and Jessica have
+# a :  the number of candies in the every bag
+n = int(raw_input().strip())
+a_elements = raw_input().strip().split(' ')
+a = (int(e) for e in a_elements)
+
+
+# write your code here
+# store your results in `sought_number_of_ways`
+
+# output
+
+# Dummy Data
+sought_number_of_ways = 1
+
+print(sought_number_of_ways)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Broogman
+# input:
+# inp : method of saving
+inp = raw_input().strip()
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 52
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Capitalizer
+# input:
+# str : input string
+str = raw_input().strip()
+
+
+# write your code here
+# store your results in `output_str`
+
+# output
+
+# Dummy Data
+output_str = "Samsung"
+
+print(output_str)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Cat and Pillows
+# input:
+# n :  the number of pillows
+n = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = "YES"
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Cat Food
+# input:
+# n :  the number of cats sitting in a circle
+# m :  the number
+elements = raw_input().strip().split(' ')
+n = int(elements[0])
+m = int(elements[1])
+
+
+# write your code here
+# store your results in `number_of_fish_the_dog_will_get`
+
+# output
+
+# Dummy Data
+number_of_fish_the_dog_will_get = 0
+
+print(number_of_fish_the_dog_will_get)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Concealing Handwriting
+# input:
+# s : A string that the spy needs to send in a letter
+# t : A string that is printed in the news article
+s = raw_input().strip()
+t = raw_input().strip()
+
+
+# write your code here
+# store your results in `right_case`,`wrong_case`
+
+# output
+
+# Dummy Data
+right_case = 5
+wrong_case = 1
+
+print(str(right_case)+" "+str(wrong_case))
+
+
+
+
+
+#!/usr/bin/python
 # Name : Forty Seven
 # input:
 # a : string a
@@ -106,14 +569,14 @@ b = raw_input().strip()
 
 
 # write your code here
-# store your results in `result`
+# store your results in `minimum_number_of_operations`
 
 # output
 
 # Dummy Data
-result = 1
+minimum_number_of_operations = 1
 
-print(result)
+print(minimum_number_of_operations)
 
 
 
@@ -122,9 +585,9 @@ print(result)
 #!/usr/bin/python
 # Name : Greedy Man
 # input:
-# n : the number of devices that will fit into
-# m : e number of smartphones available for sale
-# a : price of a smartphones
+# n :  the number of devices that will fit into
+# m :  the number of smartphones available for sale
+# a : 
 elements = raw_input().strip().split(' ')
 n = int(elements[0])
 m = int(elements[1])
@@ -133,14 +596,268 @@ a = (int(e) for e in a_elements)
 
 
 # write your code here
-# store your results in `maximum_sum_of_money`
+# store your results in `result`
 
 # output
 
 # Dummy Data
-maximum_sum_of_money = 8
+result = 8
 
-print(maximum_sum_of_money)
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Max Even Sum 
+# input:
+# n : number of integers
+# given_integers : given integers
+n = int(raw_input().strip())
+given_integers_elements = raw_input().strip().split(' ')
+given_integers = (int(e) for e in given_integers_elements)
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 6
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Nearly Prime
+# input:
+# n : range from 1 to n
+n = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 2
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Quiz
+# input:
+# n : number of consecutive questions
+# m : number of questions to which right answer was given
+# k : count threshold
+elements = raw_input().strip().split(' ')
+n = int(elements[0])
+m = int(elements[1])
+k = int(elements[2])
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 3
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Ronaldo’s Bricks
+# input:
+# n :  the number of bricks
+n = int(raw_input().strip())
+
+
+# write your code here
+# store your results in `pyramid_height`
+
+# output
+
+# Dummy Data
+pyramid_height = 1
+
+print(pyramid_height)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Sailor and Beer
+# input:
+# k :  the cost of the first bottle
+# p :  the
+# n :  number of bottles he wants to buy
+elements = raw_input().strip().split(' ')
+k = int(elements[0])
+p = int(elements[1])
+n = int(elements[2])
+
+
+# write your code here
+# store your results in `money_to_borrow`
+
+# output
+
+# Dummy Data
+money_to_borrow = 13
+
+print(money_to_borrow)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Trains
+# input:
+# n : number of cities
+# m : number of  roads connecting the cities
+# k : number of railways
+# uvx : uvx corresponds to ui vi xi
+# sy : uvx corresponds to si yi
+elements = raw_input().strip().split(' ')
+n = int(elements[0])
+m = int(elements[1])
+k = int(elements[2])
+for _ in xrange(m):
+	uvx_elements = raw_input().strip().split(' ')
+	uvx = (int(e) for e in uvx_elements)
+for _ in xrange(k):
+	sy_elements = raw_input().strip().split(' ')
+	sy = (int(e) for e in sy_elements)
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = 2
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Vowels and Consonants
+# input:
+# given_string : given string
+given_string = raw_input().strip()
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = ".s.d.f.g.h.j.k.l"
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Walter Junior
+# input:
+# a :  number of blue substances that Walter has
+# b :  number of purple substances that Walter has
+# c :  number of orange substances that Walter has
+# x :  number of blue substances that Walter needs to get
+# y :  number of purple substances that Walter needs to get
+# z :  number of orange substances that Walter needs to get
+elements = raw_input().strip().split(' ')
+a = int(elements[0])
+b = int(elements[1])
+c = int(elements[2])
+elements = raw_input().strip().split(' ')
+x = int(elements[0])
+y = int(elements[1])
+z = int(elements[2])
+
+
+# write your code here
+# store your results in `result`
+
+# output
+
+# Dummy Data
+result = "YES"
+
+print(result)
+
+
+
+
+
+#!/usr/bin/python
+# Name : Weight of Number
+# input:
+# l : boundary start
+# r : boundary end
+elements = raw_input().strip().split(' ')
+l = int(elements[0])
+r = int(elements[1])
+
+
+# write your code here
+# store your results in `maximum_weight`
+
+# output
+
+# Dummy Data
+maximum_weight = 20
+
+print(maximum_weight)
+
+
+
+
+
+#!/usr/bin/python
+# Name : XOR sum
+# input:
+# n :  the number of elements in the array
+# a :  integers from the array
+n = int(raw_input().strip())
+a_elements = raw_input().strip().split(' ')
+a = (int(e) for e in a_elements)
+
+
+# write your code here
+# store your results in `xor_sum`
+
+# output
+
+# Dummy Data
+xor_sum = 3
+
+print(xor_sum)
 
 
 

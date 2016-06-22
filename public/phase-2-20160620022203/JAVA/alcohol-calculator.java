@@ -5,10 +5,10 @@ import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// n1 :  alcohol percentage 1
-		// m1 : volume 1 in ml
-		// n2 :  alcohol percentage 2
-		// m2 : volume 2 in ml
+		// n1 : alcohol percentage
+		// m1 : volume in ml
+		// n2 : alcohol percentage
+		// m2 : volume in ml
 				Scanner in = new Scanner(System.in);
 		String[] elements = (in.nextLine()).split(" ");
 		int n1 = Integer.parseInt(elements[0]);
@@ -25,7 +25,7 @@ class Main {
 		// Dummy Data
 		String v="30%";
 
-				System.out.println(v);
+		System.out.println(v);
 
 	}
 }

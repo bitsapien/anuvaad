@@ -1,9 +1,9 @@
 // Name : Alcohol Calculator
 // input:
-// n1 :  alcohol percentage 1
-// m1 : volume 1 in ml
-// n2 :  alcohol percentage 2
-// m2 : volume 2 in ml
+// n1 : alcohol percentage
+// m1 : volume in ml
+// n2 : alcohol percentage
+// m2 : volume in ml
 var v;
 var elements = readline().split(" ");
 var n1 = parseInt(elements[0], 10);

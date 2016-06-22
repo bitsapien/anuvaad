@@ -2,10 +2,10 @@
 # Name : A Bag
 # input:
 # n : number of toolkits
-# volume : volume of each toolkit
+# volume_of_each_toolkit : volume of each toolkit
 n = int(raw_input().strip())
-volume_elements = raw_input().strip().split(' ')
-volume = (int(e) for e in volume_elements)
+volume_of_each_toolkit_elements = raw_input().strip().split(' ')
+volume_of_each_toolkit = (int(e) for e in volume_of_each_toolkit_elements)
 
 
 # write your code here

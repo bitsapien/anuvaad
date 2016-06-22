@@ -5,13 +5,13 @@ namespace Application {
 		public static void Main(string[] args) {
 		// input:
 		// n : number of toolkits
-		// volume : volume of each toolkit
+		// volume_of_each_toolkit : volume of each toolkit
 		int index;
 		int n = Convert.ToInt32(Console.ReadLine());
-		int[] volume = new int[n];
-		string[] volume_elements = (Console.ReadLine()).Split(' ');
+		int[] volume_of_each_toolkit = new int[n];
+		string[] volume_of_each_toolkit_elements = (Console.ReadLine()).Split(' ');
 		for(index=0;index<n;index++)
-			volume[index] = Convert.ToInt32(volume_elements[index]);
+			volume_of_each_toolkit[index] = Convert.ToInt32(volume_of_each_toolkit_elements[index]);
 
 
 		// write your code here

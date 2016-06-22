@@ -68,11 +68,11 @@ module Codeiya
 						else
 							extra.push '<int>idx'
 							extra.push '<int>jdx'
-							extra.push "<char>tmp[#{var['size2'].to_s}]"
+							extra.push "<char>#{var['name']}_tmp[#{var['size2'].to_s}]"
 						end
 					end
 					tmp_extra = @variables['extra'].split('|')
-					(extra+tmp_extra).join('|')
+					(extra+tmp_extra).uniq.join('|')
 
 				end
 
@@ -156,9 +156,9 @@ module Codeiya
 						else
 							input_code = ''
 							input_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {\n"
-							input_code << "\t\tscanf(\"%s\", &tmp[0]);\n"
+							input_code << "\t\tscanf(\"%s\", &#{one['name']}_tmp[0]);\n"
 							input_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {\n"
-							input_code << "\t\t\t#{one['name']}[idx][jdx] = tmp[jdx];\n"
+							input_code << "\t\t\t#{one['name']}[idx][jdx] = #{one['name']}_tmp[jdx];\n"
 							input_code << "\t\t}\n"
 							input_code << "\t}\n"
 						end

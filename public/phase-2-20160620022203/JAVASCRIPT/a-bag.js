@@ -1,13 +1,13 @@
 // Name : A Bag
 // input:
 // n : number of toolkits
-// volume : volume of each toolkit
+// volume_of_each_toolkit : volume of each toolkit
 var index,minimum_number_of_bags;
 var n = parseInt(readline(), 10);
-var volume = [];
-var volume_elements = readline().split(' ');
+var volume_of_each_toolkit = [];
+var volume_of_each_toolkit_elements = readline().split(' ');
 for(index=0;index<n;index++)
-	volume.push(parseInt(volume_elements[index], 10));
+	volume_of_each_toolkit.push(parseInt(volume_of_each_toolkit_elements[index], 10));
 
 
 // write your code here

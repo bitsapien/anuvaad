@@ -2,9 +2,9 @@
 #include <stdio.h>
 int main() {
 	// input:
-	// n : the size of the array
-	// a : source of array
-	int n, a[10000], result=1, index;
+	// n : size of array
+	// a : source array
+	int n, a[10000], maximum_number_of_equal_elements=1, index;
 	scanf("%d", &n);
 	for(index = 0; index< n; index++) {
 		scanf("%d", &a[index]);
@@ -12,9 +12,9 @@ int main() {
 
 
 	// write your code here
-	// store your results in `result`
+	// store your results in `maximum_number_of_equal_elements`
 
 	// output
-	printf("%d", result);
+	printf("%d", maximum_number_of_equal_elements);
 	return 0;
 }

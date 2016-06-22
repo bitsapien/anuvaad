@@ -1,3 +1,32 @@
+// Name : A and B
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : length of the string
+		// given_string : given string
+				Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		String given_string = in.nextLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=0;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
 // Name : A Bag
 import java.util.*;
 import java.lang.*;
@@ -6,14 +35,14 @@ class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
 		// n : number of toolkits
-		// volume : volume of each toolkit
+		// volume_of_each_toolkit : volume of each toolkit
 		int index;
 		Scanner in = new Scanner(System.in);
 		int n = Integer.parseInt(in.nextLine());
-		int[] volume = new int[n];
-		String[] volume_elements = (in.nextLine()).split(" ");
+		int[] volume_of_each_toolkit = new int[n];
+		String[] volume_of_each_toolkit_elements = (in.nextLine()).split(" ");
 		for(index=0;index<n;index++)
-			volume[index] = Integer.parseInt(volume_elements[index]);
+			volume_of_each_toolkit[index] = Integer.parseInt(volume_of_each_toolkit_elements[index]);
 
 
 		// write your code here
@@ -23,7 +52,7 @@ class Main {
 		// Dummy Data
 		int minimum_number_of_bags=4;
 
-				System.out.println(minimum_number_of_bags);
+		System.out.println(minimum_number_of_bags);
 
 	}
 }
@@ -38,8 +67,8 @@ import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// n : the size of the array
-		// a : source of array
+		// n : size of array
+		// a : source array
 		int index;
 		Scanner in = new Scanner(System.in);
 		int n = Integer.parseInt(in.nextLine());
@@ -50,13 +79,45 @@ class Main {
 
 
 		// write your code here
+		// store your results in `maximum_number_of_equal_elements`
+
+		// output
+		// Dummy Data
+		int maximum_number_of_equal_elements=1;
+
+		System.out.println(maximum_number_of_equal_elements);
+
+	}
+}
+
+
+
+
+// Name : Adventure Breakfast
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : size of bread cm
+		// m : size of bread cm
+		// c : size of slice cxc cms
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int c = Integer.parseInt(elements[2]);
+
+
+		// write your code here
 		// store your results in `result`
 
 		// output
 		// Dummy Data
-		int result=1;
+		int result=4;
 
-				System.out.println(result);
+		System.out.println(result);
 
 	}
 }
@@ -83,7 +144,7 @@ class Main {
 		// Dummy Data
 		int minimum_number_of_hours=1;
 
-				System.out.println(minimum_number_of_hours);
+		System.out.println(minimum_number_of_hours);
 
 	}
 }
@@ -98,10 +159,10 @@ import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// n1 :  alcohol percentage 1
-		// m1 : volume 1 in ml
-		// n2 :  alcohol percentage 2
-		// m2 : volume 2 in ml
+		// n1 : alcohol percentage
+		// m1 : volume in ml
+		// n2 : alcohol percentage
+		// m2 : volume in ml
 				Scanner in = new Scanner(System.in);
 		String[] elements = (in.nextLine()).split(" ");
 		int n1 = Integer.parseInt(elements[0]);
@@ -118,7 +179,548 @@ class Main {
 		// Dummy Data
 		String v="30%";
 
-				System.out.println(v);
+		System.out.println(v);
+
+	}
+}
+
+
+
+
+// Name : All as One
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : size of array
+		// a : array of integers
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `min_amt_of_changes`
+
+		// output
+		// Dummy Data
+		int min_amt_of_changes=5;
+
+		System.out.println(min_amt_of_changes);
+
+	}
+}
+
+
+
+
+// Name : Anniversary
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// k :  customer received a free bottle of milk
+		// l :  a kilogram of bacon
+		// m :  one 10 dollar coupon
+		// n : 99 percent discount for everything they bought
+		// d :  number of customers that day
+				Scanner in = new Scanner(System.in);
+		int k = Integer.parseInt(in.nextLine());
+		int l = Integer.parseInt(in.nextLine());
+		int m = Integer.parseInt(in.nextLine());
+		int n = Integer.parseInt(in.nextLine());
+		int d = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=12;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Apples
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the amount of apples
+		// w :  the weight of each apple
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] w = new int[n];
+		String[] w_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			w[index] = Integer.parseInt(w_elements[index]);
+
+
+		// write your code here
+		// store your results in `possibility`
+
+		// output
+		// Dummy Data
+		String possibility="YES";
+
+		System.out.println(possibility);
+
+	}
+}
+
+
+
+
+// Name : Arny’s Workout
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of exercises
+		// a :  the number of repeats for the exercises
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="chest";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Artbook
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// s : string of English characters
+				Scanner in = new Scanner(System.in);
+		String s = in.nextLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=51;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Bacteria
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// x : number of bacteria in the box
+				Scanner in = new Scanner(System.in);
+		int x = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `answer`
+
+		// output
+		// Dummy Data
+		int answer=2;
+
+		System.out.println(answer);
+
+	}
+}
+
+
+
+
+// Name : Bags with Apples
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// y : second bag with y number of apples
+		// k : divisible by k
+		// n : no more than n
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int y = Integer.parseInt(elements[0]);
+		int k = Integer.parseInt(elements[1]);
+		int n = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `x`
+
+		// output
+		// Dummy Data
+		int x=-1;
+
+		System.out.println(x);
+
+	}
+}
+
+
+
+
+// Name : Beautiful Photo
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// photo : girls and boys
+				Scanner in = new Scanner(System.in);
+		String photo = in.nextLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="YES";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Best Friends
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : the number of Dima's friends
+		// fingers :  the number of fingers Dima's friends will show during the counting game
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] fingers = new int[n];
+		String[] fingers_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			fingers[index] = Integer.parseInt(fingers_elements[index]);
+
+
+		// write your code here
+		// store your results in `answer`
+
+		// output
+		// Dummy Data
+		int answer=3;
+
+		System.out.println(answer);
+
+	}
+}
+
+
+
+
+// Name : Big Bang Pepsi
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : nth Pepsi
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `name`
+
+		// output
+		// Dummy Data
+		String name="Sheldon";
+
+		System.out.println(name);
+
+	}
+}
+
+
+
+
+// Name : BinSequence
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : length
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `sequence`
+
+		// output
+		// Dummy Data
+		int sequence[] = new int [] {0,1};
+
+		System.out.println(join_string(Arrays.toString(sequence)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Bookshelf
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of books
+		// m : number of books remaining in the first shelf
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `number_of_methods`
+
+		// output
+		// Dummy Data
+		int number_of_methods=4;
+
+		System.out.println(number_of_methods);
+
+	}
+}
+
+
+
+
+// Name : Box of Candies
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of boxes with candies James and Jessica have
+		// a :  the number of candies in the every bag
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `sought_number_of_ways`
+
+		// output
+		// Dummy Data
+		int sought_number_of_ways=1;
+
+		System.out.println(sought_number_of_ways);
+
+	}
+}
+
+
+
+
+// Name : Broogman
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// inp : method of saving
+				Scanner in = new Scanner(System.in);
+		String inp = in.nextLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=52;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Capitalizer
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// str : input string
+				Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+
+
+		// write your code here
+		// store your results in `output_str`
+
+		// output
+		// Dummy Data
+		String output_str="Samsung";
+
+		System.out.println(output_str);
+
+	}
+}
+
+
+
+
+// Name : Cat and Pillows
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of pillows
+				Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="YES";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Cat Food
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of cats sitting in a circle
+		// m :  the number
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `number_of_fish_the_dog_will_get`
+
+		// output
+		// Dummy Data
+		int number_of_fish_the_dog_will_get=0;
+
+		System.out.println(number_of_fish_the_dog_will_get);
+
+	}
+}
+
+
+
+
+// Name : Concealing Handwriting
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// s : A string that the spy needs to send in a letter
+		// t : A string that is printed in the news article
+				Scanner in = new Scanner(System.in);
+		String s = in.nextLine();
+		String t = in.nextLine();
+
+
+		// write your code here
+		// store your results in `right_case`,`wrong_case`
+
+		// output
+		// Dummy Data
+		int right_case=5, wrong_case=1;
+
+		System.out.println(right_case+" "+wrong_case);
 
 	}
 }
@@ -141,13 +743,13 @@ class Main {
 
 
 		// write your code here
-		// store your results in `result`
+		// store your results in `minimum_number_of_operations`
 
 		// output
 		// Dummy Data
-		int result=1;
+		int minimum_number_of_operations=1;
 
-				System.out.println(result);
+		System.out.println(minimum_number_of_operations);
 
 	}
 }
@@ -162,28 +764,359 @@ import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// n : the number of devices that will fit into
-		// m : e number of smartphones available for sale
-		// a : price of a smartphones
+		// n :  the number of devices that will fit into
+		// m :  the number of smartphones available for sale
+		// a : 
 		int index;
 		Scanner in = new Scanner(System.in);
 		String[] elements = (in.nextLine()).split(" ");
 		int n = Integer.parseInt(elements[0]);
 		int m = Integer.parseInt(elements[1]);
-		int[] a = new int[m];
+		int[] a = new int[n];
 		String[] a_elements = (in.nextLine()).split(" ");
-		for(index=0;index<m;index++)
+		for(index=0;index<n;index++)
 			a[index] = Integer.parseInt(a_elements[index]);
 
 
 		// write your code here
-		// store your results in `maximum_sum_of_money`
+		// store your results in `result`
 
 		// output
 		// Dummy Data
-		int maximum_sum_of_money=8;
+		int result=8;
 
-				System.out.println(maximum_sum_of_money);
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Max Even Sum 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of integers
+		// given_integers : given integers
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] given_integers = new int[n];
+		String[] given_integers_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			given_integers[index] = Integer.parseInt(given_integers_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=6;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Nearly Prime
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : range from 1 to n
+				Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=2;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Quiz
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of consecutive questions
+		// m : number of questions to which right answer was given
+		// k : count threshold
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int k = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Ronaldo’s Bricks
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of bricks
+				Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `pyramid_height`
+
+		// output
+		// Dummy Data
+		int pyramid_height=1;
+
+		System.out.println(pyramid_height);
+
+	}
+}
+
+
+
+
+// Name : Sailor and Beer
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// k :  the cost of the first bottle
+		// p :  the
+		// n :  number of bottles he wants to buy
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int k = Integer.parseInt(elements[0]);
+		int p = Integer.parseInt(elements[1]);
+		int n = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `money_to_borrow`
+
+		// output
+		// Dummy Data
+		int money_to_borrow=13;
+
+		System.out.println(money_to_borrow);
+
+	}
+}
+
+
+
+
+// Name : Trains
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of cities
+		// m : number of  roads connecting the cities
+		// k : number of railways
+		// uvx : uvx corresponds to ui vi xi
+		// sy : uvx corresponds to si yi
+		int idx, jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int k = Integer.parseInt(elements[2]);
+		int[][] uvx = new int[][];
+		String uvx_elements = "";
+		for(idx=0;idx<m;idx++){
+			uvx_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<3;jdx++){
+				uvx[idx][jdx] = Integer.parseInt(uvx_elements[jdx]);
+			}
+		}
+		int[][] sy = new int[][];
+		String sy_elements = "";
+		for(idx=0;idx<k;idx++){
+			sy_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				sy[idx][jdx] = Integer.parseInt(sy_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=2;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Vowels and Consonants
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// given_string : given string
+				Scanner in = new Scanner(System.in);
+		String given_string = in.nextLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result=".s.d.f.g.h.j.k.l";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Walter Junior
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// a :  number of blue substances that Walter has
+		// b :  number of purple substances that Walter has
+		// c :  number of orange substances that Walter has
+		// x :  number of blue substances that Walter needs to get
+		// y :  number of purple substances that Walter needs to get
+		// z :  number of orange substances that Walter needs to get
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int a = Integer.parseInt(elements[0]);
+		int b = Integer.parseInt(elements[1]);
+		int c = Integer.parseInt(elements[2]);
+		String[] elements = (in.nextLine()).split(" ");
+		int x = Integer.parseInt(elements[0]);
+		int y = Integer.parseInt(elements[1]);
+		int z = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="YES";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Weight of Number
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// l : boundary start
+		// r : boundary end
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int l = Integer.parseInt(elements[0]);
+		int r = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `maximum_weight`
+
+		// output
+		// Dummy Data
+		int maximum_weight=20;
+
+		System.out.println(maximum_weight);
+
+	}
+}
+
+
+
+
+// Name : XOR sum
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of elements in the array
+		// a :  integers from the array
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `xor_sum`
+
+		// output
+		// Dummy Data
+		int xor_sum=3;
+
+		System.out.println(xor_sum);
 
 	}
 }

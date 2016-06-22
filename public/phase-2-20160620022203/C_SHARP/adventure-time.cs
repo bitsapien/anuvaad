@@ -5,7 +5,7 @@ namespace Application {
 		public static void Main(string[] args) {
 		// input:
 		// n : the distance to Jake's lake house
-				int n = Convert.ToInt32(Console.ReadLine());
+		int n = Convert.ToInt32(Console.ReadLine());
 
 
 		// write your code here

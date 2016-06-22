@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # Name : Alcohol Calculator
 # input:
-# n1 :  alcohol percentage 1
-# m1 : volume 1 in ml
-# n2 :  alcohol percentage 2
-# m2 : volume 2 in ml
+# n1 : alcohol percentage
+# m1 : volume in ml
+# n2 : alcohol percentage
+# m2 : volume in ml
 elements = raw_input().strip().split(' ')
 n1 = int(elements[0])
 m1 = float(elements[1])

@@ -1,8 +1,8 @@
 // Name : Add and Remove
 // input:
-// n : the size of the array
-// a : source of array
-var index,result;
+// n : size of array
+// a : source array
+var index,maximum_number_of_equal_elements;
 var n = parseInt(readline(), 10);
 var a = [];
 var a_elements = readline().split(' ');
@@ -11,11 +11,11 @@ for(index=0;index<n;index++)
 
 
 // write your code here
-// store your results in `result`
+// store your results in `maximum_number_of_equal_elements`
 
 // Dummy Data
-result = 1;
+maximum_number_of_equal_elements = 1;
 
 
 // output
-print(result);
+print(maximum_number_of_equal_elements);

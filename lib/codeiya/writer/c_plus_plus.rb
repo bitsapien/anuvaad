@@ -19,6 +19,9 @@ module Codeiya
 
 					var_extra = Codeiya::Variables.aggregate var_extra_raw
 
+					puts '*'*90
+					puts var_extra.inspect
+
 					var_input_comment = Codeiya::Variables.input_comments(var_input_list)
 					var_output_comment = Codeiya::Variables.output_comments(var_output_list)
 
@@ -44,7 +47,7 @@ module Codeiya
 
 					code << "\t#{variables_define(var_extra)}"
 
-					code << "\t#{input_lines(var_input_list)}"
+					code << "#{input_lines(var_input_list)}"
 
 					code << "\n\n\t// write your code here\n"
 
@@ -117,8 +120,8 @@ module Codeiya
 							extra.push '<int>jdx'
 						end
 					end
-					tmp_extra = @variables['extra'].split(',')
-					(extra+tmp_extra).join(',')
+					tmp_extra = @variables['extra'].split('^')
+					(extra+tmp_extra).uniq.join('^')
 
 				end
 
@@ -140,7 +143,7 @@ module Codeiya
 					number_of_lines.times do |idx|
 						index = idx - 1
 						one_line = (input_list.map do |n| n if n['x']==idx end).compact
-						input_code << "#{input_interpreter(one_line)}"
+						input_code << "\t#{input_interpreter(one_line)}"
 					end
 					input_code
 				end
@@ -150,7 +153,7 @@ module Codeiya
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
 							line = "#{variables_define([var])}"
-							line = "\tcin >> #{var['name']};\n"
+							line << "\tcin >> #{var['name']};\n"
 						else
 							line = "#{variables_define(var_list)}\n"
 							vin_list = var_list.map do |v| v['name'] end

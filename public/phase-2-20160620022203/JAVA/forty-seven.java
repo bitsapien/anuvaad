@@ -13,13 +13,13 @@ class Main {
 
 
 		// write your code here
-		// store your results in `result`
+		// store your results in `minimum_number_of_operations`
 
 		// output
 		// Dummy Data
-		int result=1;
+		int minimum_number_of_operations=1;
 
-				System.out.println(result);
+		System.out.println(minimum_number_of_operations);
 
 	}
 }

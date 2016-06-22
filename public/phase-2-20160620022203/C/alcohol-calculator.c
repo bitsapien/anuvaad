@@ -2,10 +2,10 @@
 #include <stdio.h>
 int main() {
 	// input:
-	// n1 :  alcohol percentage 1
-	// m1 : volume 1 in ml
-	// n2 :  alcohol percentage 2
-	// m2 : volume 2 in ml
+	// n1 : alcohol percentage
+	// m1 : volume in ml
+	// n2 : alcohol percentage
+	// m2 : volume in ml
 	int n1, n2;
 	float m1, m2;
 	char v[105]="30%";

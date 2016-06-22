@@ -1,0 +1,7 @@
+banner cycle is confusing, same inputs with different outputs
+also I find no need to take its inputs on two different lines
+question and test cases not clear
+
+greedy man has a mismatch
+
+

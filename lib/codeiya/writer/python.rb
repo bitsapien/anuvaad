@@ -142,14 +142,26 @@ module Codeiya
 					elsif var['size2'].empty?
 						tmp_var_name = "#{var['name']}_elements"
 						line = "#{tmp_var_name} = raw_input().strip().split(' ')\n"
-						line << "#{var['name']} = (#{parser(var['type'],'e')} for e in #{tmp_var_name})\n"	
+						line << "#{var['name']} = #{mapper(var['type'],tmp_var_name)}\n"	
 					else
 						tmp_var_name = "#{var['name']}_elements"
-						line = "for _ in xrange(#{var['size1_name']}):\n"
+						line = "#{var['name']} = []\n"
+						line << "for _ in xrange(#{var['size1_name']}):\n"
 						line << "\t#{tmp_var_name} = raw_input().strip().split(' ')\n"
-						line << "\t#{var['name']} = (#{parser(var['type'],'e')} for e in #{tmp_var_name})\n"	
+						line << "\t#{var['name']}.append(#{mapper(var['type'],tmp_var_name)})\n"
 					end
 					line
+				end
+
+				def mapper type, term
+					input_parser = {
+						'int' => 'int',
+						'string' => '',
+						'char' => '',
+						'float' => 'float',
+						'double' => 'float'
+					}
+					input_parser[type].blank? ? term : "map(#{input_parser[type]}, #{term})"
 				end
 
 				def parser type, term

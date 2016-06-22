@@ -5,26 +5,26 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
 	// input:
-	// n : the number of devices that will fit into
-	// m : e number of smartphones available for sale
-	// a : price of a smartphones
+	// n :  the number of devices that will fit into
+	// m :  the number of smartphones available for sale
+	// a : 
 	int index;
 	int n, m;
 
 	cin >> n >> m;
-	int  a[m];
+	int a[n];
 
-	for(index=0;index<m;index++)
+	for(index=0;index<n;index++)
 		cin >> a[index];
 
 
 	// write your code here
-	// store your results in `maximum_sum_of_money`
+	// store your results in `result`
 
 	// output
 	// Dummy Data
-	int maximum_sum_of_money=8;
+	int result=8;
 
-	cout << maximum_sum_of_money;
+	cout << result;
 
 }

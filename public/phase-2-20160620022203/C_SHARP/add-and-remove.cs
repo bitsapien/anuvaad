@@ -4,8 +4,8 @@ namespace Application {
 	class addand_remove {
 		public static void Main(string[] args) {
 		// input:
-		// n : the size of the array
-		// a : source of array
+		// n : size of array
+		// a : source array
 		int index;
 		int n = Convert.ToInt32(Console.ReadLine());
 		int[] a = new int[n];
@@ -15,13 +15,13 @@ namespace Application {
 
 
 		// write your code here
-		// store your results in `result`
+		// store your results in `maximum_number_of_equal_elements`
 
 		// output
 		// Dummy Data
-		int result=1;
+		int maximum_number_of_equal_elements=1;
 
-		Console.WriteLine(result);
+		Console.WriteLine(maximum_number_of_equal_elements);
 
 		}	
 	}

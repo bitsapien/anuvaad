@@ -1,13 +1,36 @@
+// Name : A and B
+#include <stdio.h>
+int main() {
+	// input:
+	// n : length of the string
+	// given_string : given string
+	int n, result=0;
+	char given_string[105];
+	scanf("%d", &n);
+	scanf("%s", &given_string);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
 // Name : A Bag
 #include <stdio.h>
 int main() {
 	// input:
 	// n : number of toolkits
-	// volume : volume of each toolkit
-	int n, volume[10000], minimum_number_of_bags=4, index;
+	// volume_of_each_toolkit : volume of each toolkit
+	int n, volume_of_each_toolkit[10000], minimum_number_of_bags=4, index;
 	scanf("%d", &n);
 	for(index = 0; index< n; index++) {
-		scanf("%d", &volume[index]);
+		scanf("%d", &volume_of_each_toolkit[index]);
 	}
 
 
@@ -26,13 +49,35 @@ int main() {
 #include <stdio.h>
 int main() {
 	// input:
-	// n : the size of the array
-	// a : source of array
-	int n, a[10000], result=1, index;
+	// n : size of array
+	// a : source array
+	int n, a[10000], maximum_number_of_equal_elements=1, index;
 	scanf("%d", &n);
 	for(index = 0; index< n; index++) {
 		scanf("%d", &a[index]);
 	}
+
+
+	// write your code here
+	// store your results in `maximum_number_of_equal_elements`
+
+	// output
+	printf("%d", maximum_number_of_equal_elements);
+	return 0;
+}
+
+
+
+
+// Name : Adventure Breakfast
+#include <stdio.h>
+int main() {
+	// input:
+	// n : size of bread cm
+	// m : size of bread cm
+	// c : size of slice cxc cms
+	int n, m, c, result=4;
+	scanf("%d %d %d", &n, &m, &c);
 
 
 	// write your code here
@@ -70,10 +115,10 @@ int main() {
 #include <stdio.h>
 int main() {
 	// input:
-	// n1 :  alcohol percentage 1
-	// m1 : volume 1 in ml
-	// n2 :  alcohol percentage 2
-	// m2 : volume 2 in ml
+	// n1 : alcohol percentage
+	// m1 : volume in ml
+	// n2 : alcohol percentage
+	// m2 : volume in ml
 	int n1, n2;
 	float m1, m2;
 	char v[105]="30%";
@@ -92,16 +137,45 @@ int main() {
 
 
 
-// Name : Forty Seven
+// Name : All as One
 #include <stdio.h>
 int main() {
 	// input:
-	// a : string a
-	// b : string b
-	char a[105], b[105];
-	int result=1;
-	scanf("%s", &a);
-	scanf("%s", &b);
+	// n : size of array
+	// a : array of integers
+	int n, a[100000], min_amt_of_changes=5, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &a[index]);
+	}
+
+
+	// write your code here
+	// store your results in `min_amt_of_changes`
+
+	// output
+	printf("%d", min_amt_of_changes);
+	return 0;
+}
+
+
+
+
+// Name : Anniversary
+#include <stdio.h>
+int main() {
+	// input:
+	// k :  customer received a free bottle of milk
+	// l :  a kilogram of bacon
+	// m :  one 10 dollar coupon
+	// n : 99 percent discount for everything they bought
+	// d :  number of customers that day
+	int k, l, m, n, d, result=12;
+	scanf("%d", &k);
+	scanf("%d", &l);
+	scanf("%d", &m);
+	scanf("%d", &n);
+	scanf("%d", &d);
 
 
 	// write your code here
@@ -115,25 +189,636 @@ int main() {
 
 
 
-// Name : Greedy Man
+// Name : Apples
 #include <stdio.h>
 int main() {
 	// input:
-	// n : the number of devices that will fit into
-	// m : e number of smartphones available for sale
-	// a : price of a smartphones
-	int n, m, a[1000], maximum_sum_of_money=8, index;
-	scanf("%d %d", &n, &m);
-	for(index = 0; index< m; index++) {
+	// n :  the amount of apples
+	// w :  the weight of each apple
+	int n, w[100], index;
+	char possibility[105]="YES";
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &w[index]);
+	}
+
+
+	// write your code here
+	// store your results in `possibility`
+
+	// output
+	printf("%s", possibility);
+	return 0;
+}
+
+
+
+
+// Name : Arny’s Workout
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of exercises
+	// a :  the number of repeats for the exercises
+	int n, a[20], index;
+	char result[105]="chest";
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
 		scanf("%d", &a[index]);
 	}
 
 
 	// write your code here
-	// store your results in `maximum_sum_of_money`
+	// store your results in `result`
 
 	// output
-	printf("%d", maximum_sum_of_money);
+	printf("%s", result);
+	return 0;
+}
+
+
+
+
+// Name : Artbook
+#include <stdio.h>
+int main() {
+	// input:
+	// s : string of English characters
+	char s[105];
+	int result=51;
+	scanf("%s", &s);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Bacteria
+#include <stdio.h>
+int main() {
+	// input:
+	// x : number of bacteria in the box
+	int x, answer=2;
+	scanf("%d", &x);
+
+
+	// write your code here
+	// store your results in `answer`
+
+	// output
+	printf("%d", answer);
+	return 0;
+}
+
+
+
+
+// Name : Bags with Apples
+#include <stdio.h>
+int main() {
+	// input:
+	// y : second bag with y number of apples
+	// k : divisible by k
+	// n : no more than n
+	int y, k, n, x=-1;
+	scanf("%d %d %d", &y, &k, &n);
+
+
+	// write your code here
+	// store your results in `x`
+
+	// output
+	printf("%d", x);
+	return 0;
+}
+
+
+
+
+// Name : Beautiful Photo
+#include <stdio.h>
+int main() {
+	// input:
+	// photo : girls and boys
+	char photo[105], result[105]="YES";
+	scanf("%s", &photo);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%s", result);
+	return 0;
+}
+
+
+
+
+// Name : Best Friends
+#include <stdio.h>
+int main() {
+	// input:
+	// n : the number of Dima's friends
+	// fingers :  the number of fingers Dima's friends will show during the counting game
+	int n, fingers[100], answer=3, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &fingers[index]);
+	}
+
+
+	// write your code here
+	// store your results in `answer`
+
+	// output
+	printf("%d", answer);
+	return 0;
+}
+
+
+
+
+// Name : Big Bang Pepsi
+#include <stdio.h>
+int main() {
+	// input:
+	// n : nth Pepsi
+	int n;
+	char name[105]="Sheldon";
+	scanf("%d", &n);
+
+
+	// write your code here
+	// store your results in `name`
+
+	// output
+	printf("%s", name);
+	return 0;
+}
+
+
+
+
+// Name : BinSequence
+#include <stdio.h>
+int main() {
+	// input:
+	// n : length
+	int n, sequence[100]={0,1}, index;
+	scanf("%d", &n);
+
+
+	// write your code here
+	// store your results in `sequence`
+
+	// output
+	for(index = 0; index< n; index++) {
+		printf("%d ",sequence[index]);
+	}
+	return 0;
+}
+
+
+
+
+// Name : Bookshelf
+#include <stdio.h>
+int main() {
+	// input:
+	// n : number of books
+	// m : number of books remaining in the first shelf
+	int n, m, number_of_methods=4;
+	scanf("%d %d", &n, &m);
+
+
+	// write your code here
+	// store your results in `number_of_methods`
+
+	// output
+	printf("%d", number_of_methods);
+	return 0;
+}
+
+
+
+
+// Name : Box of Candies
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of boxes with candies James and Jessica have
+	// a :  the number of candies in the every bag
+	int n, a[100], sought_number_of_ways=1, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &a[index]);
+	}
+
+
+	// write your code here
+	// store your results in `sought_number_of_ways`
+
+	// output
+	printf("%d", sought_number_of_ways);
+	return 0;
+}
+
+
+
+
+// Name : Broogman
+#include <stdio.h>
+int main() {
+	// input:
+	// inp : method of saving
+	char inp[105];
+	int result=52;
+	scanf("%s", &inp);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Capitalizer
+#include <stdio.h>
+int main() {
+	// input:
+	// str : input string
+	char str[105], output_str[105]="Samsung";
+	scanf("%s", &str);
+
+
+	// write your code here
+	// store your results in `output_str`
+
+	// output
+	printf("%s", output_str);
+	return 0;
+}
+
+
+
+
+// Name : Cat and Pillows
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of pillows
+	int n;
+	char result[105]="YES";
+	scanf("%d", &n);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%s", result);
+	return 0;
+}
+
+
+
+
+// Name : Cat Food
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of cats sitting in a circle
+	// m :  the number
+	int n, m, number_of_fish_the_dog_will_get=0;
+	scanf("%d %d", &n, &m);
+
+
+	// write your code here
+	// store your results in `number_of_fish_the_dog_will_get`
+
+	// output
+	printf("%d", number_of_fish_the_dog_will_get);
+	return 0;
+}
+
+
+
+
+// Name : Concealing Handwriting
+#include <stdio.h>
+int main() {
+	// input:
+	// s : A string that the spy needs to send in a letter
+	// t : A string that is printed in the news article
+	char s[105], t[105];
+	int right_case=5, wrong_case=1;
+	scanf("%s", &s);
+	scanf("%s", &t);
+
+
+	// write your code here
+	// store your results in `right_case`,`wrong_case`
+
+	// output
+	printf("%d %d", right_case, wrong_case);
+	return 0;
+}
+
+
+
+
+// Name : Forty Seven
+#include <stdio.h>
+int main() {
+	// input:
+	// a : string a
+	// b : string b
+	char a[105], b[105];
+	int minimum_number_of_operations=1;
+	scanf("%s", &a);
+	scanf("%s", &b);
+
+
+	// write your code here
+	// store your results in `minimum_number_of_operations`
+
+	// output
+	printf("%d", minimum_number_of_operations);
+	return 0;
+}
+
+
+
+
+// Name : Greedy Man
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of devices that will fit into
+	// m :  the number of smartphones available for sale
+	// a : 
+	int n, m, a[1000], result=8, index;
+	scanf("%d %d", &n, &m);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &a[index]);
+	}
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Max Even Sum 
+#include <stdio.h>
+int main() {
+	// input:
+	// n : number of integers
+	// given_integers : given integers
+	int n, given_integers[100000], result=6, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &given_integers[index]);
+	}
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Nearly Prime
+#include <stdio.h>
+int main() {
+	// input:
+	// n : range from 1 to n
+	int n, result=2;
+	scanf("%d", &n);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Quiz
+#include <stdio.h>
+int main() {
+	// input:
+	// n : number of consecutive questions
+	// m : number of questions to which right answer was given
+	// k : count threshold
+	int n, m, k, result=3;
+	scanf("%d %d %d", &n, &m, &k);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Ronaldo’s Bricks
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of bricks
+	int n, pyramid_height=1;
+	scanf("%d", &n);
+
+
+	// write your code here
+	// store your results in `pyramid_height`
+
+	// output
+	printf("%d", pyramid_height);
+	return 0;
+}
+
+
+
+
+// Name : Sailor and Beer
+#include <stdio.h>
+int main() {
+	// input:
+	// k :  the cost of the first bottle
+	// p :  the
+	// n :  number of bottles he wants to buy
+	int k, p, n, money_to_borrow=13;
+	scanf("%d %d %d", &k, &p, &n);
+
+
+	// write your code here
+	// store your results in `money_to_borrow`
+
+	// output
+	printf("%d", money_to_borrow);
+	return 0;
+}
+
+
+
+
+// Name : Trains
+#include <stdio.h>
+int main() {
+	// input:
+	// n : number of cities
+	// m : number of  roads connecting the cities
+	// k : number of railways
+	// uvx : uvx corresponds to ui vi xi
+	// sy : uvx corresponds to si yi
+	int n, m, k, uvx[10000][3], sy[10000][2], result=2, idx, jdx, idx, jdx;
+	char tmp[3], tmp[2];
+	scanf("%d %d %d", &n, &m, &k);
+	for(idx = 0; idx< m; idx++) {
+		scanf("%s", &tmp[0]);
+		for(jdx = 0;jdx<3;jdx++) {
+			uvx[idx][jdx] = tmp[jdx];
+		}
+	}
+	for(idx = 0; idx< k; idx++) {
+		scanf("%s", &tmp[0]);
+		for(jdx = 0;jdx<2;jdx++) {
+			sy[idx][jdx] = tmp[jdx];
+		}
+	}
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%d", result);
+	return 0;
+}
+
+
+
+
+// Name : Vowels and Consonants
+#include <stdio.h>
+int main() {
+	// input:
+	// given_string : given string
+	char given_string[105], result[105]=".s.d.f.g.h.j.k.l";
+	scanf("%s", &given_string);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%s", result);
+	return 0;
+}
+
+
+
+
+// Name : Walter Junior
+#include <stdio.h>
+int main() {
+	// input:
+	// a :  number of blue substances that Walter has
+	// b :  number of purple substances that Walter has
+	// c :  number of orange substances that Walter has
+	// x :  number of blue substances that Walter needs to get
+	// y :  number of purple substances that Walter needs to get
+	// z :  number of orange substances that Walter needs to get
+	int a, b, c, x, y, z;
+	char result[105]="YES";
+	scanf("%d %d %d", &a, &b, &c);
+	scanf("%d %d %d", &x, &y, &z);
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	printf("%s", result);
+	return 0;
+}
+
+
+
+
+// Name : Weight of Number
+#include <stdio.h>
+int main() {
+	// input:
+	// l : boundary start
+	// r : boundary end
+	int l, r, maximum_weight=20;
+	scanf("%d %d", &l, &r);
+
+
+	// write your code here
+	// store your results in `maximum_weight`
+
+	// output
+	printf("%d", maximum_weight);
+	return 0;
+}
+
+
+
+
+// Name : XOR sum
+#include <stdio.h>
+int main() {
+	// input:
+	// n :  the number of elements in the array
+	// a :  integers from the array
+	int n, a[100], xor_sum=3, index;
+	scanf("%d", &n);
+	for(index = 0; index< n; index++) {
+		scanf("%d", &a[index]);
+	}
+
+
+	// write your code here
+	// store your results in `xor_sum`
+
+	// output
+	printf("%d", xor_sum);
 	return 0;
 }
 

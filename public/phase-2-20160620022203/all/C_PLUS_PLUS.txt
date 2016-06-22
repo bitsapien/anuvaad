@@ -1,3 +1,734 @@
+// Name : A and B
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : length of the string
+	// given_string : given string
+		int n;
+	cin >> n;
+	string given_string;
+	cin >> given_string;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=0;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : A Bag
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of toolkits
+	// volume_of_each_toolkit : volume of each toolkit
+	int index;
+	cin >> n;
+	int volume_of_each_toolkit[n];
+
+	for(index=0;index<n;index++)
+		cin >> volume_of_each_toolkit[index];
+
+
+	// write your code here
+	// store your results in `minimum_number_of_bags`
+
+	// output
+	// Dummy Data
+	int minimum_number_of_bags=4;
+
+	cout << minimum_number_of_bags;
+
+}
+
+
+
+
+// Name : Add and Remove
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : size of array
+	// a : source array
+	int index;
+	cin >> n;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `maximum_number_of_equal_elements`
+
+	// output
+	// Dummy Data
+	int maximum_number_of_equal_elements=1;
+
+	cout << maximum_number_of_equal_elements;
+
+}
+
+
+
+
+// Name : Adventure Breakfast
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : size of bread cm
+	// m : size of bread cm
+	// c : size of slice cxc cms
+		int n, m, c;
+
+	cin >> n >> m >> c;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=4;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Adventure Time
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : the distance to Jake's lake house
+	int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `minimum_number_of_hours`
+
+	// output
+	// Dummy Data
+	int minimum_number_of_hours=1;
+
+	cout << minimum_number_of_hours;
+
+}
+
+
+
+
+// Name : Alcohol Calculator
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n1 : alcohol percentage
+	// m1 : volume in ml
+	// n2 : alcohol percentage
+	// m2 : volume in ml
+	int n1;
+	float m1;
+
+	cin >> n1 >> m1;
+	int n2;
+	float m2;
+
+	cin >> n2 >> m2;
+
+
+	// write your code here
+	// store your results in `v`
+
+	// output
+	// Dummy Data
+	string v="30%";
+
+	cout << v;
+
+}
+
+
+
+
+// Name : All as One
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : size of array
+	// a : array of integers
+	int index;
+	int n;
+	cin >> n;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `min_amt_of_changes`
+
+	// output
+	// Dummy Data
+	int min_amt_of_changes=5;
+
+	cout << min_amt_of_changes;
+
+}
+
+
+
+
+// Name : Anniversary
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// k :  customer received a free bottle of milk
+	// l :  a kilogram of bacon
+	// m :  one 10 dollar coupon
+	// n : 99 percent discount for everything they bought
+	// d :  number of customers that day
+		int k;
+	cin >> k;
+	int l;
+	cin >> l;
+	int m;
+	cin >> m;
+	int n;
+	cin >> n;
+	int d;
+	cin >> d;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=12;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Apples
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the amount of apples
+	// w :  the weight of each apple
+	int index;
+	int n;
+	cin >> n;
+	int  w[n];
+
+	for(index=0;index<n;index++)
+		cin >> w[index];
+
+
+	// write your code here
+	// store your results in `possibility`
+
+	// output
+	// Dummy Data
+	string possibility="YES";
+
+	cout << possibility;
+
+}
+
+
+
+
+// Name : Arny’s Workout
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of exercises
+	// a :  the number of repeats for the exercises
+	int index;
+	int n;
+	cin >> n;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="chest";
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Artbook
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// s : string of English characters
+		string s;
+	cin >> s;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=51;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Bacteria
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// x : number of bacteria in the box
+	int x;
+	cin >> x;
+
+
+	// write your code here
+	// store your results in `answer`
+
+	// output
+	// Dummy Data
+	int answer=2;
+
+	cout << answer;
+
+}
+
+
+
+
+// Name : Bags with Apples
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// y : second bag with y number of apples
+	// k : divisible by k
+	// n : no more than n
+	int y, k, n;
+
+	cin >> y >> k >> n;
+
+
+	// write your code here
+	// store your results in `x`
+
+	// output
+	// Dummy Data
+	int x=-1;
+
+	cout << x;
+
+}
+
+
+
+
+// Name : Beautiful Photo
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// photo : girls and boys
+	string photo;
+	cin >> photo;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="YES";
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Best Friends
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : the number of Dima's friends
+	// fingers :  the number of fingers Dima's friends will show during the counting game
+	int index;
+	int n;
+	cin >> n;
+	int  fingers[n];
+
+	for(index=0;index<n;index++)
+		cin >> fingers[index];
+
+
+	// write your code here
+	// store your results in `answer`
+
+	// output
+	// Dummy Data
+	int answer=3;
+
+	cout << answer;
+
+}
+
+
+
+
+// Name : Big Bang Pepsi
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : nth Pepsi
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `name`
+
+	// output
+	// Dummy Data
+	string name="Sheldon";
+
+	cout << name;
+
+}
+
+
+
+
+// Name : BinSequence
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : length
+	int index;
+	int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `sequence`
+
+	// output
+	// Dummy Data
+	int  sequence[] = {0,1};
+
+	for(index=0;index<n;index++)
+		cout << sequence[index] << " ";
+
+}
+
+
+
+
+// Name : Bookshelf
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of books
+	// m : number of books remaining in the first shelf
+		int n, m;
+
+	cin >> n >> m;
+
+
+	// write your code here
+	// store your results in `number_of_methods`
+
+	// output
+	// Dummy Data
+	int number_of_methods=4;
+
+	cout << number_of_methods;
+
+}
+
+
+
+
+// Name : Box of Candies
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of boxes with candies James and Jessica have
+	// a :  the number of candies in the every bag
+	int index;
+	int n;
+	cin >> n;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `sought_number_of_ways`
+
+	// output
+	// Dummy Data
+	int sought_number_of_ways=1;
+
+	cout << sought_number_of_ways;
+
+}
+
+
+
+
+// Name : Broogman
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// inp : method of saving
+		string inp;
+	cin >> inp;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=52;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Capitalizer
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// str : input string
+		string str;
+	cin >> str;
+
+
+	// write your code here
+	// store your results in `output_str`
+
+	// output
+	// Dummy Data
+	string output_str="Samsung";
+
+	cout << output_str;
+
+}
+
+
+
+
+// Name : Cat and Pillows
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of pillows
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="YES";
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Cat Food
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of cats sitting in a circle
+	// m :  the number
+		int n, m;
+
+	cin >> n >> m;
+
+
+	// write your code here
+	// store your results in `number_of_fish_the_dog_will_get`
+
+	// output
+	// Dummy Data
+	int number_of_fish_the_dog_will_get=0;
+
+	cout << number_of_fish_the_dog_will_get;
+
+}
+
+
+
+
+// Name : Concealing Handwriting
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// s : A string that the spy needs to send in a letter
+	// t : A string that is printed in the news article
+		string s;
+	cin >> s;
+	string t;
+	cin >> t;
+
+
+	// write your code here
+	// store your results in `right_case`,`wrong_case`
+
+	// output
+	// Dummy Data
+	int right_case=5, wrong_case=1;
+
+	cout << right_case << wrong_case;
+
+}
+
+
+
+
+// Name : Forty Seven
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// a : string a
+	// b : string b
+	string a, b;
+	cin >> a;
+	cin >> b;
+
+
+	// write your code here
+	// store your results in `minimum_number_of_operations`
+
+	// output
+	// Dummy Data
+	int minimum_number_of_operations=1;
+
+	cout << minimum_number_of_operations;
+
+}
+
+
+
+
 // Name : Greedy Man
 #include <iostream>
 #include <string>
@@ -5,27 +736,332 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
 	// input:
-	// n : the number of devices that will fit into
-	// m : e number of smartphones available for sale
-	// a : price of a smartphones
+	// n :  the number of devices that will fit into
+	// m :  the number of smartphones available for sale
+	// a : 
 	int index;
 	int n, m;
 
 	cin >> n >> m;
-	int  a[m];
+	int a[n];
 
-	for(index=0;index<m;index++)
+	for(index=0;index<n;index++)
 		cin >> a[index];
 
 
 	// write your code here
-	// store your results in `maximum_sum_of_money`
+	// store your results in `result`
 
 	// output
 	// Dummy Data
-	int maximum_sum_of_money=8;
+	int result=8;
 
-	cout << maximum_sum_of_money;
+	cout << result;
+
+}
+
+
+
+
+// Name : Max Even Sum 
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of integers
+	// given_integers : given integers
+	int index;
+	int n;
+	cin >> n;
+	int  given_integers[n];
+
+	for(index=0;index<n;index++)
+		cin >> given_integers[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=6;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Nearly Prime
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : range from 1 to n
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=2;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Quiz
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of consecutive questions
+	// m : number of questions to which right answer was given
+	// k : count threshold
+		int n, m, k;
+
+	cin >> n >> m >> k;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=3;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Ronaldo’s Bricks
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of bricks
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `pyramid_height`
+
+	// output
+	// Dummy Data
+	int pyramid_height=1;
+
+	cout << pyramid_height;
+
+}
+
+
+
+
+// Name : Sailor and Beer
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// k :  the cost of the first bottle
+	// p :  the
+	// n :  number of bottles he wants to buy
+		int k, p, n;
+
+	cin >> k >> p >> n;
+
+
+	// write your code here
+	// store your results in `money_to_borrow`
+
+	// output
+	// Dummy Data
+	int money_to_borrow=13;
+
+	cout << money_to_borrow;
+
+}
+
+
+
+
+// Name : Trains
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of cities
+	// m : number of  roads connecting the cities
+	// k : number of railways
+	// uvx : uvx corresponds to ui vi xi
+	// sy : uvx corresponds to si yi
+	int idx, jdx;
+	int n, m, k;
+
+	cin >> n >> m >> k;
+	int  uvx[m][3];
+
+	for(idx=0;idx<m;idx++)
+		for(jdx=0;jdx<3;jdx++)
+			cin >> uvx[idx][jdx];
+	int  sy[k][2];
+
+	for(idx=0;idx<k;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> sy[idx][jdx];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=2;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Vowels and Consonants
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// given_string : given string
+		string given_string;
+	cin >> given_string;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result=".s.d.f.g.h.j.k.l";
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Walter Junior
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// a :  number of blue substances that Walter has
+	// b :  number of purple substances that Walter has
+	// c :  number of orange substances that Walter has
+	// x :  number of blue substances that Walter needs to get
+	// y :  number of purple substances that Walter needs to get
+	// z :  number of orange substances that Walter needs to get
+		int a, b, c;
+
+	cin >> a >> b >> c;
+	int x, y, z;
+
+	cin >> x >> y >> z;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="YES";
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Weight of Number
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// l : boundary start
+	// r : boundary end
+		int l, r;
+
+	cin >> l >> r;
+
+
+	// write your code here
+	// store your results in `maximum_weight`
+
+	// output
+	// Dummy Data
+	int maximum_weight=20;
+
+	cout << maximum_weight;
+
+}
+
+
+
+
+// Name : XOR sum
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of elements in the array
+	// a :  integers from the array
+	int index;
+	int n;
+	cin >> n;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `xor_sum`
+
+	// output
+	// Dummy Data
+	int xor_sum=3;
+
+	cout << xor_sum;
 
 }
 

@@ -17,7 +17,7 @@ class Main {
 		// Dummy Data
 		int minimum_number_of_hours=1;
 
-				System.out.println(minimum_number_of_hours);
+		System.out.println(minimum_number_of_hours);
 
 	}
 }

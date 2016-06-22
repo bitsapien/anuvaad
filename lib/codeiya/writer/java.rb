@@ -8,6 +8,7 @@ module Codeiya
 					@variables =  data['variables']
 					@namespace =  data['namespace']
 					the_file = create_files data['name'], data['namespace']
+					@array_flag = 0
 
 					var_input_list = Codeiya::Variables.aggregate @variables["input"]
 					var_output_list = Codeiya::Variables.aggregate @variables["output"]
@@ -44,7 +45,7 @@ module Codeiya
 
 					code << "\t\t#{variables_define(var_extra)}"
 
-					code << "\t\t#{input_lines(var_input_list)}"
+					code << "#{input_lines(var_input_list)}"
 
 					code << "\n\n\t\t// write your code here\n"
 
@@ -66,9 +67,19 @@ module Codeiya
 
 					# print outputs
 
-					code << "\t\t#{output_lines(var_output_list)}\n"
+					code << "#{output_lines(var_output_list)}\n"
 
 					code << "\t}\n"
+
+					if @array_flag.eql? 1
+
+						code << "\tpublic static String join_string(String inp) {\n"
+
+						code << "\t\treturn inp.replace(\"[\",\"\").replace(\"]\",\"\").replace(\",\",\"\");\n"
+
+						code << "\t}\n"
+
+					end
 
 					code << "}"
 
@@ -101,7 +112,7 @@ module Codeiya
 							vd << "#{definition}#{list.join(', ')};\n"
 						elsif vr['size2'].empty?
 							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}]" : " = new #{definition}[] #{vr['value'].gsub('[','{').gsub(']','}')}"
-							vd = "#{vr['name'].to_s}[]#{assign};\n"
+							vd = "#{definition}#{vr['name'].to_s}[]#{assign};\n"
 						else
 							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}]" : "= new #{definition}[][] #{vr['value'].gsub('[','{').gsub(']','}')}"
 							vd = "#{definition}[][] #{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]#{assign};\n"
@@ -121,8 +132,8 @@ module Codeiya
 							extra.push '<int>jdx'
 						end
 					end
-					tmp_extra = @variables['extra'].split(',')
-					(extra+tmp_extra).join(',')
+					tmp_extra = @variables['extra'].split('^')
+					(extra+tmp_extra).uniq.join('^')
 
 				end
 
@@ -138,7 +149,7 @@ module Codeiya
 
 				def input_lines input_list
 					# detect positions
-					input_code = "Scanner in = new Scanner(System.in);\n"
+					input_code = "\t\tScanner in = new Scanner(System.in);\n"
 					x = input_list.map do |ex| ex['x'] end
 					number_of_lines = x.max + 1
 					number_of_lines.times do |idx|
@@ -171,14 +182,14 @@ module Codeiya
 						tmp_var_name = "#{var['name']}_elements"
 						size_limit1 = var['size1_name'].blank? ? var['size1'] : var['size1_name']
 						size_limit2 = var['size2_name'].blank? ? var['size2'] : var['size2_name']
-						line = "\t\t#{data_type_helper(var['type'])}[][] #{var['name']} = new #{data_type_helper(var['type'])}[#{size_limit}][#{}];\n"
-						line << "\t\tString #{tmp_var_name} = \"\";\n"
+						line = "\t\t#{data_type_helper(var['type'])}[][] #{var['name']} = new #{data_type_helper(var['type'])}[#{size_limit1}][#{size_limit2}];\n"
+						line << "\t\tString[] #{tmp_var_name} = new String[100];\n"
 						line << "\t\tfor(idx=0;idx<#{var['size1_name']};idx++){\n"
 						line << "\t\t\t#{tmp_var_name} = (in.nextLine()).split(\" \");\n"
 						line << "\t\t\tfor(jdx=0;jdx<#{var['size2_name']};jdx++){\n"
 						line << "\t\t\t\t#{var['name']}[idx][jdx] = #{parser(var['type'],tmp_var_name+'[jdx]')};\n"
 						line << "\t\t\t}\n"
-						line << "\t\t}"
+						line << "\t\t}\n"
 					end
 					line
 				end
@@ -228,10 +239,12 @@ module Codeiya
 							line = "\t\tSystem.out.println(#{variables.join('+" "+')});\n"
 						end
 					elsif var['size2'].empty?
-						line = "\t\tSystem.out.println(#{var['name']}.join(\" \"));]n"
+						@array_flag = 1
+						line = "\t\tSystem.out.println(join_string(Arrays.toString(#{var['name']})));\n"
 					else
+						@array_flag = 1
 						line = "for(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\t\t\tSystem.out.println(#{var['name']}[idx].join(' '));\n"
+						line << "\t\t\tSystem.out.println(join_string(Arrays.toString(#{var['name']}[idx])));\n"
 						line << "\t\t}"
 					end
 					line
