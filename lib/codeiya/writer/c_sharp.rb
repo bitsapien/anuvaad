@@ -190,8 +190,8 @@ module Codeiya
 						'int' => 'Convert.ToInt32',
 						'string' => '',
 						'char' => '',
-						'float' => 'Float.parseFloat',
-						'double' => 'Double.parseDouble'
+						'float' => 'float.Parse',
+						'double' => 'Double.Parse'
 					}
 					input_parser[type].blank? ? term : "#{input_parser[type]}(#{term})" 
 				end
