@@ -1,3 +1,72 @@
+// Name : 4th Dimension Aliens
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// latin_characters : 
+		string latin_characters;
+	cin >> latin_characters;
+
+
+	// write your code here
+	// store your results in `latin_consonant_characters`
+
+	// output
+	// Dummy Data
+	string latin_consonant_characters="l ёl hёö ёö dr ööё ln ös! wё r öё sёö lö gd tёö!";
+
+	cout << latin_consonant_characters << endl;
+
+}
+
+
+
+
+// Name : A and B and Compilation Errors
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the initial number of compilation errors
+	// a : 
+	// b : 
+	// c : 
+	int index;
+	int n;
+	cin >> n;
+	int a[10000];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+	int b[10000];
+
+	for(index=0;index<(n-1);index++)
+		cin >> b[index];
+	int c[10000];
+
+	for(index=0;index<(n-2);index++)
+		cin >> c[index];
+
+
+	// write your code here
+	// store your results in `errors_disappeared_after_first_correction`,`errors_disappeared_after_second_correction`
+
+	// output
+	// Dummy Data
+	int errors_disappeared_after_first_correction=8, errors_disappeared_after_second_correction=123;
+
+	cout << errors_disappeared_after_first_correction << endl;
+	cout << errors_disappeared_after_second_correction << endl;
+
+}
+
+
+
+
 // Name : A and B
 #include <iostream>
 #include <string>
@@ -249,6 +318,83 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Another Game of Life
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the size of the map
+	// m :  the number of populations that want to
+	int idx, jdx;
+	int n, m;
+
+	cin >> n >> m;
+
+
+	// write your code here
+	// store your results in `exists`,`territory`
+
+	// output
+	// Dummy Data
+	string exists="NO";
+char territory[100][100]={{''}};
+	if(exists=="YES"){
+	cout << exists << endl;
+		for(idx=0;idx<n;idx++) {
+			for(jdx=0;jdx<n;jdx++) {
+				cout << territory[idx][jdx];
+			}
+			cout << endl;
+		}
+	}
+
+}
+
+
+
+
+// Name : Apartment
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the size of Shalkan’s apartment plan
+	// m : the size of Shalkan’s apartment plan
+	// nm :  the description of the apartment plan
+	int idx, jdx;
+	int n, m;
+
+	cin >> n >> m;
+	char nm[2000][2000];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<m;jdx++)
+			cin >> nm[idx][jdx];
+
+
+	// write your code here
+	// store your results in `new_plan`
+
+	// output
+	// Dummy Data
+	char new_plan[2000][2000]={{'.','*','.','*','.'},{'*','*','*','*','*'},{'.','*','.','*','.'},{'*','*','*','*','*'},{'.','*','.','*','.'}};
+
+	for(idx=0;idx<n;idx++) {
+		for(jdx=0;jdx<m;jdx++) {
+			cout << new_plan[idx][jdx];
+		}
+		cout << endl;
+	}
+
+}
+
+
+
+
 // Name : Apples
 #include <iostream>
 #include <string>
@@ -307,6 +453,45 @@ int main(int argc, char const *argv[]) {
 	string result="chest";
 
 	cout << result;
+
+}
+
+
+
+
+// Name : Arrays Minmax
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : size of a
+	// m : size of b
+	// a : array A
+	// b : array B
+	int index;
+	int n, m;
+
+	cin >> n >> m;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+	int  b[m];
+
+	for(index=0;index<m;index++)
+		cin >> b[index];
+
+
+	// write your code here
+	// store your results in `minimum_num_of_operations`
+
+	// output
+	// Dummy Data
+	int minimum_num_of_operations=3;
+
+	cout << minimum_num_of_operations;
 
 }
 
@@ -420,6 +605,35 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Bernie and Formula 1
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : 
+	// m : 
+	// k : 
+		int n, m, k;
+
+	cin >> n >> m >> k;
+
+
+	// write your code here
+	// store your results in `probability`
+
+	// output
+	// Dummy Data
+	float probability=0.857143;
+
+	cout << probability << endl;
+
+}
+
+
+
+
 // Name : Best Friends
 #include <iostream>
 #include <string>
@@ -472,6 +686,46 @@ int main(int argc, char const *argv[]) {
 	string name="Sheldon";
 
 	cout << name;
+
+}
+
+
+
+
+// Name : Big Chessboard
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// x0 : start point
+	// y0 : start point
+	// x1 : destination point
+	// y1 : destination point
+	// n : number of segments of the permitted cells
+	// rab : each row of rab corresponds to ri ai bi
+	int idx, jdx;
+	int x0, y0, x1, y1;
+
+	cin >> x0 >> y0 >> x1 >> y1;
+	int n;
+	cin >> n;
+	int  rab[n][3];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<3;jdx++)
+			cin >> rab[idx][jdx];
+
+
+	// write your code here
+	// store your results in `minimum_moves`
+
+	// output
+	// Dummy Data
+	int minimum_moves=4;
+
+	cout << minimum_moves;
 
 }
 
@@ -534,6 +788,32 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Bookworm
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of books in the class bookshelf
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `digits_needed`
+
+	// output
+	// Dummy Data
+	int digits_needed=4;
+
+	cout << digits_needed << endl;
+
+}
+
+
+
+
 // Name : Box of Candies
 #include <iostream>
 #include <string>
@@ -566,6 +846,41 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Boy and Boxes
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of boxes
+	// x : number of the
+	// a :  number of balls in each box
+	int index;
+	int n, x;
+
+	cin >> n >> x;
+	int  a[n];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int  result[] = {3,2,5,4};
+
+	for(index=0;index<n;index++)
+		cout << result[index] << " ";
+
+}
+
+
+
+
 // Name : Broogman
 #include <iostream>
 #include <string>
@@ -586,6 +901,61 @@ int main(int argc, char const *argv[]) {
 	int result=52;
 
 	cout << result;
+
+}
+
+
+
+
+// Name : Buttons
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of buttons the lock has
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=3;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Calendar
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// start_date : 
+	// end_date : 
+		string start_date;
+	cin >> start_date;
+	string end_date;
+	cin >> end_date;
+
+
+	// write your code here
+	// store your results in `number_of_days`
+
+	// output
+	// Dummy Data
+	int number_of_days=50768;
+
+	cout << number_of_days << endl;
 
 }
 
@@ -672,6 +1042,212 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Changing Root of tree
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the amount of nodes in the tree
+	// r1 : index of the old root
+	// r2 : e index of the new one
+	// old_tree :  old representation of the tree
+	int index;
+	int n, r1, r2;
+
+	cin >> n >> r1 >> r2;
+	int old_tree[104];
+
+	for(index=0;index<(n-1);index++)
+		cin >> old_tree[index];
+
+
+	// write your code here
+	// store your results in `new_tree`
+
+	// output
+	// Dummy Data
+	int new_tree[104]={2,3};
+
+	for(index=0;index<(n-1);index++)
+		cout << new_tree[index] << " ";
+
+}
+
+
+
+
+// Name : Changing Username
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// q :  number of username change requests
+	// old_and_new : 
+	int idx, jdx;
+	int q;
+	cin >> q;
+	string old_and_new[1000][2];
+
+	for(idx=0;idx<q;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> old_and_new[idx][jdx];
+
+
+	// write your code here
+	// store your results in `number_of_people_that_changed_usernames`,`first_and_current`
+
+	// output
+	// Dummy Data
+	int number_of_people_that_changed_usernames=2;
+string first_and_current[1000][2];
+
+	cout << number_of_people_that_changed_usernames << endl;
+	for(idx=0;idx<number_of_people_that_changed_usernames;idx++) {
+		for(jdx=0;jdx<2;jdx++) {
+			cout << first_and_current[idx][jdx];
+		}
+		cout << endl;
+	}
+
+}
+
+
+
+
+// Name : Clockwork
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// time :  time in the format of hh mm
+	// n :  number of minutes to add
+		string time;
+	cin >> time;
+	int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `moment_in_time`
+
+	// output
+	// Dummy Data
+	string moment_in_time="00:09";
+
+	cout << moment_in_time << endl;
+
+}
+
+
+
+
+// Name : Coders
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  number of developers
+	// m :  number of lines of
+	// b :  maximum possible number of errors
+	// mod : the module you need to use to get the
+	// a :  the number of errors that each
+	int index;
+	int n, m, b, mod;
+
+	cin >> n >> m >> b >> mod;
+	int a[500];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=10;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Collection Game Cards
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : the number of cards on the assembly line
+	// a : cards
+	int index;
+	int n;
+	cin >> n;
+	int a[100];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=1;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Colored Balls
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// k :  the number of colors
+	// c :  the number of balls of each color 
+	int idx, jdx;
+	int k;
+	cin >> k;
+	int c[1000][1];
+
+	for(idx=0;idx<k;idx++)
+		for(jdx=0;jdx<1;jdx++)
+			cin >> c[idx][jdx];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=3;
+
+	cout << result << endl;
+
+}
+
+
+
+
 // Name : Concealing Handwriting
 #include <iostream>
 #include <string>
@@ -701,6 +1277,488 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Containing Number
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : count of the following numbers
+	// k : k
+	// numbers_to_check : 
+	int idx, jdx;
+	int n, k;
+
+	cin >> n >> k;
+	int numbers_to_check[100][1];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<1;jdx++)
+			cin >> numbers_to_check[idx][jdx];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=2;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Cotton Sequence
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : length of cotton sequence
+	// m : m
+		int n, m;
+
+	cin >> n >> m;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result="6";
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Count Of Divisors
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : integer n
+	int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `smallest_integer`
+
+	// output
+	// Dummy Data
+	int smallest_integer=6;
+
+	cout << smallest_integer << endl;
+
+}
+
+
+
+
+// Name : Dirty Stairs
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  number of steps in the staircase
+	// m : number of dirty steps
+	// d :  numbers of dirty steps 
+	int index;
+	int n, m;
+
+	cin >> n >> m;
+	int d[3000];
+
+	for(index=0;index<m;index++)
+		cin >> d[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="YES";
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Do You Even Swap
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// a : given integer
+	// t : number of swaps
+		int a, t;
+
+	cin >> a >> t;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=4321;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Duff in Love
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : positive integer
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `answer`
+
+	// output
+	// Dummy Data
+	int answer=10;
+
+	cout << answer << endl;
+
+}
+
+
+
+
+// Name : Elegance of a Sequence
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : length of sequence of a
+	// a : sequence a
+	int index;
+	int n;
+	cin >> n;
+	int a[105];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `k`,`b`
+
+	// output
+	// Dummy Data
+	int k=2, b[105]={4,5};
+
+	cout << k << endl;
+	for(index=0;index<k;index++)
+		cout << b[index] << " ";
+
+}
+
+
+
+
+// Name : Elite Architect
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : the number of Buildings in the capital of Nippon
+	// h :  number of stories in each building
+	int index;
+	int n;
+	cin >> n;
+	int h[10000];
+
+	for(index=0;index<n;index++)
+		cin >> h[index];
+
+
+	// write your code here
+	// store your results in `a`
+
+	// output
+	// Dummy Data
+	int a[10000]={3,2,0,2,0};
+
+	for(index=0;index<n;index++)
+		cout << a[index] << " ";
+
+}
+
+
+
+
+// Name : Encoding
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  length of word
+	// q : position
+		int n, q;
+
+	cin >> n >> q;
+
+
+	// write your code here
+	// store your results in `w`
+
+	// output
+	// Dummy Data
+	int w=8;
+
+	cout << w << endl;
+
+}
+
+
+
+
+// Name : Equality
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the amount of array elements
+	// m : array elements
+	int index;
+	int n;
+	cin >> n;
+	int m[10000];
+
+	for(index=0;index<n;index++)
+		cin >> m[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=3;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : EShopping
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  number of phone models' descriptions in the shop
+	// description :  zero stands for an unread description one for a read description
+	int index;
+	int n;
+	cin >> n;
+	int description[1000];
+
+	for(index=0;index<n;index++)
+		cin >> description[index];
+
+
+	// write your code here
+	// store your results in `clicks`
+
+	// output
+	// Dummy Data
+	int clicks=9;
+
+	cout << clicks << endl;
+
+}
+
+
+
+
+// Name : Fabulous Sum
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// t :  the amount of numbers for which you need to calculate the requested sum
+	// n : 
+	int idx, jdx;
+	int t;
+	cin >> t;
+	int n[100][1];
+
+	for(idx=0;idx<t;idx++)
+		for(jdx=0;jdx<1;jdx++)
+			cin >> n[idx][jdx];
+
+
+	// write your code here
+	// store your results in `sum`
+
+	// output
+	// Dummy Data
+	int sum[100][1]={{-4},{499999998352516354}};
+
+	for(idx=0;idx<t;idx++) {
+		for(jdx=0;jdx<1;jdx++) {
+			cout << sum[idx][jdx];
+		}
+		cout << endl;
+	}
+
+}
+
+
+
+
+// Name : Factorial game
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// t :  the number of games the soldiers play
+	// ab :  each row containing a pair of integers a and b defining the value of n for each game
+	int idx, jdx;
+	int t;
+	cin >> t;
+	int ab[1000000][2];
+
+	for(idx=0;idx<t;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> ab[idx][jdx];
+
+
+	// write your code here
+	// store your results in `max_score_for_soldiers`
+
+	// output
+	// Dummy Data
+	int max_score_for_soldiers[100000][1]={{2},{5}};
+
+	for(idx=0;idx<t;idx++) {
+		for(jdx=0;jdx<1;jdx++) {
+			cout << max_score_for_soldiers[idx][jdx];
+		}
+		cout << endl;
+	}
+
+}
+
+
+
+
+// Name : Flowers Girls and Grandma
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of girls
+	// p : Grandmas favourite prime number
+	// lr : each row corresponds to the range of flowers that each girl can grow
+	int idx, jdx;
+	int n, p;
+
+	cin >> n >> p;
+	int lr[10000][2];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> lr[idx][jdx];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	float result=0.0;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Forgotten Password
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of digits in the password 
+	// m :  the number of
+	// sc : each row contains si ci
+	int idx, jdx;
+	int n, m;
+
+	cin >> n >> m;
+	string sc[10][2];
+
+	for(idx=0;idx<m;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> sc[idx][jdx];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=6;
+
+	cout << result << endl;
+
+}
+
+
+
+
 // Name : Forty Seven
 #include <iostream>
 #include <string>
@@ -723,6 +1781,70 @@ int main(int argc, char const *argv[]) {
 	int minimum_number_of_operations=1;
 
 	cout << minimum_number_of_operations;
+
+}
+
+
+
+
+// Name : Going to a Bar
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of streets in Berlin
+	// m : the number of avenues in Berlin
+	// a :  the cost of spending a night in a bar at the intersection of street N and avenue M
+	int idx, jdx;
+	int n, m;
+
+	cin >> n >> m;
+	int a[100][100];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<m;jdx++)
+			cin >> a[idx][jdx];
+
+
+	// write your code here
+	// store your results in `cost`
+
+	// output
+	// Dummy Data
+	int cost=2;
+
+	cout << cost << endl;
+
+}
+
+
+
+
+// Name : Grasshopper
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the length of the board
+	// m : width of jump of grasshopper
+	// s : length of jump of grasshoppe
+		int n, m, s;
+
+	cin >> n >> m >> s;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=6;
+
+	cout << result << endl;
 
 }
 
@@ -763,6 +1885,259 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Happy Colleagues
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// r :  the number of candies of red
+	// g :  the number of candies of green
+	// b :  the number of candies of blue
+		int r, g, b;
+
+	cin >> r >> g >> b;
+
+
+	// write your code here
+	// store your results in `number_of_colleagues`
+
+	// output
+	// Dummy Data
+	int number_of_colleagues=4;
+
+	cout << number_of_colleagues;
+
+}
+
+
+
+
+// Name : Inmates
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of prisoners
+	// t : crime threshold
+	// c : selected inmates
+	// severity :  severity of the crime committed by each inmate
+	int index;
+	int n, t, c;
+
+	cin >> n >> t >> c;
+	int severity[10000];
+
+	for(index=0;index<n;index++)
+		cin >> severity[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=2;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Interesting Game
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// a : 
+	// b : 
+	// mod : 
+		int a, b, mod;
+
+	cin >> a >> b >> mod;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="2";
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Junior Broker
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  number of days
+	// e :  amount of Euro Finn has on the first day
+	// a :  the currency rate of Dollar to Euro on day i
+	int index;
+	int n, e;
+
+	cin >> n >> e;
+	int a[2000];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=8;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Little Bear With Cards
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of cards
+	// description : 
+	int idx, jdx;
+	int n;
+	cin >> n;
+	int description[10000][2];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> description[idx][jdx];
+
+
+	// write your code here
+	// store your results in `steps`
+
+	// output
+	// Dummy Data
+	int steps=0;
+
+	cout << steps << endl;
+
+}
+
+
+
+
+// Name : Magic Pool
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of tourists
+	// a : sizes of the pool
+	// b : sizes of the pool
+		int n, a, b;
+
+	cin >> n >> a >> b;
+
+
+	// write your code here
+	// store your results in `s`,`a1`,`b1`
+
+	// output
+	// Dummy Data
+	int s=18, a1=3, b1=6;
+
+	cout << s << endl;
+	cout << a1 << b1 << endl;
+
+}
+
+
+
+
+// Name : Magic Square
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// original_magic_square : original magic square
+	int idx, jdx;
+	int original_magic_square[3][3];
+
+	for(idx=0;idx<3;idx++)
+		for(jdx=0;jdx<3;jdx++)
+			cin >> original_magic_square[idx][jdx];
+
+
+	// write your code here
+	// store your results in `repaired_magic_square`
+
+	// output
+	// Dummy Data
+	int repaired_magic_square[3][3]={{4,4,4},{4,4,4},{4,4,4}};
+
+	for(idx=0;idx<3;idx++) {
+		for(jdx=0;jdx<3;jdx++) {
+			cout << repaired_magic_square[idx][jdx];
+		}
+		cout << endl;
+	}
+
+}
+
+
+
+
+// Name : Master of Eight
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : non negative number
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `exist`,`result`
+
+	// output
+	// Dummy Data
+	string exist="YES";
+int result=344;
+
+	cout << exist << endl;
+	cout << result << endl;
+
+}
+
+
+
+
 // Name : Max Even Sum 
 #include <iostream>
 #include <string>
@@ -795,6 +2170,84 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Mom Loves Art
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// a1 : 
+	// b1 : 
+	// a2 : 
+	// b2 : 
+	// a3 : 
+	// b3 : 
+		int a1, b1;
+
+	cin >> a1 >> b1;
+	int a2, b2;
+
+	cin >> a2 >> b2;
+	int a3, b3;
+
+	cin >> a3 >> b3;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	string result="YES";
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : MSSUM1
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of elements in the array
+	// q :  the number of queries correspondingly
+	// a :  the array elements
+	// lr : each row corresponds to l and r
+	int index, idx, jdx;
+	int n, q;
+
+	cin >> n >> q;
+	int a[100000];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+	int lr[100000][2];
+
+	for(idx=0;idx<q;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> lr[idx][jdx];
+
+
+	// write your code here
+	// store your results in `sum_of_replies`
+
+	// output
+	// Dummy Data
+	int sum_of_replies=25;
+
+	cout << sum_of_replies << endl;
+
+}
+
+
+
+
 // Name : Nearly Prime
 #include <iostream>
 #include <string>
@@ -815,6 +2268,168 @@ int main(int argc, char const *argv[]) {
 	int result=2;
 
 	cout << result;
+
+}
+
+
+
+
+// Name : Notebook with Numbers 
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of sheets
+	// k : 
+	// a : 
+	int index;
+	int n, k;
+
+	cin >> n >> k;
+	int a[300];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `maximum_sum`,`r`
+
+	// output
+	// Dummy Data
+	int maximum_sum=27, r[300]={3,4,5,8};
+
+	cout << maximum_sum << endl;
+	for(index=0;index<(k-1);index++)
+		cout << r[index] << " ";
+
+}
+
+
+
+
+// Name : Palindrome game
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// str : input
+		string str;
+	cin >> str;
+
+
+	// write your code here
+	// store your results in `winner`
+
+	// output
+	// Dummy Data
+	string winner="First";
+
+	cout << winner << endl;
+
+}
+
+
+
+
+// Name : Palindromization
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  string length
+	// p :  the current position of the cursor
+	// given_string : string of n lowercase Latin letters
+	int n, p;
+
+	cin >> n >> p;
+	string given_string;
+	cin >> given_string;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=12;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Pocket money
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : the number of exams
+	// r :  the maximum score
+	// avg : average score required to double his pocket money
+	// ab : ab corresponds to ai bi
+	int idx, jdx;
+	int n, r, avg;
+
+	cin >> n >> r >> avg;
+	int  ab[n][2];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> ab[idx][jdx];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=4;
+
+	cout << result;
+
+}
+
+
+
+
+// Name : Pony Sequence
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of elements in the sequences in a and b
+	// a : sequence a
+	int index;
+	int n;
+	cin >> n;
+	int a[100];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `b`
+
+	// output
+	// Dummy Data
+	int b[100]={1,1,1,1,1};
+
+	for(index=0;index<n;index++)
+		cout << b[index] << " ";
 
 }
 
@@ -844,6 +2459,38 @@ int main(int argc, char const *argv[]) {
 	int result=3;
 
 	cout << result;
+
+}
+
+
+
+
+// Name : Robot's Task
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of non negative integers
+	// a : integers
+	int index;
+	int n;
+	cin >> n;
+	int a[1000];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `changes`
+
+	// output
+	// Dummy Data
+	int changes=1;
+
+	cout << changes << endl;
 
 }
 
@@ -905,6 +2552,323 @@ int main(int argc, char const *argv[]) {
 
 
 
+// Name : Skyscraper
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of skyscrapers
+	// k : number of stories to move
+	// h : each row has height of each skyscraper
+	int index;
+	int n, k;
+
+	cin >> n >> k;
+	int h[100];
+
+	for(index=0;index<n;index++)
+		cin >> h[index];
+
+
+	// write your code here
+	// store your results in `j`
+
+	// output
+	// Dummy Data
+	int j=3;
+
+	cout << j << endl;
+
+}
+
+
+
+
+// Name : Small Reform
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  value of the most expensive coin
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `result_set`
+
+	// output
+	// Dummy Data
+	string result_set="10 5 1";
+
+	cout << result_set << endl;
+
+}
+
+
+
+
+// Name : Snowflakes
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : length of array
+	// k : number of  letters of the English alphabet
+	// english_letters :  contains n uppercase English letters
+		int n, k;
+
+	cin >> n >> k;
+	string english_letters;
+	cin >> english_letters;
+
+
+	// write your code here
+	// store your results in `min_number_of_changes`,`changed_array`
+
+	// output
+	// Dummy Data
+	int min_number_of_changes=2;
+	string changed_array="ABCACA";
+
+	cout << min_number_of_changes << endl;
+	cout << changed_array << endl;
+
+}
+
+
+
+
+// Name : Sort
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of subjects
+	// m : the number of limitations
+	// su : pairs si ui which describe the order of subjects
+	// sequence : 
+	int idx, jdx, index;
+	int n, m;
+
+	cin >> n >> m;
+	int su[10000][2];
+
+	for(idx=0;idx<m;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> su[idx][jdx];
+	int sequence[1000];
+
+	for(index=0;index<n;index++)
+		cin >> sequence[index];
+
+
+	// write your code here
+	// store your results in `correct`
+
+	// output
+	// Dummy Data
+	string correct="YES";
+
+	cout << correct << endl;
+
+}
+
+
+
+
+// Name : Splitty Palindromes
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// word : given word
+		string word;
+	cin >> word;
+
+
+	// write your code here
+	// store your results in `splitty_palindrome`
+
+	// output
+	// Dummy Data
+	string splitty_palindrome="te a m m a te";
+
+	cout << splitty_palindrome << endl;
+
+}
+
+
+
+
+// Name : Square
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// k :  count of cases
+	// an : integers a and n in every row
+	int idx, jdx;
+	int k;
+	cin >> k;
+	int an[1000][2];
+
+	for(idx=0;idx<k;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> an[idx][jdx];
+
+
+	// write your code here
+	// store your results in `roots`
+
+	// output
+	// Dummy Data
+	string roots="No root";
+
+	cout << roots << endl;
+
+}
+
+
+
+
+// Name : Squirrel and Nuts
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the initial amount of nuts
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=16;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Strings Problemo
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// s : latin characters
+	// t : latin characters
+	// n : the number of possible replacements
+	// abw : each row corresponds to a b w for each possible replacement
+	int idx, jdx;
+	string s;
+	cin >> s;
+	string t;
+	cin >> t;
+	int n;
+	cin >> n;
+	char abw[500][3];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<3;jdx++)
+			cin >> abw[idx][jdx];
+
+
+	// write your code here
+	// store your results in `answer`,`resulting_string`
+
+	// output
+	// Dummy Data
+	int answer=21;
+	string resulting_string="uxyd";
+
+	cout << answer << endl;
+	cout << resulting_string << endl;
+
+}
+
+
+
+
+// Name : Supergame
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of boys
+	// a :  number of rounds each boy wants to play
+	int index;
+	int n;
+	cin >> n;
+	int a[10000];
+
+	for(index=0;index<n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=4;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : The toy shop
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of toys
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `color_of_toys`
+
+	// output
+	// Dummy Data
+	string color_of_toys="ROYGBIVG";
+
+	cout << color_of_toys << endl;
+
+}
+
+
+
+
 // Name : Trains
 #include <iostream>
 #include <string>
@@ -941,6 +2905,144 @@ int main(int argc, char const *argv[]) {
 	int result=2;
 
 	cout << result;
+
+}
+
+
+
+
+// Name : Treasure Lock
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : the number of buttons
+		int n;
+	cin >> n;
+
+
+	// write your code here
+	// store your results in `result`
+
+	// output
+	// Dummy Data
+	int result=1;
+
+	cout << result << endl;
+
+}
+
+
+
+
+// Name : Treepath
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of vertices
+	// m :  edges of the graph
+	// uvw : each row has the  numbers of the
+	// u :  the number of the starting vertex
+	int idx, jdx, index;
+	int n, m;
+
+	cin >> n >> m;
+	int uvw[10000][3];
+
+	for(idx=0;idx<m;idx++)
+		for(jdx=0;jdx<3;jdx++)
+			cin >> uvw[idx][jdx];
+	int u;
+	cin >> u;
+
+
+	// write your code here
+	// store your results in `minimal_total_weight`,`indices_of_edges`
+
+	// output
+	// Dummy Data
+	int minimal_total_weight=2, indices_of_edges[10000]={1,2};
+
+	cout << minimal_total_weight << endl;
+	for(index=0;index<n;index++)
+		cout << indices_of_edges[index] << " ";
+
+}
+
+
+
+
+// Name : Two Circles
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n :  the number of points
+	// x1 : coordinates of first circle
+	// y1 : coordinates of first circle
+	// x2 : coordinates of second circle
+	// y2 :  coordinates of second circle
+	// xy :  each row contains integers xi and yi
+	int idx, jdx;
+	int n, x1, y1, x2, y2;
+
+	cin >> n >> x1 >> y1 >> x2 >> y2;
+	int xy[2000][2];
+
+	for(idx=0;idx<n;idx++)
+		for(jdx=0;jdx<2;jdx++)
+			cin >> xy[idx][jdx];
+
+
+	// write your code here
+	// store your results in `minimum_value`
+
+	// output
+	// Dummy Data
+	int minimum_value=6;
+
+	cout << minimum_value << endl;
+
+}
+
+
+
+
+// Name : Two Piles of Balls
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+	// input:
+	// n : number of balls in a pile
+	// a : 
+	int index;
+	int n;
+	cin >> n;
+	int a[100];
+
+	for(index=0;index<2n;index++)
+		cin >> a[index];
+
+
+	// write your code here
+	// store your results in `result`,`b`
+
+	// output
+	// Dummy Data
+	int result=1, b[100]={2,1};
+
+	cout << result << endl;
+	for(index=0;index<(2*n);index++)
+		cout << b[index] << " ";
 
 }
 

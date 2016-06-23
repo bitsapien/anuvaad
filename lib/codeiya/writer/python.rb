@@ -201,7 +201,7 @@ module Codeiya
 						line = "print(\" \".join(str(e) for e in #{var['name']}))"
 					else
 						line = "for idx in xrange(#{var['size1_name']}):\n"
-						line = "\tprint(\" \".join(str(e) for e in #{var['name']}[idx]))"
+						line << "\tprint(\" \".join(str(e) for e in #{var['name']}[idx]))"
 					end
 					line
 				end

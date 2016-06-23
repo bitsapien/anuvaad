@@ -2,6 +2,16 @@ banner cycle is confusing, same inputs with different outputs
 also I find no need to take its inputs on two different lines
 question and test cases not clear
 
+
+
 greedy man has a mismatch
 
 
+
+apple tree is confusing
+
+
+
+
+A and B and Compilation Errors - says print on one line
+test cases say otherwise

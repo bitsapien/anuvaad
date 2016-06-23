@@ -198,14 +198,14 @@ module Codeiya
 						elsif one['size2'].blank?
 							output_code = ''
 							output_code << "\tfor(index = 0; index< #{one['size1_name']}; index++) {\n"
-							output_code << "\t\tprintf(\"%d \",#{one['name']}[index]);\n"
+							output_code << "\t\tprintf(\"#{access_specifier_mappings[one['type']]} \",#{one['name']}[index]);\n"
 							output_code << "\t}\n"
 
 						else
 							output_code = ''
 							output_code << "\tfor(idx = 0; idx< #{one['size1_name']}; idx++) {\n"
 							output_code << "\t\tfor(jdx = 0;jdx<#{one['size2_name']};jdx++) {\n"
-							output_code << "\t\t\tprintf(\"%d \",#{one['name']}[idx][jdx]);\n"
+							output_code << "\t\t\tprintf(\"#{access_specifier_mappings[one['type']]} \",#{one['name']}[idx][jdx]);\n"
 							output_code << "\t\t}\n"
 							output_code << "\t\tprintf(\"\\n\");\n"
 							output_code << "\t}\n"							

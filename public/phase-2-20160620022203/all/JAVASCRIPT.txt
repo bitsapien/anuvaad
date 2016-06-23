@@ -1,3 +1,62 @@
+// Name : 4th Dimension Aliens
+// input:
+// latin_characters : 
+var latin_consonant_characters;
+var latin_characters = readline();
+
+
+// write your code here
+// store your results in `latin_consonant_characters`
+
+// Dummy Data
+latin_consonant_characters = "l ёl hёö ёö dr ööё ln ös! wё r öё sёö lö gd tёö!";
+
+
+// output
+print(latin_consonant_characters);
+
+
+
+
+
+// Name : A and B and Compilation Errors
+// input:
+// n :  the initial number of compilation errors
+// a : 
+// b : 
+// c : 
+var index,errors_disappeared_after_first_correction,errors_disappeared_after_second_correction;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+var b = [];
+var b_elements = readline().split(' ');
+for(index=0;index<(n-1);index++)
+	b.push(parseInt(b_elements[index], 10));
+var c = [];
+var c_elements = readline().split(' ');
+for(index=0;index<(n-2);index++)
+	c.push(parseInt(c_elements[index], 10));
+
+
+// write your code here
+// store your results in `errors_disappeared_after_first_correction`,`errors_disappeared_after_second_correction`
+
+// Dummy Data
+errors_disappeared_after_first_correction = 8;
+errors_disappeared_after_second_correction = 123;
+
+
+// output
+print(errors_disappeared_after_first_correction);
+print(errors_disappeared_after_second_correction);
+
+
+
+
+
 // Name : A and B
 // input:
 // n : length of the string
@@ -204,6 +263,72 @@ print(result);
 
 
 
+// Name : Another Game of Life
+// input:
+// n :  the size of the map
+// m :  the number of populations that want to
+var idx,exists,territory;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+
+
+// write your code here
+// store your results in `exists`,`territory`
+
+// Dummy Data
+exists = "NO";
+territory = [['']];
+
+
+// output
+print(exists);
+if(exists=="YES"){
+	for(idx=0;idx<n;idx++){
+		print(territory[idx].join(' '));
+	}
+}
+
+
+
+
+
+// Name : Apartment
+// input:
+// n :  the size of Shalkan’s apartment plan
+// m : the size of Shalkan’s apartment plan
+// nm :  the description of the apartment plan
+var idx,new_plan;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var nm = new Array([]);
+var nm_elements = "";
+for(idx=0;idx<n;idx++){
+	nm_elements = readline().split(' ');
+	nm[idx] = new Array([]);
+	for(jdx=0;jdx<m;jdx++){
+		nm[idx][jdx] = nm_elements[jdx];
+	}
+}
+
+
+// write your code here
+// store your results in `new_plan`
+
+// Dummy Data
+new_plan = [['.','*','.','*','.'],['*','*','*','*','*'],['.','*','.','*','.'],['*','*','*','*','*'],['.','*','.','*','.']];
+
+
+// output
+for(idx=0;idx<n;idx++){
+	print(new_plan[idx].join(' '));
+}
+
+
+
+
+
 // Name : Apples
 // input:
 // n :  the amount of apples
@@ -251,6 +376,40 @@ result = "chest";
 
 // output
 print(result);
+
+
+
+
+
+// Name : Arrays Minmax
+// input:
+// n : size of a
+// m : size of b
+// a : array A
+// b : array B
+var index,minimum_num_of_operations;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+var b = [];
+var b_elements = readline().split(' ');
+for(index=0;index<m;index++)
+	b.push(parseInt(b_elements[index], 10));
+
+
+// write your code here
+// store your results in `minimum_num_of_operations`
+
+// Dummy Data
+minimum_num_of_operations = 3;
+
+
+// output
+print(minimum_num_of_operations);
 
 
 
@@ -345,6 +504,32 @@ print(result);
 
 
 
+// Name : Bernie and Formula 1
+// input:
+// n : 
+// m : 
+// k : 
+var probability;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var k = parseInt(elements[2], 10);
+
+
+// write your code here
+// store your results in `probability`
+
+// Dummy Data
+probability = 0.857143;
+
+
+// output
+print(probability);
+
+
+
+
+
 // Name : Best Friends
 // input:
 // n : the number of Dima's friends
@@ -387,6 +572,45 @@ name = "Sheldon";
 
 // output
 print(name);
+
+
+
+
+
+// Name : Big Chessboard
+// input:
+// x0 : start point
+// y0 : start point
+// x1 : destination point
+// y1 : destination point
+// n : number of segments of the permitted cells
+// rab : each row of rab corresponds to ri ai bi
+var idx,minimum_moves;
+var elements = readline().split(" ");
+var x0 = parseInt(elements[0], 10);
+var y0 = parseInt(elements[1], 10);
+var x1 = parseInt(elements[2], 10);
+var y1 = parseInt(elements[3], 10);
+var n = parseInt(readline(), 10);
+var rab = new Array([]);
+var rab_elements = "";
+for(idx=0;idx<n;idx++){
+	rab_elements = readline().split(' ');
+	rab[idx] = new Array([]);
+	for(jdx=0;jdx<3;jdx++){
+		rab[idx][jdx] = parseInt(rab_elements[jdx], 10);
+	}
+}
+
+// write your code here
+// store your results in `minimum_moves`
+
+// Dummy Data
+minimum_moves = 4;
+
+
+// output
+print(minimum_moves);
 
 
 
@@ -436,6 +660,27 @@ print(number_of_methods);
 
 
 
+// Name : Bookworm
+// input:
+// n :  the number of books in the class bookshelf
+var digits_needed;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `digits_needed`
+
+// Dummy Data
+digits_needed = 4;
+
+
+// output
+print(digits_needed);
+
+
+
+
+
 // Name : Box of Candies
 // input:
 // n :  the number of boxes with candies James and Jessica have
@@ -462,6 +707,34 @@ print(sought_number_of_ways);
 
 
 
+// Name : Boy and Boxes
+// input:
+// n :  the number of boxes
+// x : number of the
+// a :  number of balls in each box
+var index,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var x = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = [3,2,5,4];
+
+
+// output
+print(result.join(" "))
+
+
+
+
 // Name : Broogman
 // input:
 // inp : method of saving
@@ -478,6 +751,50 @@ result = 52;
 
 // output
 print(result);
+
+
+
+
+
+// Name : Buttons
+// input:
+// n :  the number of buttons the lock has
+var result;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 3;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Calendar
+// input:
+// start_date : 
+// end_date : 
+var number_of_days;
+var start_date = readline();
+var end_date = readline();
+
+
+// write your code here
+// store your results in `number_of_days`
+
+// Dummy Data
+number_of_days = 50768;
+
+
+// output
+print(number_of_days);
 
 
 
@@ -549,6 +866,185 @@ print(number_of_fish_the_dog_will_get);
 
 
 
+// Name : Changing Root of tree
+// input:
+// n :  the amount of nodes in the tree
+// r1 : index of the old root
+// r2 : e index of the new one
+// old_tree :  old representation of the tree
+var index,new_tree;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var r1 = parseInt(elements[1], 10);
+var r2 = parseInt(elements[2], 10);
+var old_tree = [];
+var old_tree_elements = readline().split(' ');
+for(index=0;index<(n-1);index++)
+	old_tree.push(parseInt(old_tree_elements[index], 10));
+
+
+// write your code here
+// store your results in `new_tree`
+
+// Dummy Data
+new_tree = {2,3};
+
+
+// output
+print(new_tree.join(" "))
+
+
+
+
+
+// Name : Changing Username
+// input:
+// q :  number of username change requests
+// old_and_new : 
+var idx,number_of_people_that_changed_usernames,first_and_current;
+var q = parseInt(readline(), 10);
+var old_and_new = new Array([]);
+var old_and_new_elements = "";
+for(idx=0;idx<q;idx++){
+	old_and_new_elements = readline().split(' ');
+	old_and_new[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		old_and_new[idx][jdx] = old_and_new_elements[jdx];
+	}
+}
+
+
+// write your code here
+// store your results in `number_of_people_that_changed_usernames`,`first_and_current`
+
+// Dummy Data
+number_of_people_that_changed_usernames = 2;
+first_and_current = ;
+
+
+// output
+print(number_of_people_that_changed_usernames);
+for(idx=0;idx<number_of_people_that_changed_usernames;idx++){
+	print(first_and_current[idx].join(' '));
+}
+
+
+
+
+
+// Name : Clockwork
+// input:
+// time :  time in the format of hh mm
+// n :  number of minutes to add
+var moment_in_time;
+var time = readline();
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `moment_in_time`
+
+// Dummy Data
+moment_in_time = "00:09";
+
+
+// output
+print(moment_in_time);
+
+
+
+
+
+// Name : Coders
+// input:
+// n :  number of developers
+// m :  number of lines of
+// b :  maximum possible number of errors
+// mod : the module you need to use to get the
+// a :  the number of errors that each
+var index,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var b = parseInt(elements[2], 10);
+var mod = parseInt(elements[3], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 10;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Collection Game Cards
+// input:
+// n : the number of cards on the assembly line
+// a : cards
+var index,result;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 1;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Colored Balls
+// input:
+// k :  the number of colors
+// c :  the number of balls of each color 
+var idx,result;
+var k = parseInt(readline(), 10);
+var c = new Array([]);
+var c_elements = "";
+for(idx=0;idx<k;idx++){
+	c_elements = readline().split(' ');
+	c[idx] = new Array([]);
+	for(jdx=0;jdx<1;jdx++){
+		c[idx][jdx] = parseInt(c_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 3;
+
+
+// output
+print(result);
+
+
+
+
+
 // Name : Concealing Handwriting
 // input:
 // s : A string that the spy needs to send in a letter
@@ -573,6 +1069,423 @@ print(right_case+" "+wrong_case);
 
 
 
+// Name : Containing Number
+// input:
+// n : count of the following numbers
+// k : k
+// numbers_to_check : 
+var idx,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var k = parseInt(elements[1], 10);
+var numbers_to_check = new Array([]);
+var numbers_to_check_elements = "";
+for(idx=0;idx<n;idx++){
+	numbers_to_check_elements = readline().split(' ');
+	numbers_to_check[idx] = new Array([]);
+	for(jdx=0;jdx<1;jdx++){
+		numbers_to_check[idx][jdx] = parseInt(numbers_to_check_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 2;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Cotton Sequence
+// input:
+// n : length of cotton sequence
+// m : m
+var result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = "6";
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Count Of Divisors
+// input:
+// n : integer n
+var smallest_integer;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `smallest_integer`
+
+// Dummy Data
+smallest_integer = 6;
+
+
+// output
+print(smallest_integer);
+
+
+
+
+
+// Name : Dirty Stairs
+// input:
+// n :  number of steps in the staircase
+// m : number of dirty steps
+// d :  numbers of dirty steps 
+var index,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var d = [];
+var d_elements = readline().split(' ');
+for(index=0;index<m;index++)
+	d.push(parseInt(d_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = "YES";
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Do You Even Swap
+// input:
+// a : given integer
+// t : number of swaps
+var result;
+var elements = readline().split(" ");
+var a = parseInt(elements[0], 10);
+var t = parseInt(elements[1], 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 4321;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Duff in Love
+// input:
+// n : positive integer
+var answer;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `answer`
+
+// Dummy Data
+answer = 10;
+
+
+// output
+print(answer);
+
+
+
+
+
+// Name : Elegance of a Sequence
+// input:
+// n : length of sequence of a
+// a : sequence a
+var index,k,b;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `k`,`b`
+
+// Dummy Data
+k = 2;
+b = [4,5];
+
+
+// output
+print(k);
+print(b.join(" "))
+
+
+
+
+
+// Name : Elite Architect
+// input:
+// n : the number of Buildings in the capital of Nippon
+// h :  number of stories in each building
+var index,a;
+var n = parseInt(readline(), 10);
+var h = [];
+var h_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	h.push(parseInt(h_elements[index], 10));
+
+
+// write your code here
+// store your results in `a`
+
+// Dummy Data
+a = [3,2,0,2,0];
+
+
+// output
+print(a.join(" "))
+
+
+
+
+
+// Name : Encoding
+// input:
+// n :  length of word
+// q : position
+var w;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var q = parseInt(elements[1], 10);
+
+
+// write your code here
+// store your results in `w`
+
+// Dummy Data
+w = 8;
+
+
+// output
+print(w);
+
+
+
+
+
+// Name : Equality
+// input:
+// n :  the amount of array elements
+// m : array elements
+var index,result;
+var n = parseInt(readline(), 10);
+var m = [];
+var m_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	m.push(parseInt(m_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 3;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : EShopping
+// input:
+// n :  number of phone models' descriptions in the shop
+// description :  zero stands for an unread description one for a read description
+var index,clicks;
+var n = parseInt(readline(), 10);
+var description = [];
+var description_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	description.push(parseInt(description_elements[index], 10));
+
+
+// write your code here
+// store your results in `clicks`
+
+// Dummy Data
+clicks = 9;
+
+
+// output
+print(clicks);
+
+
+
+
+
+// Name : Fabulous Sum
+// input:
+// t :  the amount of numbers for which you need to calculate the requested sum
+// n : 
+var idx,sum;
+var t = parseInt(readline(), 10);
+var n = new Array([]);
+var n_elements = "";
+for(idx=0;idx<t;idx++){
+	n_elements = readline().split(' ');
+	n[idx] = new Array([]);
+	for(jdx=0;jdx<1;jdx++){
+		n[idx][jdx] = parseInt(n_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `sum`
+
+// Dummy Data
+sum = [[-4],[499999998352516354]];
+
+
+// output
+for(idx=0;idx<t;idx++){
+	print(sum[idx].join(' '));
+}
+
+
+
+
+
+// Name : Factorial game
+// input:
+// t :  the number of games the soldiers play
+// ab :  each row containing a pair of integers a and b defining the value of n for each game
+var idx,max_score_for_soldiers;
+var t = parseInt(readline(), 10);
+var ab = new Array([]);
+var ab_elements = "";
+for(idx=0;idx<t;idx++){
+	ab_elements = readline().split(' ');
+	ab[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		ab[idx][jdx] = parseInt(ab_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `max_score_for_soldiers`
+
+// Dummy Data
+max_score_for_soldiers = [[2],[5]];
+
+
+// output
+for(idx=0;idx<t;idx++){
+	print(max_score_for_soldiers[idx].join(' '));
+}
+
+
+
+
+
+// Name : Flowers Girls and Grandma
+// input:
+// n :  the number of girls
+// p : Grandmas favourite prime number
+// lr : each row corresponds to the range of flowers that each girl can grow
+var idx,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var p = parseInt(elements[1], 10);
+var lr = new Array([]);
+var lr_elements = "";
+for(idx=0;idx<n;idx++){
+	lr_elements = readline().split(' ');
+	lr[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		lr[idx][jdx] = parseInt(lr_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 0.0;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Forgotten Password
+// input:
+// n :  the number of digits in the password 
+// m :  the number of
+// sc : each row contains si ci
+var idx,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var sc = new Array([]);
+var sc_elements = "";
+for(idx=0;idx<m;idx++){
+	sc_elements = readline().split(' ');
+	sc[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		sc[idx][jdx] = sc_elements[jdx];
+	}
+}
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 6;
+
+
+// output
+print(result);
+
+
+
+
+
 // Name : Forty Seven
 // input:
 // a : string a
@@ -591,6 +1504,66 @@ minimum_number_of_operations = 1;
 
 // output
 print(minimum_number_of_operations);
+
+
+
+
+
+// Name : Going to a Bar
+// input:
+// n :  the number of streets in Berlin
+// m : the number of avenues in Berlin
+// a :  the cost of spending a night in a bar at the intersection of street N and avenue M
+var idx,cost;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var a = new Array([]);
+var a_elements = "";
+for(idx=0;idx<n;idx++){
+	a_elements = readline().split(' ');
+	a[idx] = new Array([]);
+	for(jdx=0;jdx<m;jdx++){
+		a[idx][jdx] = parseInt(a_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `cost`
+
+// Dummy Data
+cost = 2;
+
+
+// output
+print(cost);
+
+
+
+
+
+// Name : Grasshopper
+// input:
+// n :  the length of the board
+// m : width of jump of grasshopper
+// s : length of jump of grasshoppe
+var result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var s = parseInt(elements[2], 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 6;
+
+
+// output
+print(result);
 
 
 
@@ -625,6 +1598,232 @@ print(result);
 
 
 
+// Name : Happy Colleagues
+// input:
+// r :  the number of candies of red
+// g :  the number of candies of green
+// b :  the number of candies of blue
+var number_of_colleagues;
+var elements = readline().split(" ");
+var r = parseInt(elements[0], 10);
+var g = parseInt(elements[1], 10);
+var b = parseInt(elements[2], 10);
+
+
+// write your code here
+// store your results in `number_of_colleagues`
+
+// Dummy Data
+number_of_colleagues = 4;
+
+
+// output
+print(number_of_colleagues);
+
+
+
+
+
+// Name : Inmates
+// input:
+// n : number of prisoners
+// t : crime threshold
+// c : selected inmates
+// severity :  severity of the crime committed by each inmate
+var index,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var t = parseInt(elements[1], 10);
+var c = parseInt(elements[2], 10);
+var severity = [];
+var severity_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	severity.push(parseInt(severity_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 2;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Interesting Game
+// input:
+// a : 
+// b : 
+// mod : 
+var result;
+var elements = readline().split(" ");
+var a = parseInt(elements[0], 10);
+var b = parseInt(elements[1], 10);
+var mod = parseInt(elements[2], 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = "2";
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Junior Broker
+// input:
+// n :  number of days
+// e :  amount of Euro Finn has on the first day
+// a :  the currency rate of Dollar to Euro on day i
+var index,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var e = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 8;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Little Bear With Cards
+// input:
+// n :  the number of cards
+// description : 
+var idx,steps;
+var n = parseInt(readline(), 10);
+var description = new Array([]);
+var description_elements = "";
+for(idx=0;idx<n;idx++){
+	description_elements = readline().split(' ');
+	description[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		description[idx][jdx] = parseInt(description_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `steps`
+
+// Dummy Data
+steps = 0;
+
+
+// output
+print(steps);
+
+
+
+
+
+// Name : Magic Pool
+// input:
+// n : number of tourists
+// a : sizes of the pool
+// b : sizes of the pool
+var s,a1,b1;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var a = parseInt(elements[1], 10);
+var b = parseInt(elements[2], 10);
+
+
+// write your code here
+// store your results in `s`,`a1`,`b1`
+
+// Dummy Data
+s = 18;
+a1 = 3;
+b1 = 6;
+
+
+// output
+print(s);
+print(a1+" "+b1);
+
+
+
+
+
+// Name : Magic Square
+// input:
+// original_magic_square : original magic square
+var idx,repaired_magic_square;
+var original_magic_square = new Array([]);
+var original_magic_square_elements = "";
+for(idx=0;idx<3;idx++){
+	original_magic_square_elements = readline().split(' ');
+	original_magic_square[idx] = new Array([]);
+	for(jdx=0;jdx<3;jdx++){
+		original_magic_square[idx][jdx] = parseInt(original_magic_square_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `repaired_magic_square`
+
+// Dummy Data
+repaired_magic_square = [[4,4,4],[4,4,4],[4,4,4]];
+
+
+// output
+for(idx=0;idx<3;idx++){
+	print(repaired_magic_square[idx].join(' '));
+}
+
+
+
+
+
+// Name : Master of Eight
+// input:
+// n : non negative number
+var exist,result;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `exist`,`result`
+
+// Dummy Data
+exist = "YES";
+result = 344;
+
+
+// output
+print(exist);
+print(result);
+
+
+
+
+
 // Name : Max Even Sum 
 // input:
 // n : number of integers
@@ -651,6 +1850,79 @@ print(result);
 
 
 
+// Name : Mom Loves Art
+// input:
+// a1 : 
+// b1 : 
+// a2 : 
+// b2 : 
+// a3 : 
+// b3 : 
+var result;
+var elements = readline().split(" ");
+var a1 = parseInt(elements[0], 10);
+var b1 = parseInt(elements[1], 10);
+var elements = readline().split(" ");
+var a2 = parseInt(elements[0], 10);
+var b2 = parseInt(elements[1], 10);
+var elements = readline().split(" ");
+var a3 = parseInt(elements[0], 10);
+var b3 = parseInt(elements[1], 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = "YES";
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : MSSUM1
+// input:
+// n :  the number of elements in the array
+// q :  the number of queries correspondingly
+// a :  the array elements
+// lr : each row corresponds to l and r
+var index,sum_of_replies;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var q = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+var lr = new Array([]);
+var lr_elements = "";
+for(idx=0;idx<q;idx++){
+	lr_elements = readline().split(' ');
+	lr[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		lr[idx][jdx] = parseInt(lr_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `sum_of_replies`
+
+// Dummy Data
+sum_of_replies = 25;
+
+
+// output
+print(sum_of_replies);
+
+
+
+
+
 // Name : Nearly Prime
 // input:
 // n : range from 1 to n
@@ -667,6 +1939,145 @@ result = 2;
 
 // output
 print(result);
+
+
+
+
+
+// Name : Notebook with Numbers 
+// input:
+// n : number of sheets
+// k : 
+// a : 
+var index,maximum_sum,r;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var k = parseInt(elements[1], 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `maximum_sum`,`r`
+
+// Dummy Data
+maximum_sum = 27;
+r = [3,4,5,8];
+
+
+// output
+print(maximum_sum);
+print(r.join(" "))
+
+
+
+
+
+// Name : Palindrome game
+// input:
+// str : input
+var winner;
+var str = readline();
+
+
+// write your code here
+// store your results in `winner`
+
+// Dummy Data
+winner = "First";
+
+
+// output
+print(winner);
+
+
+
+
+
+// Name : Palindromization
+// input:
+// n :  string length
+// p :  the current position of the cursor
+// given_string : string of n lowercase Latin letters
+var result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var p = parseInt(elements[1], 10);
+var given_string = readline();
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 12;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Pocket money
+// input:
+// n : the number of exams
+// r :  the maximum score
+// avg : average score required to double his pocket money
+// ab : ab corresponds to ai bi
+var idx,result;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var r = parseInt(elements[1], 10);
+var avg = parseInt(elements[2], 10);
+var ab = new Array([]);
+var ab_elements = "";
+for(idx=0;idx<n;idx++){
+	ab_elements = readline().split(' ');
+	ab[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		ab[idx][jdx] = parseInt(ab_elements[jdx], 10);
+	}
+}
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 4;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Pony Sequence
+// input:
+// n : number of elements in the sequences in a and b
+// a : sequence a
+var index,b;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `b`
+
+// Dummy Data
+b = [1,1,1,1,1];
+
+
+// output
+print(b.join(" "))
 
 
 
@@ -693,6 +2104,32 @@ result = 3;
 
 // output
 print(result);
+
+
+
+
+
+// Name : Robot's Task
+// input:
+// n : number of non negative integers
+// a : integers
+var index,changes;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `changes`
+
+// Dummy Data
+changes = 1;
+
+
+// output
+print(changes);
 
 
 
@@ -745,6 +2182,280 @@ print(money_to_borrow);
 
 
 
+// Name : Skyscraper
+// input:
+// n : number of skyscrapers
+// k : number of stories to move
+// h : each row has height of each skyscraper
+var index,j;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var k = parseInt(elements[1], 10);
+var h = [];
+var h_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	h.push(parseInt(h_elements[index], 10));
+
+
+// write your code here
+// store your results in `j`
+
+// Dummy Data
+j = 3;
+
+
+// output
+print(j);
+
+
+
+
+
+// Name : Small Reform
+// input:
+// n :  value of the most expensive coin
+var result_set;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `result_set`
+
+// Dummy Data
+result_set = "10 5 1";
+
+
+// output
+print(result_set);
+
+
+
+
+
+// Name : Snowflakes
+// input:
+// n : length of array
+// k : number of  letters of the English alphabet
+// english_letters :  contains n uppercase English letters
+var min_number_of_changes,changed_array;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var k = parseInt(elements[1], 10);
+var english_letters = readline();
+
+
+// write your code here
+// store your results in `min_number_of_changes`,`changed_array`
+
+// Dummy Data
+min_number_of_changes = 2;
+changed_array = "ABCACA";
+
+
+// output
+print(min_number_of_changes);
+print(changed_array);
+
+
+
+
+
+// Name : Sort
+// input:
+// n : number of subjects
+// m : the number of limitations
+// su : pairs si ui which describe the order of subjects
+// sequence : 
+var idx,correct;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var su = new Array([]);
+var su_elements = "";
+for(idx=0;idx<m;idx++){
+	su_elements = readline().split(' ');
+	su[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		su[idx][jdx] = parseInt(su_elements[jdx], 10);
+	}
+}
+var sequence = [];
+var sequence_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	sequence.push(parseInt(sequence_elements[index], 10));
+
+
+// write your code here
+// store your results in `correct`
+
+// Dummy Data
+correct = "YES";
+
+
+// output
+print(correct);
+
+
+
+
+
+// Name : Splitty Palindromes
+// input:
+// word : given word
+var splitty_palindrome;
+var word = readline();
+
+
+// write your code here
+// store your results in `splitty_palindrome`
+
+// Dummy Data
+splitty_palindrome = "te a m m a te";
+
+
+// output
+print(splitty_palindrome);
+
+
+
+
+
+// Name : Square
+// input:
+// k :  count of cases
+// an : integers a and n in every row
+var idx,roots;
+var k = parseInt(readline(), 10);
+var an = new Array([]);
+var an_elements = "";
+for(idx=0;idx<k;idx++){
+	an_elements = readline().split(' ');
+	an[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		an[idx][jdx] = parseInt(an_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `roots`
+
+// Dummy Data
+roots = "No root";
+
+
+// output
+print(roots);
+
+
+
+
+
+// Name : Squirrel and Nuts
+// input:
+// n :  the initial amount of nuts
+var result;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 16;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Strings Problemo
+// input:
+// s : latin characters
+// t : latin characters
+// n : the number of possible replacements
+// abw : each row corresponds to a b w for each possible replacement
+var idx,answer,resulting_string;
+var s = readline();
+var t = readline();
+var n = parseInt(readline(), 10);
+var abw = new Array([]);
+var abw_elements = "";
+for(idx=0;idx<n;idx++){
+	abw_elements = readline().split(' ');
+	abw[idx] = new Array([]);
+	for(jdx=0;jdx<3;jdx++){
+		abw[idx][jdx] = abw_elements[jdx];
+	}
+}
+
+
+// write your code here
+// store your results in `answer`,`resulting_string`
+
+// Dummy Data
+answer = 21;
+resulting_string = "uxyd";
+
+
+// output
+print(answer);
+print(resulting_string);
+
+
+
+
+
+// Name : Supergame
+// input:
+// n : number of boys
+// a :  number of rounds each boy wants to play
+var index,result;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 4;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : The toy shop
+// input:
+// n : number of toys
+var color_of_toys;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `color_of_toys`
+
+// Dummy Data
+color_of_toys = "ROYGBIVG";
+
+
+// output
+print(color_of_toys);
+
+
+
+
+
 // Name : Trains
 // input:
 // n : number of cities
@@ -784,6 +2495,133 @@ result = 2;
 
 // output
 print(result);
+
+
+
+
+
+// Name : Treasure Lock
+// input:
+// n : the number of buttons
+var result;
+var n = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `result`
+
+// Dummy Data
+result = 1;
+
+
+// output
+print(result);
+
+
+
+
+
+// Name : Treepath
+// input:
+// n :  the number of vertices
+// m :  edges of the graph
+// uvw : each row has the  numbers of the
+// u :  the number of the starting vertex
+var idx,minimal_total_weight,indices_of_edges;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var m = parseInt(elements[1], 10);
+var uvw = new Array([]);
+var uvw_elements = "";
+for(idx=0;idx<m;idx++){
+	uvw_elements = readline().split(' ');
+	uvw[idx] = new Array([]);
+	for(jdx=0;jdx<3;jdx++){
+		uvw[idx][jdx] = parseInt(uvw_elements[jdx], 10);
+	}
+}
+var u = parseInt(readline(), 10);
+
+
+// write your code here
+// store your results in `minimal_total_weight`,`indices_of_edges`
+
+// Dummy Data
+minimal_total_weight = 2;
+indices_of_edges = [1,2];
+
+
+// output
+print(minimal_total_weight);
+print(indices_of_edges.join(" "))
+
+
+
+
+
+// Name : Two Circles
+// input:
+// n :  the number of points
+// x1 : coordinates of first circle
+// y1 : coordinates of first circle
+// x2 : coordinates of second circle
+// y2 :  coordinates of second circle
+// xy :  each row contains integers xi and yi
+var idx,minimum_value;
+var elements = readline().split(" ");
+var n = parseInt(elements[0], 10);
+var x1 = parseInt(elements[1], 10);
+var y1 = parseInt(elements[2], 10);
+var x2 = parseInt(elements[3], 10);
+var y2 = parseInt(elements[4], 10);
+var xy = new Array([]);
+var xy_elements = "";
+for(idx=0;idx<n;idx++){
+	xy_elements = readline().split(' ');
+	xy[idx] = new Array([]);
+	for(jdx=0;jdx<2;jdx++){
+		xy[idx][jdx] = parseInt(xy_elements[jdx], 10);
+	}
+}
+
+
+// write your code here
+// store your results in `minimum_value`
+
+// Dummy Data
+minimum_value = 6;
+
+
+// output
+print(minimum_value);
+
+
+
+
+
+// Name : Two Piles of Balls
+// input:
+// n : number of balls in a pile
+// a : 
+var index,result,b;
+var n = parseInt(readline(), 10);
+var a = [];
+var a_elements = readline().split(' ');
+for(index=0;index<2n;index++)
+	a.push(parseInt(a_elements[index], 10));
+
+
+// write your code here
+// store your results in `result`,`b`
+
+// Dummy Data
+result = 1;
+b = [2,1];
+
+
+// output
+print(result);
+print(b.join(" "))
 
 
 

@@ -65,7 +65,7 @@ module Codeiya
 
 					# print outputs
 
-					code << "\t#{output_lines(var_output_list)}\n"
+					code << "#{output_lines(var_output_list)}\n"
 
 					code << "}"
 
@@ -102,7 +102,7 @@ module Codeiya
 								list.push "#{name.to_s}[#{vr['size1']}][#{vr['size2']}]#{assign}"
 							end
 						end
-						vd << "\t#{definition}#{list.join(', ')};\n"
+						vd << "#{definition}#{list.join(', ')};\n"
 					end
 					vd
 				end
@@ -198,16 +198,16 @@ module Codeiya
 					var = var_list[0]
 					if var['size1'].empty? && var['size2'].empty?
 						if var_list.size.eql? 1
-							line = "cout << #{var['name']} << endl;\n"
+							line = "\tcout << #{var['name']} << endl;\n"
 						else
 							variables = var_list.map do |k| k['name'] end
-							line = "cout << #{variables.join(' << ')} << endl;\n"
+							line = "\tcout << #{variables.join(' << ')} << endl;\n"
 						end
 					elsif var['size2'].empty?
-						line = "for(index=0;index<#{var['size1_name']};index++)\n"
+						line = "\tfor(index=0;index<#{var['size1_name']};index++)\n"
 						line << "\t\tcout << #{var['name']}[index] << \" \";\n"
 					else
-						line = "for(idx=0;idx<#{var['size1_name']};idx++) {\n"
+						line = "\tfor(idx=0;idx<#{var['size1_name']};idx++) {\n"
 						line << "\t\tfor(jdx=0;jdx<#{var['size2_name']};jdx++) {\n"
 						line << "\t\t\tcout << #{var['name']}[idx][jdx];\n"
 						line << "\t\t}\n"

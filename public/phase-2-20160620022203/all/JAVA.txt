@@ -1,3 +1,75 @@
+// Name : 4th Dimension Aliens
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// latin_characters : 
+		Scanner in = new Scanner(System.in);
+		String latin_characters = in.nextLine();
+
+
+		// write your code here
+		// store your results in `latin_consonant_characters`
+
+		// output
+		// Dummy Data
+		String latin_consonant_characters="l ёl hёö ёö dr ööё ln ös! wё r öё sёö lö gd tёö!";
+
+		System.out.println(latin_consonant_characters);
+
+	}
+}
+
+
+
+
+// Name : A and B and Compilation Errors
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the initial number of compilation errors
+		// a : 
+		// b : 
+		// c : 
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+		int[] b = new int[(n-1)];
+		String[] b_elements = (in.nextLine()).split(" ");
+		for(index=0;index<(n-1);index++)
+			b[index] = Integer.parseInt(b_elements[index]);
+		int[] c = new int[(n-2)];
+		String[] c_elements = (in.nextLine()).split(" ");
+		for(index=0;index<(n-2);index++)
+			c[index] = Integer.parseInt(c_elements[index]);
+
+
+		// write your code here
+		// store your results in `errors_disappeared_after_first_correction`,`errors_disappeared_after_second_correction`
+
+		// output
+		// Dummy Data
+		int errors_disappeared_after_first_correction=8;
+		int errors_disappeared_after_second_correction=123;
+
+		System.out.println(errors_disappeared_after_first_correction);
+		System.out.println(errors_disappeared_after_second_correction);
+
+	}
+}
+
+
+
+
 // Name : A and B
 import java.util.*;
 import java.lang.*;
@@ -255,6 +327,91 @@ class Main {
 
 
 
+// Name : Another Game of Life
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the size of the map
+		// m :  the number of populations that want to
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `exists`,`territory`
+
+		// output
+		// Dummy Data
+		String exists="NO";
+		char[][] territory[100][100]= new char[][] {{''}};
+
+		System.out.println(exists);
+		if(exists=="YES"){
+			for(idx=0;idx<n;idx++){
+				System.out.println(join_string(Arrays.toString(territory[idx])));
+			}
+		}
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Apartment
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the size of Shalkan’s apartment plan
+		// m : the size of Shalkan’s apartment plan
+		// nm :  the description of the apartment plan
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		char[][] nm = new char[n][m];
+		String[] nm_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			nm_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<m;jdx++){
+				nm[idx][jdx] = nm_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `new_plan`
+
+		// output
+		// Dummy Data
+		char[][] new_plan[2000][2000]= new char[][] {{'.','*','.','*','.'},{'*','*','*','*','*'},{'.','*','.','*','.'},{'*','*','*','*','*'},{'.','*','.','*','.'}};
+
+for(idx=0;idx<n;idx++){
+			System.out.println(join_string(Arrays.toString(new_plan[idx])));
+		}
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
 // Name : Apples
 import java.util.*;
 import java.lang.*;
@@ -314,6 +471,47 @@ class Main {
 		String result="chest";
 
 		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Arrays Minmax
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : size of a
+		// m : size of b
+		// a : array A
+		// b : array B
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+		int[] b = new int[m];
+		String[] b_elements = (in.nextLine()).split(" ");
+		for(index=0;index<m;index++)
+			b[index] = Integer.parseInt(b_elements[index]);
+
+
+		// write your code here
+		// store your results in `minimum_num_of_operations`
+
+		// output
+		// Dummy Data
+		int minimum_num_of_operations=3;
+
+		System.out.println(minimum_num_of_operations);
 
 	}
 }
@@ -434,6 +632,38 @@ class Main {
 
 
 
+// Name : Bernie and Formula 1
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : 
+		// m : 
+		// k : 
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int k = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `probability`
+
+		// output
+		// Dummy Data
+		float probability=0.857143;
+
+		System.out.println(probability);
+
+	}
+}
+
+
+
+
 // Name : Best Friends
 import java.util.*;
 import java.lang.*;
@@ -487,6 +717,52 @@ class Main {
 		String name="Sheldon";
 
 		System.out.println(name);
+
+	}
+}
+
+
+
+
+// Name : Big Chessboard
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// x0 : start point
+		// y0 : start point
+		// x1 : destination point
+		// y1 : destination point
+		// n : number of segments of the permitted cells
+		// rab : each row of rab corresponds to ri ai bi
+		int idx, jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int x0 = Integer.parseInt(elements[0]);
+		int y0 = Integer.parseInt(elements[1]);
+		int x1 = Integer.parseInt(elements[2]);
+		int y1 = Integer.parseInt(elements[3]);
+		int n = Integer.parseInt(in.nextLine());
+		int[][] rab = new int[n][3];
+		String[] rab_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			rab_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<3;jdx++){
+				rab[idx][jdx] = Integer.parseInt(rab_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `minimum_moves`
+
+		// output
+		// Dummy Data
+		int minimum_moves=4;
+
+		System.out.println(minimum_moves);
 
 	}
 }
@@ -555,6 +831,33 @@ class Main {
 
 
 
+// Name : Bookworm
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of books in the class bookshelf
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `digits_needed`
+
+		// output
+		// Dummy Data
+		int digits_needed=4;
+
+		System.out.println(digits_needed);
+
+	}
+}
+
+
+
+
 // Name : Box of Candies
 import java.util.*;
 import java.lang.*;
@@ -588,6 +891,45 @@ class Main {
 
 
 
+// Name : Boy and Boxes
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of boxes
+		// x : number of the
+		// a :  number of balls in each box
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int x = Integer.parseInt(elements[1]);
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result[] = new int [] {3,2,5,4};
+
+		System.out.println(join_string(Arrays.toString(result)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
 // Name : Broogman
 import java.util.*;
 import java.lang.*;
@@ -608,6 +950,62 @@ class Main {
 		int result=52;
 
 		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Buttons
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of buttons the lock has
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Calendar
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// start_date : 
+		// end_date : 
+		Scanner in = new Scanner(System.in);
+		String start_date = in.nextLine();
+		String end_date = in.nextLine();
+
+
+		// write your code here
+		// store your results in `number_of_days`
+
+		// output
+		// Dummy Data
+		int number_of_days=50768;
+
+		System.out.println(number_of_days);
 
 	}
 }
@@ -699,6 +1097,231 @@ class Main {
 
 
 
+// Name : Changing Root of tree
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the amount of nodes in the tree
+		// r1 : index of the old root
+		// r2 : e index of the new one
+		// old_tree :  old representation of the tree
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int r1 = Integer.parseInt(elements[1]);
+		int r2 = Integer.parseInt(elements[2]);
+		int[] old_tree = new int[(n-1)];
+		String[] old_tree_elements = (in.nextLine()).split(" ");
+		for(index=0;index<(n-1);index++)
+			old_tree[index] = Integer.parseInt(old_tree_elements[index]);
+
+
+		// write your code here
+		// store your results in `new_tree`
+
+		// output
+		// Dummy Data
+		intnew_tree[] = new int[] {2,3};
+
+		System.out.println(join_string(Arrays.toString(new_tree)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Changing Username
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// q :  number of username change requests
+		// old_and_new : 
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int q = Integer.parseInt(in.nextLine());
+		String[][] old_and_new = new String[q][2];
+		String[] old_and_new_elements = new String[100];
+		for(idx=0;idx<q;idx++){
+			old_and_new_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				old_and_new[idx][jdx] = old_and_new_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `number_of_people_that_changed_usernames`,`first_and_current`
+
+		// output
+		// Dummy Data
+		int number_of_people_that_changed_usernames=2;
+		String[][] first_and_current[1000][2]= new String[number_of_people_that_changed_usernames][2];
+
+		System.out.println(number_of_people_that_changed_usernames);
+for(idx=0;idx<number_of_people_that_changed_usernames;idx++){
+			System.out.println(join_string(Arrays.toString(first_and_current[idx])));
+		}
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Clockwork
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// time :  time in the format of hh mm
+		// n :  number of minutes to add
+		Scanner in = new Scanner(System.in);
+		String time = in.nextLine();
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `moment_in_time`
+
+		// output
+		// Dummy Data
+		String moment_in_time="00:09";
+
+		System.out.println(moment_in_time);
+
+	}
+}
+
+
+
+
+// Name : Coders
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  number of developers
+		// m :  number of lines of
+		// b :  maximum possible number of errors
+		// mod : the module you need to use to get the
+		// a :  the number of errors that each
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int b = Integer.parseInt(elements[2]);
+		int mod = Integer.parseInt(elements[3]);
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=10;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Collection Game Cards
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : the number of cards on the assembly line
+		// a : cards
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=1;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Colored Balls
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// k :  the number of colors
+		// c :  the number of balls of each color 
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int k = Integer.parseInt(in.nextLine());
+		int[][] c = new int[k][1];
+		String[] c_elements = new String[100];
+		for(idx=0;idx<k;idx++){
+			c_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<1;jdx++){
+				c[idx][jdx] = Integer.parseInt(c_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
 // Name : Concealing Handwriting
 import java.util.*;
 import java.lang.*;
@@ -728,6 +1351,533 @@ class Main {
 
 
 
+// Name : Containing Number
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : count of the following numbers
+		// k : k
+		// numbers_to_check : 
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int k = Integer.parseInt(elements[1]);
+		int[][] numbers_to_check = new int[n][1];
+		String[] numbers_to_check_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			numbers_to_check_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<1;jdx++){
+				numbers_to_check[idx][jdx] = Integer.parseInt(numbers_to_check_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=2;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Cotton Sequence
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : length of cotton sequence
+		// m : m
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result="6";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Count Of Divisors
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : integer n
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `smallest_integer`
+
+		// output
+		// Dummy Data
+		int smallest_integer=6;
+
+		System.out.println(smallest_integer);
+
+	}
+}
+
+
+
+
+// Name : Dirty Stairs
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  number of steps in the staircase
+		// m : number of dirty steps
+		// d :  numbers of dirty steps 
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int[] d = new int[m];
+		String[] d_elements = (in.nextLine()).split(" ");
+		for(index=0;index<m;index++)
+			d[index] = Integer.parseInt(d_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="YES";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Do You Even Swap
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// a : given integer
+		// t : number of swaps
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int a = Integer.parseInt(elements[0]);
+		int t = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=4321;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Duff in Love
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : positive integer
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `answer`
+
+		// output
+		// Dummy Data
+		int answer=10;
+
+		System.out.println(answer);
+
+	}
+}
+
+
+
+
+// Name : Elegance of a Sequence
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : length of sequence of a
+		// a : sequence a
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `k`,`b`
+
+		// output
+		// Dummy Data
+		int k=2;
+		intb[] = new int[] {4,5};
+
+		System.out.println(k);
+		System.out.println(join_string(Arrays.toString(b)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Elite Architect
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : the number of Buildings in the capital of Nippon
+		// h :  number of stories in each building
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] h = new int[n];
+		String[] h_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			h[index] = Integer.parseInt(h_elements[index]);
+
+
+		// write your code here
+		// store your results in `a`
+
+		// output
+		// Dummy Data
+		inta[] = new int[] {3,2,0,2,0};
+
+		System.out.println(join_string(Arrays.toString(a)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Encoding
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  length of word
+		// q : position
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int q = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `w`
+
+		// output
+		// Dummy Data
+		int w=8;
+
+		System.out.println(w);
+
+	}
+}
+
+
+
+
+// Name : Equality
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the amount of array elements
+		// m : array elements
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] m = new int[n];
+		String[] m_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			m[index] = Integer.parseInt(m_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : EShopping
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  number of phone models' descriptions in the shop
+		// description :  zero stands for an unread description one for a read description
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] description = new int[n];
+		String[] description_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			description[index] = Integer.parseInt(description_elements[index]);
+
+
+		// write your code here
+		// store your results in `clicks`
+
+		// output
+		// Dummy Data
+		int clicks=9;
+
+		System.out.println(clicks);
+
+	}
+}
+
+
+
+
+// Name : Fabulous Sum
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// t :  the amount of numbers for which you need to calculate the requested sum
+		// n : 
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int t = Integer.parseInt(in.nextLine());
+		int[][] n = new int[t][1];
+		String[] n_elements = new String[100];
+		for(idx=0;idx<t;idx++){
+			n_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<1;jdx++){
+				n[idx][jdx] = Integer.parseInt(n_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `sum`
+
+		// output
+		// Dummy Data
+		int[][] sum[100][1]= new int[][] {{-4},{499999998352516354}};
+
+for(idx=0;idx<t;idx++){
+			System.out.println(join_string(Arrays.toString(sum[idx])));
+		}
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Factorial game
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// t :  the number of games the soldiers play
+		// ab :  each row containing a pair of integers a and b defining the value of n for each game
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int t = Integer.parseInt(in.nextLine());
+		int[][] ab = new int[t][2];
+		String[] ab_elements = new String[100];
+		for(idx=0;idx<t;idx++){
+			ab_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				ab[idx][jdx] = Integer.parseInt(ab_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `max_score_for_soldiers`
+
+		// output
+		// Dummy Data
+		int[][] max_score_for_soldiers[100000][1]= new int[][] {{2},{5}};
+
+for(idx=0;idx<t;idx++){
+			System.out.println(join_string(Arrays.toString(max_score_for_soldiers[idx])));
+		}
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Flowers Girls and Grandma
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of girls
+		// p : Grandmas favourite prime number
+		// lr : each row corresponds to the range of flowers that each girl can grow
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int p = Integer.parseInt(elements[1]);
+		int[][] lr = new int[n][2];
+		String[] lr_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			lr_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				lr[idx][jdx] = Integer.parseInt(lr_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		float result=0.0;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Forgotten Password
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of digits in the password 
+		// m :  the number of
+		// sc : each row contains si ci
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		String[][] sc = new String[m][2];
+		String[] sc_elements = new String[100];
+		for(idx=0;idx<m;idx++){
+			sc_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				sc[idx][jdx] = sc_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=6;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
 // Name : Forty Seven
 import java.util.*;
 import java.lang.*;
@@ -750,6 +1900,79 @@ class Main {
 		int minimum_number_of_operations=1;
 
 		System.out.println(minimum_number_of_operations);
+
+	}
+}
+
+
+
+
+// Name : Going to a Bar
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of streets in Berlin
+		// m : the number of avenues in Berlin
+		// a :  the cost of spending a night in a bar at the intersection of street N and avenue M
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int[][] a = new int[n][m];
+		String[] a_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			a_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<m;jdx++){
+				a[idx][jdx] = Integer.parseInt(a_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `cost`
+
+		// output
+		// Dummy Data
+		int cost=2;
+
+		System.out.println(cost);
+
+	}
+}
+
+
+
+
+// Name : Grasshopper
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the length of the board
+		// m : width of jump of grasshopper
+		// s : length of jump of grasshoppe
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int s = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=6;
+
+		System.out.println(result);
 
 	}
 }
@@ -793,6 +2016,286 @@ class Main {
 
 
 
+// Name : Happy Colleagues
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// r :  the number of candies of red
+		// g :  the number of candies of green
+		// b :  the number of candies of blue
+				Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int r = Integer.parseInt(elements[0]);
+		int g = Integer.parseInt(elements[1]);
+		int b = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `number_of_colleagues`
+
+		// output
+		// Dummy Data
+		int number_of_colleagues=4;
+
+		System.out.println(number_of_colleagues);
+
+	}
+}
+
+
+
+
+// Name : Inmates
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of prisoners
+		// t : crime threshold
+		// c : selected inmates
+		// severity :  severity of the crime committed by each inmate
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int t = Integer.parseInt(elements[1]);
+		int c = Integer.parseInt(elements[2]);
+		int[] severity = new int[n];
+		String[] severity_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			severity[index] = Integer.parseInt(severity_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=2;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Interesting Game
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// a : 
+		// b : 
+		// mod : 
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int a = Integer.parseInt(elements[0]);
+		int b = Integer.parseInt(elements[1]);
+		int mod = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="2";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Junior Broker
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  number of days
+		// e :  amount of Euro Finn has on the first day
+		// a :  the currency rate of Dollar to Euro on day i
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int e = Integer.parseInt(elements[1]);
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=8;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Little Bear With Cards
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of cards
+		// description : 
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[][] description = new int[n][2];
+		String[] description_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			description_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				description[idx][jdx] = Integer.parseInt(description_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `steps`
+
+		// output
+		// Dummy Data
+		int steps=0;
+
+		System.out.println(steps);
+
+	}
+}
+
+
+
+
+// Name : Magic Pool
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of tourists
+		// a : sizes of the pool
+		// b : sizes of the pool
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int a = Integer.parseInt(elements[1]);
+		int b = Integer.parseInt(elements[2]);
+
+
+		// write your code here
+		// store your results in `s`,`a1`,`b1`
+
+		// output
+		// Dummy Data
+		int s=18;
+		int a1=3;
+		int b1=6;
+
+		System.out.println(s);
+		System.out.println(a1+" "+b1);
+
+	}
+}
+
+
+
+
+// Name : Magic Square
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// original_magic_square : original magic square
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int[][] original_magic_square = new int[3][3];
+		String[] original_magic_square_elements = new String[100];
+		for(idx=0;idx<3;idx++){
+			original_magic_square_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<3;jdx++){
+				original_magic_square[idx][jdx] = Integer.parseInt(original_magic_square_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `repaired_magic_square`
+
+		// output
+		// Dummy Data
+		int[][] repaired_magic_square[3][3]= new int[][] {{4,4,4},{4,4,4},{4,4,4}};
+
+for(idx=0;idx<3;idx++){
+			System.out.println(join_string(Arrays.toString(repaired_magic_square[idx])));
+		}
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Master of Eight
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : non negative number
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `exist`,`result`
+
+		// output
+		// Dummy Data
+		String exist="YES";
+		int result=344;
+
+		System.out.println(exist);
+		System.out.println(result);
+
+	}
+}
+
+
+
+
 // Name : Max Even Sum 
 import java.util.*;
 import java.lang.*;
@@ -819,6 +2322,93 @@ class Main {
 		int result=6;
 
 		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Mom Loves Art
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// a1 : 
+		// b1 : 
+		// a2 : 
+		// b2 : 
+		// a3 : 
+		// b3 : 
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int a1 = Integer.parseInt(elements[0]);
+		int b1 = Integer.parseInt(elements[1]);
+		String[] elements = (in.nextLine()).split(" ");
+		int a2 = Integer.parseInt(elements[0]);
+		int b2 = Integer.parseInt(elements[1]);
+		String[] elements = (in.nextLine()).split(" ");
+		int a3 = Integer.parseInt(elements[0]);
+		int b3 = Integer.parseInt(elements[1]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		String result="YES";
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : MSSUM1
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of elements in the array
+		// q :  the number of queries correspondingly
+		// a :  the array elements
+		// lr : each row corresponds to l and r
+		int index;
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int q = Integer.parseInt(elements[1]);
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+		int[][] lr = new int[q][2];
+		String[] lr_elements = new String[100];
+		for(idx=0;idx<q;idx++){
+			lr_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				lr[idx][jdx] = Integer.parseInt(lr_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `sum_of_replies`
+
+		// output
+		// Dummy Data
+		int sum_of_replies=25;
+
+		System.out.println(sum_of_replies);
 
 	}
 }
@@ -853,6 +2443,184 @@ class Main {
 
 
 
+// Name : Notebook with Numbers 
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of sheets
+		// k : 
+		// a : 
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int k = Integer.parseInt(elements[1]);
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `maximum_sum`,`r`
+
+		// output
+		// Dummy Data
+		int maximum_sum=27;
+		intr[] = new int[] {3,4,5,8};
+
+		System.out.println(maximum_sum);
+		System.out.println(join_string(Arrays.toString(r)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Palindrome game
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// str : input
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+
+
+		// write your code here
+		// store your results in `winner`
+
+		// output
+		// Dummy Data
+		String winner="First";
+
+		System.out.println(winner);
+
+	}
+}
+
+
+
+
+// Name : Palindromization
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  string length
+		// p :  the current position of the cursor
+		// given_string : string of n lowercase Latin letters
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int p = Integer.parseInt(elements[1]);
+		String given_string = in.nextLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=12;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Pocket money
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : the number of exams
+		// r :  the maximum score
+		// avg : average score required to double his pocket money
+		// ab : ab corresponds to ai bi
+		int idx, jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int r = Integer.parseInt(elements[1]);
+		int avg = Integer.parseInt(elements[2]);
+		int[][] ab = new int[n][2];
+		String[] ab_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			ab_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				ab[idx][jdx] = Integer.parseInt(ab_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=4;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Pony Sequence
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of elements in the sequences in a and b
+		// a : sequence a
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `b`
+
+		// output
+		// Dummy Data
+		intb[] = new int[] {1,1,1,1,1};
+
+		System.out.println(join_string(Arrays.toString(b)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
 // Name : Quiz
 import java.util.*;
 import java.lang.*;
@@ -878,6 +2646,39 @@ class Main {
 		int result=3;
 
 		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Robot's Task
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of non negative integers
+		// a : integers
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `changes`
+
+		// output
+		// Dummy Data
+		int changes=1;
+
+		System.out.println(changes);
 
 	}
 }
@@ -944,6 +2745,346 @@ class Main {
 
 
 
+// Name : Skyscraper
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of skyscrapers
+		// k : number of stories to move
+		// h : each row has height of each skyscraper
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int k = Integer.parseInt(elements[1]);
+		int[] h = new int[n];
+		String[] h_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			h[index] = Integer.parseInt(h_elements[index]);
+
+
+		// write your code here
+		// store your results in `j`
+
+		// output
+		// Dummy Data
+		int j=3;
+
+		System.out.println(j);
+
+	}
+}
+
+
+
+
+// Name : Small Reform
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  value of the most expensive coin
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result_set`
+
+		// output
+		// Dummy Data
+		String result_set="10 5 1";
+
+		System.out.println(result_set);
+
+	}
+}
+
+
+
+
+// Name : Snowflakes
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : length of array
+		// k : number of  letters of the English alphabet
+		// english_letters :  contains n uppercase English letters
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int k = Integer.parseInt(elements[1]);
+		String english_letters = in.nextLine();
+
+
+		// write your code here
+		// store your results in `min_number_of_changes`,`changed_array`
+
+		// output
+		// Dummy Data
+		int min_number_of_changes=2;
+		String changed_array="ABCACA";
+
+		System.out.println(min_number_of_changes);
+		System.out.println(changed_array);
+
+	}
+}
+
+
+
+
+// Name : Sort
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of subjects
+		// m : the number of limitations
+		// su : pairs si ui which describe the order of subjects
+		// sequence : 
+		int idx;
+		int jdx;
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int[][] su = new int[m][2];
+		String[] su_elements = new String[100];
+		for(idx=0;idx<m;idx++){
+			su_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				su[idx][jdx] = Integer.parseInt(su_elements[jdx]);
+			}
+		}
+		int[] sequence = new int[n];
+		String[] sequence_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			sequence[index] = Integer.parseInt(sequence_elements[index]);
+
+
+		// write your code here
+		// store your results in `correct`
+
+		// output
+		// Dummy Data
+		String correct="YES";
+
+		System.out.println(correct);
+
+	}
+}
+
+
+
+
+// Name : Splitty Palindromes
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// word : given word
+		Scanner in = new Scanner(System.in);
+		String word = in.nextLine();
+
+
+		// write your code here
+		// store your results in `splitty_palindrome`
+
+		// output
+		// Dummy Data
+		String splitty_palindrome="te a m m a te";
+
+		System.out.println(splitty_palindrome);
+
+	}
+}
+
+
+
+
+// Name : Square
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// k :  count of cases
+		// an : integers a and n in every row
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		int k = Integer.parseInt(in.nextLine());
+		int[][] an = new int[k][2];
+		String[] an_elements = new String[100];
+		for(idx=0;idx<k;idx++){
+			an_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				an[idx][jdx] = Integer.parseInt(an_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `roots`
+
+		// output
+		// Dummy Data
+		String roots="No root";
+
+		System.out.println(roots);
+
+	}
+}
+
+
+
+
+// Name : Squirrel and Nuts
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the initial amount of nuts
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=16;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Strings Problemo
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// s : latin characters
+		// t : latin characters
+		// n : the number of possible replacements
+		// abw : each row corresponds to a b w for each possible replacement
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String s = in.nextLine();
+		String t = in.nextLine();
+		int n = Integer.parseInt(in.nextLine());
+		char[][] abw = new char[n][3];
+		String[] abw_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			abw_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<3;jdx++){
+				abw[idx][jdx] = abw_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `answer`,`resulting_string`
+
+		// output
+		// Dummy Data
+		int answer=21;
+		String resulting_string="uxyd";
+
+		System.out.println(answer);
+		System.out.println(resulting_string);
+
+	}
+}
+
+
+
+
+// Name : Supergame
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of boys
+		// a :  number of rounds each boy wants to play
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=4;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : The toy shop
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of toys
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `color_of_toys`
+
+		// output
+		// Dummy Data
+		String color_of_toys="ROYGBIVG";
+
+		System.out.println(color_of_toys);
+
+	}
+}
+
+
+
+
 // Name : Trains
 import java.util.*;
 import java.lang.*;
@@ -962,16 +3103,16 @@ class Main {
 		int n = Integer.parseInt(elements[0]);
 		int m = Integer.parseInt(elements[1]);
 		int k = Integer.parseInt(elements[2]);
-		int[][] uvx = new int[][];
-		String uvx_elements = "";
+		int[][] uvx = new int[m][3];
+		String[] uvx_elements = new String[100];
 		for(idx=0;idx<m;idx++){
 			uvx_elements = (in.nextLine()).split(" ");
 			for(jdx=0;jdx<3;jdx++){
 				uvx[idx][jdx] = Integer.parseInt(uvx_elements[jdx]);
 			}
 		}
-		int[][] sy = new int[][];
-		String sy_elements = "";
+		int[][] sy = new int[k][2];
+		String[] sy_elements = new String[100];
 		for(idx=0;idx<k;idx++){
 			sy_elements = (in.nextLine()).split(" ");
 			for(jdx=0;jdx<2;jdx++){
@@ -989,6 +3130,167 @@ class Main {
 
 		System.out.println(result);
 
+	}
+}
+
+
+
+
+// Name : Treasure Lock
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : the number of buttons
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=1;
+
+		System.out.println(result);
+
+	}
+}
+
+
+
+
+// Name : Treepath
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of vertices
+		// m :  edges of the graph
+		// uvw : each row has the  numbers of the
+		// u :  the number of the starting vertex
+		int idx;
+		int jdx;
+		int index;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int m = Integer.parseInt(elements[1]);
+		int[][] uvw = new int[m][3];
+		String[] uvw_elements = new String[100];
+		for(idx=0;idx<m;idx++){
+			uvw_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<3;jdx++){
+				uvw[idx][jdx] = Integer.parseInt(uvw_elements[jdx]);
+			}
+		}
+		int u = Integer.parseInt(in.nextLine());
+
+
+		// write your code here
+		// store your results in `minimal_total_weight`,`indices_of_edges`
+
+		// output
+		// Dummy Data
+		int minimal_total_weight=2;
+		intindices_of_edges[] = new int[] {1,2};
+
+		System.out.println(minimal_total_weight);
+		System.out.println(join_string(Arrays.toString(indices_of_edges)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
+	}
+}
+
+
+
+
+// Name : Two Circles
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n :  the number of points
+		// x1 : coordinates of first circle
+		// y1 : coordinates of first circle
+		// x2 : coordinates of second circle
+		// y2 :  coordinates of second circle
+		// xy :  each row contains integers xi and yi
+		int idx;
+		int jdx;
+		Scanner in = new Scanner(System.in);
+		String[] elements = (in.nextLine()).split(" ");
+		int n = Integer.parseInt(elements[0]);
+		int x1 = Integer.parseInt(elements[1]);
+		int y1 = Integer.parseInt(elements[2]);
+		int x2 = Integer.parseInt(elements[3]);
+		int y2 = Integer.parseInt(elements[4]);
+		int[][] xy = new int[n][2];
+		String[] xy_elements = new String[100];
+		for(idx=0;idx<n;idx++){
+			xy_elements = (in.nextLine()).split(" ");
+			for(jdx=0;jdx<2;jdx++){
+				xy[idx][jdx] = Integer.parseInt(xy_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `minimum_value`
+
+		// output
+		// Dummy Data
+		int minimum_value=6;
+
+		System.out.println(minimum_value);
+
+	}
+}
+
+
+
+
+// Name : Two Piles of Balls
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+class Main {
+	public static void main (String[] args) throws java.lang.Exception {
+		// input:
+		// n : number of balls in a pile
+		// a : 
+		int index;
+		Scanner in = new Scanner(System.in);
+		int n = Integer.parseInt(in.nextLine());
+		int[] a = new int[2n];
+		String[] a_elements = (in.nextLine()).split(" ");
+		for(index=0;index<2n;index++)
+			a[index] = Integer.parseInt(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`,`b`
+
+		// output
+		// Dummy Data
+		int result=1;
+		intb[] = new int[] {2,1};
+
+		System.out.println(result);
+		System.out.println(join_string(Arrays.toString(b)));
+
+	}
+	public static String join_string(String inp) {
+		return inp.replace("[","").replace("]","").replace(",","");
 	}
 }
 

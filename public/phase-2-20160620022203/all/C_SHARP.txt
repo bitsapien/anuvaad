@@ -1,3 +1,73 @@
+// Name : 4th Dimension Aliens
+using System;
+namespace Application {
+	class 4th_dimension_aliens {
+		public static void Main(string[] args) {
+		// input:
+		// latin_characters : 
+		string latin_characters = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `latin_consonant_characters`
+
+		// output
+		// Dummy Data
+		string latin_consonant_characters="l ёl hёö ёö dr ööё ln ös! wё r öё sёö lö gd tёö!";
+
+		Console.WriteLine(latin_consonant_characters);
+
+		}	
+	}
+}
+
+
+
+
+// Name : A and B and Compilation Errors
+using System;
+namespace Application {
+	class aand_band_compilation_errors {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the initial number of compilation errors
+		// a : 
+		// b : 
+		// c : 
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+		int[] b = new int[(n-1)];
+		string[] b_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<(n-1);index++)
+			b[index] = Convert.ToInt32(b_elements[index]);
+		int[] c = new int[(n-2)];
+		string[] c_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<(n-2);index++)
+			c[index] = Convert.ToInt32(c_elements[index]);
+
+
+		// write your code here
+		// store your results in `errors_disappeared_after_first_correction`,`errors_disappeared_after_second_correction`
+
+		// output
+		// Dummy Data
+		int errors_disappeared_after_first_correction=8;
+		int errors_disappeared_after_second_correction=123;
+
+		Console.WriteLine(errors_disappeared_after_first_correction);
+		Console.WriteLine(errors_disappeared_after_second_correction);
+
+		}	
+	}
+}
+
+
+
+
 // Name : A and B
 using System;
 namespace Application {
@@ -247,6 +317,83 @@ namespace Application {
 
 
 
+// Name : Another Game of Life
+using System;
+namespace Application {
+	class another_gameof_life {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the size of the map
+		// m :  the number of populations that want to
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+
+
+		// write your code here
+		// store your results in `exists`,`territory`
+
+		// output
+		// Dummy Data
+		string exists="NO";
+		char[][] territory= new char[][] {{''}};
+
+		Console.WriteLine(exists);
+		if(exists=="YES"){
+			for(idx=0;idx<n;idx++){
+				Console.WriteLine(string.Join(" ", territory[idx]));
+			}
+		}
+		}	
+	}
+}
+
+
+
+
+// Name : Apartment
+using System;
+namespace Application {
+	class apartment {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the size of Shalkan’s apartment plan
+		// m : the size of Shalkan’s apartment plan
+		// nm :  the description of the apartment plan
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		char[,] nm = new char[n,m];
+		string[] nm_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			nm_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<m;jdx++){
+				nm[idx,jdx] = nm_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `new_plan`
+
+		// output
+		// Dummy Data
+		char[][] new_plan= new char[][] {{'.','*','.','*','.'},{'*','*','*','*','*'},{'.','*','.','*','.'},{'*','*','*','*','*'},{'.','*','.','*','.'}};
+
+for(idx=0;idx<n;idx++){
+			Console.WriteLine(string.Join(" ", new_plan[idx]));
+		}
+		}	
+	}
+}
+
+
+
+
 // Name : Apples
 using System;
 namespace Application {
@@ -303,6 +450,46 @@ namespace Application {
 		string result="chest";
 
 		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Arrays Minmax
+using System;
+namespace Application {
+	class arrays_minmax {
+		public static void Main(string[] args) {
+		// input:
+		// n : size of a
+		// m : size of b
+		// a : array A
+		// b : array B
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+		int[] b = new int[m];
+		string[] b_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<m;index++)
+			b[index] = Convert.ToInt32(b_elements[index]);
+
+
+		// write your code here
+		// store your results in `minimum_num_of_operations`
+
+		// output
+		// Dummy Data
+		int minimum_num_of_operations=3;
+
+		Console.WriteLine(minimum_num_of_operations);
 
 		}	
 	}
@@ -420,6 +607,37 @@ namespace Application {
 
 
 
+// Name : Bernie and Formula 1
+using System;
+namespace Application {
+	class bernieand_formula1 {
+		public static void Main(string[] args) {
+		// input:
+		// n : 
+		// m : 
+		// k : 
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int k = Convert.ToInt32(elements[2]);
+
+
+		// write your code here
+		// store your results in `probability`
+
+		// output
+		// Dummy Data
+		float probability=0.857143;
+
+		Console.WriteLine(probability);
+
+		}	
+	}
+}
+
+
+
+
 // Name : Best Friends
 using System;
 namespace Application {
@@ -470,6 +688,51 @@ namespace Application {
 		string name="Sheldon";
 
 		Console.WriteLine(name);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Big Chessboard
+using System;
+namespace Application {
+	class big_chessboard {
+		public static void Main(string[] args) {
+		// input:
+		// x0 : start point
+		// y0 : start point
+		// x1 : destination point
+		// y1 : destination point
+		// n : number of segments of the permitted cells
+		// rab : each row of rab corresponds to ri ai bi
+		int idx, jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int x0 = Convert.ToInt32(elements[0]);
+		int y0 = Convert.ToInt32(elements[1]);
+		int x1 = Convert.ToInt32(elements[2]);
+		int y1 = Convert.ToInt32(elements[3]);
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[,] rab = new int[n,3];
+		string[] rab_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			rab_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<3;jdx++){
+				rab[idx,jdx] = Convert.ToInt32(rab_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `minimum_moves`
+
+		// output
+		// Dummy Data
+		int minimum_moves=4;
+
+		Console.WriteLine(minimum_moves);
 
 		}	
 	}
@@ -533,6 +796,32 @@ namespace Application {
 
 
 
+// Name : Bookworm
+using System;
+namespace Application {
+	class bookworm {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of books in the class bookshelf
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `digits_needed`
+
+		// output
+		// Dummy Data
+		int digits_needed=4;
+
+		Console.WriteLine(digits_needed);
+
+		}	
+	}
+}
+
+
+
+
 // Name : Box of Candies
 using System;
 namespace Application {
@@ -565,6 +854,40 @@ namespace Application {
 
 
 
+// Name : Boy and Boxes
+using System;
+namespace Application {
+	class boyand_boxes {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of boxes
+		// x : number of the
+		// a :  number of balls in each box
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int x = Convert.ToInt32(elements[1]);
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int[] result = new int[] {3,2,5,4};
+
+		Console.WriteLine(string.Join(" ", result));
+		}	
+	}
+}
+
+
+
+
 // Name : Broogman
 using System;
 namespace Application {
@@ -583,6 +906,60 @@ namespace Application {
 		int result=52;
 
 		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Buttons
+using System;
+namespace Application {
+	class buttons {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of buttons the lock has
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Calendar
+using System;
+namespace Application {
+	class calendar {
+		public static void Main(string[] args) {
+		// input:
+		// start_date : 
+		// end_date : 
+		string start_date = Console.ReadLine();
+		string end_date = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `number_of_days`
+
+		// output
+		// Dummy Data
+		int number_of_days=50768;
+
+		Console.WriteLine(number_of_days);
 
 		}	
 	}
@@ -672,6 +1049,218 @@ namespace Application {
 
 
 
+// Name : Changing Root of tree
+using System;
+namespace Application {
+	class changing_rootoftree {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the amount of nodes in the tree
+		// r1 : index of the old root
+		// r2 : e index of the new one
+		// old_tree :  old representation of the tree
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int r1 = Convert.ToInt32(elements[1]);
+		int r2 = Convert.ToInt32(elements[2]);
+		int[] old_tree = new int[(n-1)];
+		string[] old_tree_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<(n-1);index++)
+			old_tree[index] = Convert.ToInt32(old_tree_elements[index]);
+
+
+		// write your code here
+		// store your results in `new_tree`
+
+		// output
+		// Dummy Data
+		int[] new_tree = new int[] {2,3};
+
+		Console.WriteLine(string.Join(" ", new_tree));
+		}	
+	}
+}
+
+
+
+
+// Name : Changing Username
+using System;
+namespace Application {
+	class changing_username {
+		public static void Main(string[] args) {
+		// input:
+		// q :  number of username change requests
+		// old_and_new : 
+		int idx;
+		int jdx;
+		int q = Convert.ToInt32(Console.ReadLine());
+		string[,] old_and_new = new string[q,2];
+		string[] old_and_new_elements = new string[100];
+		for(idx=0;idx<q;idx++){
+			old_and_new_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				old_and_new[idx,jdx] = old_and_new_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `number_of_people_that_changed_usernames`,`first_and_current`
+
+		// output
+		// Dummy Data
+		int number_of_people_that_changed_usernames=2;
+		string[][] first_and_current= new string[number_of_people_that_changed_usernames][2];
+
+		Console.WriteLine(number_of_people_that_changed_usernames);
+for(idx=0;idx<number_of_people_that_changed_usernames;idx++){
+			Console.WriteLine(string.Join(" ", first_and_current[idx]));
+		}
+		}	
+	}
+}
+
+
+
+
+// Name : Clockwork
+using System;
+namespace Application {
+	class clockwork {
+		public static void Main(string[] args) {
+		// input:
+		// time :  time in the format of hh mm
+		// n :  number of minutes to add
+		string time = Console.ReadLine();
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `moment_in_time`
+
+		// output
+		// Dummy Data
+		string moment_in_time="00:09";
+
+		Console.WriteLine(moment_in_time);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Coders
+using System;
+namespace Application {
+	class coders {
+		public static void Main(string[] args) {
+		// input:
+		// n :  number of developers
+		// m :  number of lines of
+		// b :  maximum possible number of errors
+		// mod : the module you need to use to get the
+		// a :  the number of errors that each
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int b = Convert.ToInt32(elements[2]);
+		int mod = Convert.ToInt32(elements[3]);
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=10;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Collection Game Cards
+using System;
+namespace Application {
+	class collection_game_cards {
+		public static void Main(string[] args) {
+		// input:
+		// n : the number of cards on the assembly line
+		// a : cards
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=1;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Colored Balls
+using System;
+namespace Application {
+	class colored_balls {
+		public static void Main(string[] args) {
+		// input:
+		// k :  the number of colors
+		// c :  the number of balls of each color 
+		int idx;
+		int jdx;
+		int k = Convert.ToInt32(Console.ReadLine());
+		int[,] c = new int[k,1];
+		string[] c_elements = new string[100];
+		for(idx=0;idx<k;idx++){
+			c_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<1;jdx++){
+				c[idx,jdx] = Convert.ToInt32(c_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
 // Name : Concealing Handwriting
 using System;
 namespace Application {
@@ -700,6 +1289,504 @@ namespace Application {
 
 
 
+// Name : Containing Number
+using System;
+namespace Application {
+	class containing_number {
+		public static void Main(string[] args) {
+		// input:
+		// n : count of the following numbers
+		// k : k
+		// numbers_to_check : 
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int k = Convert.ToInt32(elements[1]);
+		int[,] numbers_to_check = new int[n,1];
+		string[] numbers_to_check_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			numbers_to_check_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<1;jdx++){
+				numbers_to_check[idx,jdx] = Convert.ToInt32(numbers_to_check_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=2;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Cotton Sequence
+using System;
+namespace Application {
+	class cotton_sequence {
+		public static void Main(string[] args) {
+		// input:
+		// n : length of cotton sequence
+		// m : m
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result="6";
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Count Of Divisors
+using System;
+namespace Application {
+	class count_of_divisors {
+		public static void Main(string[] args) {
+		// input:
+		// n : integer n
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `smallest_integer`
+
+		// output
+		// Dummy Data
+		int smallest_integer=6;
+
+		Console.WriteLine(smallest_integer);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Dirty Stairs
+using System;
+namespace Application {
+	class dirty_stairs {
+		public static void Main(string[] args) {
+		// input:
+		// n :  number of steps in the staircase
+		// m : number of dirty steps
+		// d :  numbers of dirty steps 
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int[] d = new int[m];
+		string[] d_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<m;index++)
+			d[index] = Convert.ToInt32(d_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		string result="YES";
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Do You Even Swap
+using System;
+namespace Application {
+	class do_you_even_swap {
+		public static void Main(string[] args) {
+		// input:
+		// a : given integer
+		// t : number of swaps
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int a = Convert.ToInt32(elements[0]);
+		int t = Convert.ToInt32(elements[1]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=4321;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Duff in Love
+using System;
+namespace Application {
+	class duffin_love {
+		public static void Main(string[] args) {
+		// input:
+		// n : positive integer
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `answer`
+
+		// output
+		// Dummy Data
+		int answer=10;
+
+		Console.WriteLine(answer);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Elegance of a Sequence
+using System;
+namespace Application {
+	class eleganceofa_sequence {
+		public static void Main(string[] args) {
+		// input:
+		// n : length of sequence of a
+		// a : sequence a
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `k`,`b`
+
+		// output
+		// Dummy Data
+		int k=2;
+		int[] b = new int[] {4,5};
+
+		Console.WriteLine(k);
+		Console.WriteLine(string.Join(" ", b));
+		}	
+	}
+}
+
+
+
+
+// Name : Elite Architect
+using System;
+namespace Application {
+	class elite_architect {
+		public static void Main(string[] args) {
+		// input:
+		// n : the number of Buildings in the capital of Nippon
+		// h :  number of stories in each building
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] h = new int[n];
+		string[] h_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			h[index] = Convert.ToInt32(h_elements[index]);
+
+
+		// write your code here
+		// store your results in `a`
+
+		// output
+		// Dummy Data
+		int[] a = new int[] {3,2,0,2,0};
+
+		Console.WriteLine(string.Join(" ", a));
+		}	
+	}
+}
+
+
+
+
+// Name : Encoding
+using System;
+namespace Application {
+	class encoding {
+		public static void Main(string[] args) {
+		// input:
+		// n :  length of word
+		// q : position
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int q = Convert.ToInt32(elements[1]);
+
+
+		// write your code here
+		// store your results in `w`
+
+		// output
+		// Dummy Data
+		int w=8;
+
+		Console.WriteLine(w);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Equality
+using System;
+namespace Application {
+	class equality {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the amount of array elements
+		// m : array elements
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] m = new int[n];
+		string[] m_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			m[index] = Convert.ToInt32(m_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=3;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : EShopping
+using System;
+namespace Application {
+	class e_shopping {
+		public static void Main(string[] args) {
+		// input:
+		// n :  number of phone models' descriptions in the shop
+		// description :  zero stands for an unread description one for a read description
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] description = new int[n];
+		string[] description_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			description[index] = Convert.ToInt32(description_elements[index]);
+
+
+		// write your code here
+		// store your results in `clicks`
+
+		// output
+		// Dummy Data
+		int clicks=9;
+
+		Console.WriteLine(clicks);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Fabulous Sum
+using System;
+namespace Application {
+	class fabulous_sum {
+		public static void Main(string[] args) {
+		// input:
+		// t :  the amount of numbers for which you need to calculate the requested sum
+		// n : 
+		int idx;
+		int jdx;
+		int t = Convert.ToInt32(Console.ReadLine());
+		int[,] n = new int[t,1];
+		string[] n_elements = new string[100];
+		for(idx=0;idx<t;idx++){
+			n_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<1;jdx++){
+				n[idx,jdx] = Convert.ToInt32(n_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `sum`
+
+		// output
+		// Dummy Data
+		int[][] sum= new int[][] {{-4},{499999998352516354}};
+
+for(idx=0;idx<t;idx++){
+			Console.WriteLine(string.Join(" ", sum[idx]));
+		}
+		}	
+	}
+}
+
+
+
+
+// Name : Factorial game
+using System;
+namespace Application {
+	class factorialgame {
+		public static void Main(string[] args) {
+		// input:
+		// t :  the number of games the soldiers play
+		// ab :  each row containing a pair of integers a and b defining the value of n for each game
+		int idx;
+		int jdx;
+		int t = Convert.ToInt32(Console.ReadLine());
+		int[,] ab = new int[t,2];
+		string[] ab_elements = new string[100];
+		for(idx=0;idx<t;idx++){
+			ab_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				ab[idx,jdx] = Convert.ToInt32(ab_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `max_score_for_soldiers`
+
+		// output
+		// Dummy Data
+		int[][] max_score_for_soldiers= new int[][] {{2},{5}};
+
+for(idx=0;idx<t;idx++){
+			Console.WriteLine(string.Join(" ", max_score_for_soldiers[idx]));
+		}
+		}	
+	}
+}
+
+
+
+
+// Name : Flowers Girls and Grandma
+using System;
+namespace Application {
+	class flowers_girlsand_grandma {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of girls
+		// p : Grandmas favourite prime number
+		// lr : each row corresponds to the range of flowers that each girl can grow
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int p = Convert.ToInt32(elements[1]);
+		int[,] lr = new int[n,2];
+		string[] lr_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			lr_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				lr[idx,jdx] = Convert.ToInt32(lr_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		float result=0.0;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Forgotten Password
+using System;
+namespace Application {
+	class forgotten_password {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of digits in the password 
+		// m :  the number of
+		// sc : each row contains si ci
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		string[,] sc = new string[m,2];
+		string[] sc_elements = new string[100];
+		for(idx=0;idx<m;idx++){
+			sc_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				sc[idx,jdx] = sc_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=6;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
 // Name : Forty Seven
 using System;
 namespace Application {
@@ -720,6 +1807,77 @@ namespace Application {
 		int minimum_number_of_operations=1;
 
 		Console.WriteLine(minimum_number_of_operations);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Going to a Bar
+using System;
+namespace Application {
+	class goingtoa_bar {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of streets in Berlin
+		// m : the number of avenues in Berlin
+		// a :  the cost of spending a night in a bar at the intersection of street N and avenue M
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int[,] a = new int[n,m];
+		string[] a_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			a_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<m;jdx++){
+				a[idx,jdx] = Convert.ToInt32(a_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `cost`
+
+		// output
+		// Dummy Data
+		int cost=2;
+
+		Console.WriteLine(cost);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Grasshopper
+using System;
+namespace Application {
+	class grasshopper {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the length of the board
+		// m : width of jump of grasshopper
+		// s : length of jump of grasshoppe
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int s = Convert.ToInt32(elements[2]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=6;
+
+		Console.WriteLine(result);
 
 		}	
 	}
@@ -763,6 +1921,275 @@ namespace Application {
 
 
 
+// Name : Happy Colleagues
+using System;
+namespace Application {
+	class happy_colleagues {
+		public static void Main(string[] args) {
+		// input:
+		// r :  the number of candies of red
+		// g :  the number of candies of green
+		// b :  the number of candies of blue
+				string[] elements = (Console.ReadLine()).Split(' ');
+		int r = Convert.ToInt32(elements[0]);
+		int g = Convert.ToInt32(elements[1]);
+		int b = Convert.ToInt32(elements[2]);
+
+
+		// write your code here
+		// store your results in `number_of_colleagues`
+
+		// output
+		// Dummy Data
+		int number_of_colleagues=4;
+
+		Console.WriteLine(number_of_colleagues);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Inmates
+using System;
+namespace Application {
+	class inmates {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of prisoners
+		// t : crime threshold
+		// c : selected inmates
+		// severity :  severity of the crime committed by each inmate
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int t = Convert.ToInt32(elements[1]);
+		int c = Convert.ToInt32(elements[2]);
+		int[] severity = new int[n];
+		string[] severity_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			severity[index] = Convert.ToInt32(severity_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=2;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Interesting Game
+using System;
+namespace Application {
+	class interesting_game {
+		public static void Main(string[] args) {
+		// input:
+		// a : 
+		// b : 
+		// mod : 
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int a = Convert.ToInt32(elements[0]);
+		int b = Convert.ToInt32(elements[1]);
+		int mod = Convert.ToInt32(elements[2]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		string result="2";
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Junior Broker
+using System;
+namespace Application {
+	class junior_broker {
+		public static void Main(string[] args) {
+		// input:
+		// n :  number of days
+		// e :  amount of Euro Finn has on the first day
+		// a :  the currency rate of Dollar to Euro on day i
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int e = Convert.ToInt32(elements[1]);
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=8;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Little Bear With Cards
+using System;
+namespace Application {
+	class little_bear_with_cards {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of cards
+		// description : 
+		int idx;
+		int jdx;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[,] description = new int[n,2];
+		string[] description_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			description_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				description[idx,jdx] = Convert.ToInt32(description_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `steps`
+
+		// output
+		// Dummy Data
+		int steps=0;
+
+		Console.WriteLine(steps);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Magic Pool
+using System;
+namespace Application {
+	class magic_pool {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of tourists
+		// a : sizes of the pool
+		// b : sizes of the pool
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int a = Convert.ToInt32(elements[1]);
+		int b = Convert.ToInt32(elements[2]);
+
+
+		// write your code here
+		// store your results in `s`,`a1`,`b1`
+
+		// output
+		// Dummy Data
+		int s=18;
+		int a1=3;
+		int b1=6;
+
+		Console.WriteLine(s);
+		Console.WriteLine(a1+" "+b1);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Magic Square
+using System;
+namespace Application {
+	class magic_square {
+		public static void Main(string[] args) {
+		// input:
+		// original_magic_square : original magic square
+		int idx;
+		int jdx;
+		int[,] original_magic_square = new int[3,3];
+		string[] original_magic_square_elements = new string[100];
+		for(idx=0;idx<3;idx++){
+			original_magic_square_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<3;jdx++){
+				original_magic_square[idx,jdx] = Convert.ToInt32(original_magic_square_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `repaired_magic_square`
+
+		// output
+		// Dummy Data
+		int[][] repaired_magic_square= new int[][] {{4,4,4},{4,4,4},{4,4,4}};
+
+for(idx=0;idx<3;idx++){
+			Console.WriteLine(string.Join(" ", repaired_magic_square[idx]));
+		}
+		}	
+	}
+}
+
+
+
+
+// Name : Master of Eight
+using System;
+namespace Application {
+	class masterof_eight {
+		public static void Main(string[] args) {
+		// input:
+		// n : non negative number
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `exist`,`result`
+
+		// output
+		// Dummy Data
+		string exist="YES";
+		int result=344;
+
+		Console.WriteLine(exist);
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
 // Name : Max Even Sum 
 using System;
 namespace Application {
@@ -787,6 +2214,91 @@ namespace Application {
 		int result=6;
 
 		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Mom Loves Art
+using System;
+namespace Application {
+	class mom_loves_art {
+		public static void Main(string[] args) {
+		// input:
+		// a1 : 
+		// b1 : 
+		// a2 : 
+		// b2 : 
+		// a3 : 
+		// b3 : 
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int a1 = Convert.ToInt32(elements[0]);
+		int b1 = Convert.ToInt32(elements[1]);
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int a2 = Convert.ToInt32(elements[0]);
+		int b2 = Convert.ToInt32(elements[1]);
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int a3 = Convert.ToInt32(elements[0]);
+		int b3 = Convert.ToInt32(elements[1]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		string result="YES";
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : MSSUM1
+using System;
+namespace Application {
+	class mssum1 {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of elements in the array
+		// q :  the number of queries correspondingly
+		// a :  the array elements
+		// lr : each row corresponds to l and r
+		int index;
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int q = Convert.ToInt32(elements[1]);
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+		int[,] lr = new int[q,2];
+		string[] lr_elements = new string[100];
+		for(idx=0;idx<q;idx++){
+			lr_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				lr[idx,jdx] = Convert.ToInt32(lr_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `sum_of_replies`
+
+		// output
+		// Dummy Data
+		int sum_of_replies=25;
+
+		Console.WriteLine(sum_of_replies);
 
 		}	
 	}
@@ -821,6 +2333,171 @@ namespace Application {
 
 
 
+// Name : Notebook with Numbers 
+using System;
+namespace Application {
+	class notebookwith_numbers {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of sheets
+		// k : 
+		// a : 
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int k = Convert.ToInt32(elements[1]);
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `maximum_sum`,`r`
+
+		// output
+		// Dummy Data
+		int maximum_sum=27;
+		int[] r = new int[] {3,4,5,8};
+
+		Console.WriteLine(maximum_sum);
+		Console.WriteLine(string.Join(" ", r));
+		}	
+	}
+}
+
+
+
+
+// Name : Palindrome game
+using System;
+namespace Application {
+	class palindromegame {
+		public static void Main(string[] args) {
+		// input:
+		// str : input
+		string str = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `winner`
+
+		// output
+		// Dummy Data
+		string winner="First";
+
+		Console.WriteLine(winner);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Palindromization
+using System;
+namespace Application {
+	class palindromization {
+		public static void Main(string[] args) {
+		// input:
+		// n :  string length
+		// p :  the current position of the cursor
+		// given_string : string of n lowercase Latin letters
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int p = Convert.ToInt32(elements[1]);
+		string given_string = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=12;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Pocket money
+using System;
+namespace Application {
+	class pocketmoney {
+		public static void Main(string[] args) {
+		// input:
+		// n : the number of exams
+		// r :  the maximum score
+		// avg : average score required to double his pocket money
+		// ab : ab corresponds to ai bi
+		int idx, jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int r = Convert.ToInt32(elements[1]);
+		int avg = Convert.ToInt32(elements[2]);
+		int[,] ab = new int[n,2];
+		string[] ab_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			ab_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				ab[idx,jdx] = Convert.ToInt32(ab_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=4;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Pony Sequence
+using System;
+namespace Application {
+	class pony_sequence {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of elements in the sequences in a and b
+		// a : sequence a
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `b`
+
+		// output
+		// Dummy Data
+		int[] b = new int[] {1,1,1,1,1};
+
+		Console.WriteLine(string.Join(" ", b));
+		}	
+	}
+}
+
+
+
+
 // Name : Quiz
 using System;
 namespace Application {
@@ -844,6 +2521,38 @@ namespace Application {
 		int result=3;
 
 		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Robot's Task
+using System;
+namespace Application {
+	class robot's_task {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of non negative integers
+		// a : integers
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `changes`
+
+		// output
+		// Dummy Data
+		int changes=1;
+
+		Console.WriteLine(changes);
 
 		}	
 	}
@@ -909,6 +2618,336 @@ namespace Application {
 
 
 
+// Name : Skyscraper
+using System;
+namespace Application {
+	class  {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of skyscrapers
+		// k : number of stories to move
+		// h : each row has height of each skyscraper
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int k = Convert.ToInt32(elements[1]);
+		int[] h = new int[n];
+		string[] h_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			h[index] = Convert.ToInt32(h_elements[index]);
+
+
+		// write your code here
+		// store your results in `j`
+
+		// output
+		// Dummy Data
+		int j=3;
+
+		Console.WriteLine(j);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Small Reform
+using System;
+namespace Application {
+	class small_reform {
+		public static void Main(string[] args) {
+		// input:
+		// n :  value of the most expensive coin
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `result_set`
+
+		// output
+		// Dummy Data
+		string result_set="10 5 1";
+
+		Console.WriteLine(result_set);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Snowflakes
+using System;
+namespace Application {
+	class snowflakes {
+		public static void Main(string[] args) {
+		// input:
+		// n : length of array
+		// k : number of  letters of the English alphabet
+		// english_letters :  contains n uppercase English letters
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int k = Convert.ToInt32(elements[1]);
+		string english_letters = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `min_number_of_changes`,`changed_array`
+
+		// output
+		// Dummy Data
+		int min_number_of_changes=2;
+		string changed_array="ABCACA";
+
+		Console.WriteLine(min_number_of_changes);
+		Console.WriteLine(changed_array);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Sort
+using System;
+namespace Application {
+	class sort {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of subjects
+		// m : the number of limitations
+		// su : pairs si ui which describe the order of subjects
+		// sequence : 
+		int idx;
+		int jdx;
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int[,] su = new int[m,2];
+		string[] su_elements = new string[100];
+		for(idx=0;idx<m;idx++){
+			su_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				su[idx,jdx] = Convert.ToInt32(su_elements[jdx]);
+			}
+		}
+		int[] sequence = new int[n];
+		string[] sequence_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			sequence[index] = Convert.ToInt32(sequence_elements[index]);
+
+
+		// write your code here
+		// store your results in `correct`
+
+		// output
+		// Dummy Data
+		string correct="YES";
+
+		Console.WriteLine(correct);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Splitty Palindromes
+using System;
+namespace Application {
+	class splitty_palindromes {
+		public static void Main(string[] args) {
+		// input:
+		// word : given word
+		string word = Console.ReadLine();
+
+
+		// write your code here
+		// store your results in `splitty_palindrome`
+
+		// output
+		// Dummy Data
+		string splitty_palindrome="te a m m a te";
+
+		Console.WriteLine(splitty_palindrome);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Square
+using System;
+namespace Application {
+	class square {
+		public static void Main(string[] args) {
+		// input:
+		// k :  count of cases
+		// an : integers a and n in every row
+		int idx;
+		int jdx;
+		int k = Convert.ToInt32(Console.ReadLine());
+		int[,] an = new int[k,2];
+		string[] an_elements = new string[100];
+		for(idx=0;idx<k;idx++){
+			an_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				an[idx,jdx] = Convert.ToInt32(an_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `roots`
+
+		// output
+		// Dummy Data
+		string roots="No root";
+
+		Console.WriteLine(roots);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Squirrel and Nuts
+using System;
+namespace Application {
+	class squirreland_nuts {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the initial amount of nuts
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=16;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Strings Problemo
+using System;
+namespace Application {
+	class strings_problemo {
+		public static void Main(string[] args) {
+		// input:
+		// s : latin characters
+		// t : latin characters
+		// n : the number of possible replacements
+		// abw : each row corresponds to a b w for each possible replacement
+		int idx;
+		int jdx;
+		string s = Console.ReadLine();
+		string t = Console.ReadLine();
+		int n = Convert.ToInt32(Console.ReadLine());
+		char[,] abw = new char[n,3];
+		string[] abw_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			abw_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<3;jdx++){
+				abw[idx,jdx] = abw_elements[jdx];
+			}
+		}
+
+
+		// write your code here
+		// store your results in `answer`,`resulting_string`
+
+		// output
+		// Dummy Data
+		int answer=21;
+		string resulting_string="uxyd";
+
+		Console.WriteLine(answer);
+		Console.WriteLine(resulting_string);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Supergame
+using System;
+namespace Application {
+	class supergame {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of boys
+		// a :  number of rounds each boy wants to play
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=4;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : The toy shop
+using System;
+namespace Application {
+	class thetoyshop {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of toys
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `color_of_toys`
+
+		// output
+		// Dummy Data
+		string color_of_toys="ROYGBIVG";
+
+		Console.WriteLine(color_of_toys);
+
+		}	
+	}
+}
+
+
+
+
 // Name : Trains
 using System;
 namespace Application {
@@ -925,20 +2964,20 @@ namespace Application {
 		int n = Convert.ToInt32(elements[0]);
 		int m = Convert.ToInt32(elements[1]);
 		int k = Convert.ToInt32(elements[2]);
-		int[][] uvx = new int[][];
-		string uvx_elements = "";
+		int[,] uvx = new int[m,3];
+		string[] uvx_elements = new string[100];
 		for(idx=0;idx<m;idx++){
 			uvx_elements = (Console.ReadLine()).Split(' ');
 			for(jdx=0;jdx<3;jdx++){
-				uvx[idx][jdx] = Convert.ToInt32(uvx_elements[jdx]);
+				uvx[idx,jdx] = Convert.ToInt32(uvx_elements[jdx]);
 			}
 		}
-		int[][] sy = new int[][];
-		string sy_elements = "";
+		int[,] sy = new int[k,2];
+		string[] sy_elements = new string[100];
 		for(idx=0;idx<k;idx++){
 			sy_elements = (Console.ReadLine()).Split(' ');
 			for(jdx=0;jdx<2;jdx++){
-				sy[idx][jdx] = Convert.ToInt32(sy_elements[jdx]);
+				sy[idx,jdx] = Convert.ToInt32(sy_elements[jdx]);
 			}
 		}
 
@@ -952,6 +2991,155 @@ namespace Application {
 
 		Console.WriteLine(result);
 
+		}	
+	}
+}
+
+
+
+
+// Name : Treasure Lock
+using System;
+namespace Application {
+	class treasure_lock {
+		public static void Main(string[] args) {
+		// input:
+		// n : the number of buttons
+		int n = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `result`
+
+		// output
+		// Dummy Data
+		int result=1;
+
+		Console.WriteLine(result);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Treepath
+using System;
+namespace Application {
+	class treepath {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of vertices
+		// m :  edges of the graph
+		// uvw : each row has the  numbers of the
+		// u :  the number of the starting vertex
+		int idx;
+		int jdx;
+		int index;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int m = Convert.ToInt32(elements[1]);
+		int[,] uvw = new int[m,3];
+		string[] uvw_elements = new string[100];
+		for(idx=0;idx<m;idx++){
+			uvw_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<3;jdx++){
+				uvw[idx,jdx] = Convert.ToInt32(uvw_elements[jdx]);
+			}
+		}
+		int u = Convert.ToInt32(Console.ReadLine());
+
+
+		// write your code here
+		// store your results in `minimal_total_weight`,`indices_of_edges`
+
+		// output
+		// Dummy Data
+		int minimal_total_weight=2;
+		int[] indices_of_edges = new int[] {1,2};
+
+		Console.WriteLine(minimal_total_weight);
+		Console.WriteLine(string.Join(" ", indices_of_edges));
+		}	
+	}
+}
+
+
+
+
+// Name : Two Circles
+using System;
+namespace Application {
+	class two_circles {
+		public static void Main(string[] args) {
+		// input:
+		// n :  the number of points
+		// x1 : coordinates of first circle
+		// y1 : coordinates of first circle
+		// x2 : coordinates of second circle
+		// y2 :  coordinates of second circle
+		// xy :  each row contains integers xi and yi
+		int idx;
+		int jdx;
+		string[] elements = (Console.ReadLine()).Split(' ');
+		int n = Convert.ToInt32(elements[0]);
+		int x1 = Convert.ToInt32(elements[1]);
+		int y1 = Convert.ToInt32(elements[2]);
+		int x2 = Convert.ToInt32(elements[3]);
+		int y2 = Convert.ToInt32(elements[4]);
+		int[,] xy = new int[n,2];
+		string[] xy_elements = new string[100];
+		for(idx=0;idx<n;idx++){
+			xy_elements = (Console.ReadLine()).Split(' ');
+			for(jdx=0;jdx<2;jdx++){
+				xy[idx,jdx] = Convert.ToInt32(xy_elements[jdx]);
+			}
+		}
+
+
+		// write your code here
+		// store your results in `minimum_value`
+
+		// output
+		// Dummy Data
+		int minimum_value=6;
+
+		Console.WriteLine(minimum_value);
+
+		}	
+	}
+}
+
+
+
+
+// Name : Two Piles of Balls
+using System;
+namespace Application {
+	class two_pilesof_balls {
+		public static void Main(string[] args) {
+		// input:
+		// n : number of balls in a pile
+		// a : 
+		int index;
+		int n = Convert.ToInt32(Console.ReadLine());
+		int[] a = new int[2n];
+		string[] a_elements = (Console.ReadLine()).Split(' ');
+		for(index=0;index<2n;index++)
+			a[index] = Convert.ToInt32(a_elements[index]);
+
+
+		// write your code here
+		// store your results in `result`,`b`
+
+		// output
+		// Dummy Data
+		int result=1;
+		int[] b = new int[] {2,1};
+
+		Console.WriteLine(result);
+		Console.WriteLine(string.Join(" ", b));
 		}	
 	}
 }
