@@ -94,8 +94,8 @@ module Codeiya
 							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}]" : " = new #{definition}[] #{vr['value'].gsub('[','{').gsub(']','}')}"
 							vd << "\t\t#{definition}[] #{vr['name'].to_s}#{assign};\n"
 						else
-							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}]" : "= new #{definition}[][] #{vr['value'].gsub('[','{').gsub(']','}')}"
-							vd << "\t\t#{definition}[][] #{vr['name'].to_s}#{assign};\n"
+							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']},#{vr['size2_name']}]" : "= new #{definition}[,] #{vr['value'].gsub('[','{').gsub(']','}')}"
+							vd << "\t\t#{definition}[,] #{vr['name'].to_s}#{assign};\n"
 						end
 					end
 					vd
@@ -222,8 +222,11 @@ module Codeiya
 						line = "\t\tConsole.WriteLine(string.Join(\" \", #{var['name']}));"
 					else
 						line = "for(idx=0;idx<#{var['size1_name']};idx++){\n"
-						line << "\t\t\tConsole.WriteLine(string.Join(\" \", #{var['name']}[idx]));\n"
-						line << "\t\t}"
+						line << "\tfor(jdx=0;idx<#{var['size2_name']};jdx++){\n"
+						line << "\t\t\tConsole.Write(#{var['name']}[idx,jdx]+\" \");\n"
+						line << "\t}\n"
+						line << "\tConsole.WriteLine();\n"
+						line << "}\n"
 					end
 					line
 				end
