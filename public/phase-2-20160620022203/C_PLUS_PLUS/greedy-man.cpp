@@ -5,26 +5,26 @@ using namespace std;
 
 int main(int argc, char const *argv[]) {
 	// input:
-	// n :  the number of devices that will fit into
-	// m :  the number of smartphones available for sale
-	// a : 
+	// m : 
+	// n : 
+	// mn : 
 	int index;
-	int n, m;
+	int m, n;
 
-	cin >> n >> m;
-	int a[n];
+	cin >> m >> n;
+	int mn[1000];
 
-	for(index=0;index<n;index++)
-		cin >> a[index];
+	for(index=0;index<m;index++)
+		cin >> mn[index];
 
 
 	// write your code here
-	// store your results in `result`
+	// store your results in `ouput`
 
 	// output
 	// Dummy Data
-	int result=8;
+	int ouput=8;
 
-	cout << result;
+	cout << ouput << endl;
 
 }

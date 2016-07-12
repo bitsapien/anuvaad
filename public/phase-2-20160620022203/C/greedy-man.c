@@ -2,20 +2,20 @@
 #include <stdio.h>
 int main() {
 	// input:
-	// n :  the number of devices that will fit into
-	// m :  the number of smartphones available for sale
-	// a : 
-	int n, m, a[1000], result=8, index;
-	scanf("%d %d", &n, &m);
-	for(index = 0; index< n; index++) {
-		scanf("%d", &a[index]);
+	// m : 
+	// n : 
+	// mn : 
+	int m, n, mn[1000], ouput=8, index;
+	scanf("%d %d", &m, &n);
+	for(index = 0; index< m; index++) {
+		scanf("%d", &mn[index]);
 	}
 
 
 	// write your code here
-	// store your results in `result`
+	// store your results in `ouput`
 
 	// output
-	printf("%d", result);
+	printf("%d", ouput);
 	return 0;
 }

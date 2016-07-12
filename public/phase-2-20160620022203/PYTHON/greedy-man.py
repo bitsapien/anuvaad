@@ -1,22 +1,22 @@
 #!/usr/bin/python
 # Name : Greedy Man
 # input:
-# n :  the number of devices that will fit into
-# m :  the number of smartphones available for sale
-# a : 
+# m : 
+# n : 
+# mn : 
 elements = raw_input().strip().split(' ')
-n = int(elements[0])
-m = int(elements[1])
-a_elements = raw_input().strip().split(' ')
-a = (int(e) for e in a_elements)
+m = int(elements[0])
+n = int(elements[1])
+mn_elements = raw_input().strip().split(' ')
+mn = map(int, mn_elements)
 
 
 # write your code here
-# store your results in `result`
+# store your results in `ouput`
 
 # output
 
 # Dummy Data
-result = 8
+ouput = 8
 
-print(result)
+print(ouput)

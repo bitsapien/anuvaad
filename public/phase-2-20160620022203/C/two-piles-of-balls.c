@@ -6,7 +6,7 @@ int main() {
 	// a : 
 	int n, a[100], result=1, b[100]={2,1}, index;
 	scanf("%d", &n);
-	for(index = 0; index< 2n; index++) {
+	for(index = 0; index< (2*n); index++) {
 		scanf("%d", &a[index]);
 	}
 

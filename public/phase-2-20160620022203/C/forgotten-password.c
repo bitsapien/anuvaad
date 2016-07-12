@@ -10,9 +10,8 @@ int main() {
 	char sc_tmp[2];
 	scanf("%d %d", &n, &m);
 	for(idx = 0; idx< m; idx++) {
-		scanf("%s", &sc_tmp[0]);
 		for(jdx = 0;jdx<2;jdx++) {
-			sc[idx][jdx] = sc_tmp[jdx];
+			scanf("%s", &sc[idx][jdx][0]);
 		}
 	}
 

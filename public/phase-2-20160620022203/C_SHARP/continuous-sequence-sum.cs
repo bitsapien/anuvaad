@@ -1,29 +1,30 @@
-// Name : Two Piles of Balls
+// Name : Continuous Sequence Sum
 using System;
 namespace Application {
-	class two_pilesof_balls {
+	class continuous_sequence_sum {
 		public static void Main(string[] args) {
 		// input:
-		// n : number of balls in a pile
-		// a : 
+		// n : length of sequence
+		// a : sequence
+		// t : sum
 		int index;
 		int n = Convert.ToInt32(Console.ReadLine());
-		int[] a = new int[2*n];
+		int[] a = new int[n];
 		string[] a_elements = (Console.ReadLine()).Split(' ');
-		for(index=0;index<(2*n);index++)
+		for(index=0;index<n;index++)
 			a[index] = Convert.ToInt32(a_elements[index]);
+		int t = Convert.ToInt32(Console.ReadLine());
 
 
 		// write your code here
-		// store your results in `result`,`b`
+		// store your results in `result`
 
 		// output
 		// Dummy Data
-		int result=1;
-		int[] b = new int[] {2,1};
+		string result="True";
 
 		Console.WriteLine(result);
-		Console.WriteLine(string.Join(" ", b));
+
 		}	
 	}
 }

@@ -1,30 +1,31 @@
-// Name : Two Piles of Balls
+// Name : Continuous Sequence Sum
 #include <iostream>
 #include <string>
 using namespace std;
 
 int main(int argc, char const *argv[]) {
 	// input:
-	// n : number of balls in a pile
-	// a : 
+	// n : length of sequence
+	// a : sequence
+	// t : sum
 	int index;
 	int n;
 	cin >> n;
 	int a[100];
 
-	for(index=0;index<(2*n);index++)
+	for(index=0;index<n;index++)
 		cin >> a[index];
+	int t;
+	cin >> t;
 
 
 	// write your code here
-	// store your results in `result`,`b`
+	// store your results in `result`
 
 	// output
 	// Dummy Data
-	int result=1, b[100]={2,1};
+	string result="True";
 
 	cout << result << endl;
-	for(index=0;index<(2*n);index++)
-		cout << b[index] << " ";
 
 }

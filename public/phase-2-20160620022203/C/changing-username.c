@@ -5,13 +5,12 @@ int main() {
 	// q :  number of username change requests
 	// old_and_new : 
 	int q, number_of_people_that_changed_usernames=2, idx, jdx;
-	char old_and_new[105][1000][2], first_and_current[105][1000][2];
+	char old_and_new[1000][2][105], first_and_current[1000][2][105];
 	char old_and_new_tmp[2], first_and_current_tmp[2];
 	scanf("%d", &q);
 	for(idx = 0; idx< q; idx++) {
-		scanf("%s", &old_and_new_tmp[0]);
 		for(jdx = 0;jdx<2;jdx++) {
-			old_and_new[idx][jdx] = old_and_new_tmp[jdx];
+			scanf("%s", &old_and_new[idx][jdx][0]);
 		}
 	}
 

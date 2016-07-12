@@ -108,7 +108,7 @@ module Codeiya
 							vd << "\t\t#{definition}#{vr['name'].to_s}[]#{assign};\n"
 						else
 							assign = vr['value'].blank? ? "= new #{definition}[#{vr['size1_name']}][#{vr['size2_name']}]" : "= new #{definition}[][] #{vr['value'].gsub('[','{').gsub(']','}')}"
-							vd << "\t\t#{definition}[][] #{vr['name'].to_s}[#{vr['size1']}][#{vr['size2']}]#{assign};\n"
+							vd << "\t\t#{definition}[][] #{vr['name'].to_s}#{assign};\n"
 						end
 					end
 					vd

@@ -6,7 +6,7 @@ var index,result,b;
 var n = parseInt(readline(), 10);
 var a = [];
 var a_elements = readline().split(' ');
-for(index=0;index<2n;index++)
+for(index=0;index<(2*n);index++)
 	a.push(parseInt(a_elements[index], 10));
 
 

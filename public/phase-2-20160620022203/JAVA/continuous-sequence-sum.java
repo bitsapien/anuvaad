@@ -1,34 +1,31 @@
-// Name : Two Piles of Balls
+// Name : Continuous Sequence Sum
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 class Main {
 	public static void main (String[] args) throws java.lang.Exception {
 		// input:
-		// n : number of balls in a pile
-		// a : 
+		// n : length of sequence
+		// a : sequence
+		// t : sum
 		int index;
 		Scanner in = new Scanner(System.in);
 		int n = Integer.parseInt(in.nextLine());
-		int[] a = new int[2*n];
+		int[] a = new int[n];
 		String[] a_elements = (in.nextLine()).split(" ");
-		for(index=0;index<(2*n);index++)
+		for(index=0;index<n;index++)
 			a[index] = Integer.parseInt(a_elements[index]);
+		int t = Integer.parseInt(in.nextLine());
 
 
 		// write your code here
-		// store your results in `result`,`b`
+		// store your results in `result`
 
 		// output
 		// Dummy Data
-		int result=1;
-		intb[] = new int[] {2,1};
+		String result="True";
 
 		System.out.println(result);
-		System.out.println(join_string(Arrays.toString(b)));
 
-	}
-	public static String join_string(String inp) {
-		return inp.replace("[","").replace("]","").replace(",","");
 	}
 }
