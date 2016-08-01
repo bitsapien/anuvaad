@@ -9,8 +9,8 @@ class IndexController < ApplicationController
   def authenticate
     name = params[:name]
     key = params[:key]
-    if name == 'rahul' and key == 'macbook1905'
-      session['user'] = 'rahul'
+    if name == '<none>' and key == '<none>'
+      session['user'] = '<none>'
     end
     redirect_to '/'
   end
