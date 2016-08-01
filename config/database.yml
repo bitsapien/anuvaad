@@ -26,7 +26,7 @@ test:
 production:
   <<: *default
   adapter: postgresql
-  username: jmxhmekjxkctap
-  password: doyN8pgtiwxGcx3rIH5KtNQHTJ
-  database: d89o157c8tkct6
-  host: ec2-23-21-235-126.compute-1.amazonaws.com
+  username: <none>
+  password: <none>
+  database: <none>
+  host: <none>
