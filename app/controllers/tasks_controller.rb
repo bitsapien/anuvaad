@@ -6,36 +6,51 @@ require 'codeiya/all'
 
 
 class TasksController < ApplicationController
-	def index
+	
+  before_action :require_login
+
+  def index
 		# get list of folders in public
 		# get info on the folders and list
-		@tasks = get_list_with_details
+		@tasks = Task.all
 		# puts File::Stat.new(@tasks.first).ctime
 
 	end
 
 	def create
 		# create task folder
-		namespace, time = create_task_folder params
+		namespace, time, file_path = create_task_folder params
 		# make tracker file
 		generate_tracker_file params, namespace, time
-
+    # make a note in table, #TODO: deprecate old method above
+    new_task = Task.create(name:                    params[:task_name], 
+                           namespace:               namespace, 
+                           file:                    file_path,
+                           original_filename:       params["question_file"].original_filename, 
+                           number_of_questions:     params['number_of_questions'].to_i)
+    new_task.save!
 		# writing the question file
 		File.open(Rails.public_path.join(namespace, namespace+File.extname(params['question_file'].original_filename)), 'wb') do |file|
   			file.write(params['question_file'].read)
 		end
 
 		msg = { :message => "Success!" }
-		render :json => msg
+		#render :json => msg
+    redirect_to :back
 	end
 
 	def show
+    @task = Task.where(namespace: params['namespace']).first
 		@link = "#{params['namespace']}/#{params['namespace']}.pdf"
 		@namespace = params['namespace']
+    @code_skeletons = CodeSkeleton.where(task: @task)
+    @fill_form = CodeSkeleton.where(id: params[:code_skeleton]).first unless params[:code_skeleton].blank?
 	end
 
 	def generate_code
 		codeiya = Codeiya::Base.new params['name'], params['comments'], params['variables'], params['languages'], params['namespace']
+    cs = CodeSkeleton.create(name: params['name'], comments: params['comments'].to_json, variables: params['variables'].to_json, languages_used: params['languages'].to_s, task: Task.where(namespace: params['namespace']).first)
+    cs.save!
 		redirect_to :back
 	end
 
@@ -60,7 +75,7 @@ class TasksController < ApplicationController
 			namespace = params["task_name"].downcase.parameterize+'-'+time.to_s.parameterize.gsub('-','').gsub('utc','')
 			Dir.mkdir(Rails.public_path.join(namespace))
 			Dir.mkdir(Rails.public_path.join(namespace,'all'))
-			[namespace, time]		
+			[namespace, time, Rails.public_path.join(namespace).to_s]		
 		end
 
 		def generate_tracker_file params, namespace, time

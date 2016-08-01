@@ -10,12 +10,12 @@
     	</thead>
     	<tbody>
     		<% @tasks.each do |task| %>
-                <% show_link = link_to task['name'], "tasks/show/#{task['namespace']}" %>
-                <% pack_link = link_to "pack", "tasks/pack/#{task['namespace']}" %>
+                <% show_link = link_to task.name, "tasks/show/#{task.namespace}" %>
+                <% pack_link = link_to "pack", "tasks/pack/#{task.namespace}" %>
     			<%= "<tr> 
     				<td>#{show_link}</td>
-    				<td>#{task['number_of_questions']}</td>
-    				<td>#{task['creation_time'].in_time_zone}</td>
+    				<td>#{task.number_of_questions}</td>
+    				<td>#{task.created_at.in_time_zone}</td>
     				<td>#{pack_link} | <a href='#'>delete</a></td>
     			</tr>".html_safe %>
     		<% end %>

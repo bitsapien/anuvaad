@@ -1,0 +1,7 @@
+<%= form_tag("/authenticate", method: "post") do %>
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name) %>
+  <%= label_tag(:key, "Key") %>
+  <%= password_field_tag(:key) %>
+  <%= submit_tag("In") %>
+<% end %>

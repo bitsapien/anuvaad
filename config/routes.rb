@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  post '/authenticate' => 'index#authenticate'
+  get '/in' => 'index#login'
+  get '/logout' => 'index#logout'
+
   get '/' => 'tasks#index'
   post 'tasks/create.json' => 'tasks#create'
   get 'tasks/show/:namespace' => 'tasks#show'
